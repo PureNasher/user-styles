@@ -119,10 +119,25 @@ body {
             position: fixed !important;
         }
         
+        /* to do: change 'edit' link to an icon */
+        
         /*#sr-more-link::before {
-            content: url('http://ompldr.org/vZmJsNQ');
-        }*/
-            
+            content: url('http://ompldr.org/vZmJsNQ') !important;
+            text-align: center !important;
+            background: #505050 !important;
+            height: 15px !important;
+            max-width: 22px !important;
+            min-width: 22px !important;
+            position: fixed !important;
+            top: 1px !important;
+            right: 9px !important;
+            margin-right: 27px !important;
+            z-index: 5;
+        }
+        
+        #sr-more-link:hover::before {
+            content: url('http://ompldr.org/vZmJsNQ') !important;
+         }*/
             
 #sr-header-area .selected a {
     color: #dddddd !important;
@@ -301,7 +316,7 @@ pagename a {
 
 
 .side::before {
-    content: url('http://ompldr.org/vZmJsOQ');
+    content: url('http://ompldr.org/vZmVpNg');
     text-align: center !important;
     background: #505050 !important;
     height: 15px !important;
@@ -315,7 +330,7 @@ pagename a {
 }
 
 .side:hover::before {
-    content: url('http://ompldr.org/vZmJsZA') !important;
+    content: url('http://ompldr.org/vZmVpNw') !important;
 }
 
 .side:hover {
@@ -633,7 +648,7 @@ a.author {
 
 .textarea {
     color: #3f3f3f !important;
-    background: #f9f9f9 !important;
+    background: #fff !important;
     border: none !important;
 }
 
@@ -687,7 +702,7 @@ a.author {
 
 #sr-autocomplete {
     color: #3f3f3f !important;
-    background: #f9f9f9 !important;
+    background: #fff !important;
     -webkit-border-radius:5px;
     border-radius: 5px;
 }
