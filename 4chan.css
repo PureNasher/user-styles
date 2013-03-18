@@ -1,7 +1,6 @@
-
-z-document domain("boards.4chan.org") {
+ @-moz-document domain("boards.4chan.org") {
         body {
-          background: #fff !important;
+          background: #f9f9f9 !important;
           font-family: Lucida Grande !important;
           font-size: 10pt !important;
         }
@@ -188,7 +187,7 @@ z-document domain("boards.4chan.org") {
        
         .boardBanner {
             margin-bottom: 0px !important;
-            background: #fff !important;
+            background: #f9f9f9 !important;
             width: 94% !important;
             margin: 0 auto !important;
             padding-top: 40px !important;
@@ -237,7 +236,7 @@ z-document domain("boards.4chan.org") {
             text-align: center !important;
            
             /*border-top: 5px solid #eee !important;*/
-                border-top: none !important;
+	        border-top: none !important;
             box-shadow: 0px 4px 3px rgba(0,0,0,0.2) !important;
             font-size: 0 !important;
             color: transparent !important;
@@ -311,7 +310,7 @@ z-document domain("boards.4chan.org") {
         #boardNavDesktop a[href*="/co/"] {
             display: inline !important;
         }
-       
+        
         #boardNavDesktop a[href*="/mu/"] {
             display: inline !important;
         }
@@ -344,7 +343,7 @@ z-document domain("boards.4chan.org") {
             color: transparent;
             font-size: 0;
         }
- 
+
         #globalToggle::after {
             content: url('http://ompldr.org/vZmVpNg');
         }
@@ -368,7 +367,7 @@ z-document domain("boards.4chan.org") {
             border-bottom-right-radius: 2px !important;
             background: #404040 !important;
         }
-       
+        
         .globalMessage.hideMobile {
             display: none;
         }
@@ -453,7 +452,7 @@ z-document domain("boards.4chan.org") {
             font-size: 9pt !important;
             margin-left: 2px !important;
         }
- 
+
        
         #count.new {
             background: transparent !important;
@@ -889,7 +888,7 @@ z-document domain("boards.4chan.org") {
             margin: 0 auto !important;
             margin-bottom: 0px !important;
             margin-top: 30px !important;
-            background-color: #fff !important;
+            background-color: #f9f9f9 !important;
             width: 70% !important;
         }
      
@@ -1349,7 +1348,7 @@ z-document domain("boards.4chan.org") {
      
     @-moz-document regexp("http://boards.4chan.org/(.|..|...)\\/catalog"), regexp("https://boards.4chan.org/(.|..|...)\\/catalog") {
         body {
-            background: #fff !important;
+            background: #f9f9f9 !important;
             font-family: Lucida Grande !important;
             font-size: 10pt !important;
             color: #646464 !important;
@@ -1380,14 +1379,14 @@ z-document domain("boards.4chan.org") {
             border-radius: 2px !important;
             border: 1px solid #e0e0e0 !important;
         }
-       
+        
         #settings {
             position: fixed !important;
             text-align: center !important;
             width: 100% !important;
         }
- 
- 
+
+
         .thumb {
             border-top: none !important;
             border-radius: 1px !important;
@@ -1400,8 +1399,8 @@ z-document domain("boards.4chan.org") {
             margin-left: 5px !important;
             margin-right: 5px !important;
         }
-       
-       
+        
+        
         /*Settings integration into the navigation bar */
         #settings {
             position: fixed !important;
@@ -1530,7 +1529,7 @@ z-document domain("boards.4chan.org") {
         #qf-box:focus {
             border: none !important;
         }
-       
+        
         #toggleMsgBtn {
             content: url('http://ompldr.org/vZmVpNg') !important;
             display: inline !important;
@@ -1546,19 +1545,19 @@ z-document domain("boards.4chan.org") {
             font-size: 0;
             opacity: 1.0 !important;
         }
- 
+
         #toggleMsgBtn::after {
             opacity: 1.0 !important;
             content: url('http://ompldr.org/vZmVpNg') !important;
         }
-     
-       
+      
+        
         .collapseIcon, .expandIcon {
             background-image: none !important;
         }
-       
+        
         a#globalToggle.button.redButton.mobile.shown::after, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon {
             display: none !important;
         }
-       
+        
     }

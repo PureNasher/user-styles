@@ -13,7 +13,7 @@ body {
 
     background-attachment: fixed !important;
 
-    background-color: #fff !important;
+    background-color: #f9f9f9 !important;
 
     /*background-image: url("chrome://browser/skin/newtab/noise.png"), linear-gradient(rgba(255,255,255,0.5), rgba(255, 255, 255, 0.2)) !important; */
 
@@ -29,7 +29,7 @@ body {
 
 #header {
 
-    background: #fff !important;
+    background: #f9f9f9 !important;
 
     border-bottom: none !important;
 
@@ -201,7 +201,7 @@ body {
 
     #header-bottom-right {
 
-        background: #fff !important;
+        background: #f9f9f9 !important;
 
         box-shadow: none !important;
 
@@ -326,7 +326,7 @@ pagename a {
 
 
 .sidebox .subtitle {
-    background: #fff !important;
+    background: #f9f9f9 !important;
 }
 
 .sidebox .spacer {
@@ -624,7 +624,7 @@ a.author {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     color: #3f3f3f !important;
-    background: #fff !important;
+    background: #f9f9f9 !important;
 }
 
     .roundfield .title {
@@ -633,12 +633,12 @@ a.author {
 
 .textarea {
     color: #3f3f3f !important;
-    background: #fff !important;
+    background: #f9f9f9 !important;
     border: none !important;
 }
 
 #link-desc.infobar {
-    background-color: #fff !important;
+    background-color: #f9f9f9 !important;
     color: #646464 !important;
     border-color: #909090 !important;
     -webkit-border-radius: 0px;
@@ -687,7 +687,7 @@ a.author {
 
 #sr-autocomplete {
     color: #3f3f3f !important;
-    background: #fff !important;
+    background: #f9f9f9 !important;
     -webkit-border-radius:5px;
     border-radius: 5px;
 }
@@ -717,7 +717,7 @@ a.author {
     overflow: hidden;
     border: none !important;
     margin-bottom: 5px;
-    background: #fff !important;
+    background: #f9f9f9 !important;
     top: 10px !important;
     width: 100% !important;
 }
