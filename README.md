@@ -8,6 +8,6 @@ Thanks to hdni for the inspiration.
 Reddit:
 ![reddit](http://goput.it/4jb.png)
 
-Last.fm:
+Last.fm (this one's still buggy!):
 ![lfm](http://goput.it/yw7.png)
 
