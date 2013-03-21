@@ -1,4 +1,4 @@
-  @-moz-document domain("boards.4chan.org") {
+n("boards.4chan.org") {
         body {
           background: #fbfbfb !important;
           font-family: Lucida Grande !important;
@@ -1349,7 +1349,7 @@
         }
     }
      
-    @-moz-document regexp("http://boards.4chan.org/(.|..|...)\\/catalog"), regexp("https://boards.4chan.org/(.|..|...)\\/catalog") {
+    @-moz-document regexp("http://boards.4chan.org/(.|..|...|....)\\/catalog"), regexp("https://boards.4chan.org/(.|..|...|....)\\/catalog") {
         body {
             background: #f9f9f9 !important;
             font-family: Lucida Grande !important;
