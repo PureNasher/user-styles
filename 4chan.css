@@ -1,6 +1,6 @@
- @-moz-document domain("boards.4chan.org") {
+  @-moz-document domain("boards.4chan.org") {
         body {
-          background: #f9f9f9 !important;
+          background: #fbfbfb !important;
           font-family: Lucida Grande !important;
           font-size: 10pt !important;
         }
@@ -12,19 +12,23 @@
         a.useremail[href*='Sage']:last-of-type::after,
         a.useremail[href*='SAGE']:last-of-type::after {
             content: " (SAGE)" !important;
-            color: #d43a47 !important;
+            color: #a27b9d !important;
             font-size: 9pt !important;
             font-weight: normal !important;
         }
-           
+        
+        span.capcodeMod span.name, span.capcodeMod a:not(:hover), span.capcodeMod span.postertrip, span.capcodeMod strong.capcode {
+            color: #a27b9d !important;
+        }
+        
         .useremail .name {
-            color: #555 !important;
+            color: #bfa5d8 !important;
             text-decoration: none !important;
             font-weight: normal !important;
         }
      
         .useremail .name:hover {
-            color: #333 !important;
+            color: #9984ac !important;
         }
        
         a.useremail {
@@ -43,38 +47,38 @@
         }
      
         .name {
-            color: #555 !important;
+            color: #a5abd8 !important;
             font-weight: normal !important;
             text-decoration: none !important;
         }
                
         .postertrip {
-            color: #555 !important;
+            color: #d8a5aa !important;
         }
      
         .dateTime {
-            color: #aaa !important;
+            color: #999 !important;
             font-style: normal !important;
         }
        
         .fileText {
-            color: #999 !important;
+            color: #d8a5aa !important;
         }
      
         .postNum a, .inline .postNum a {
-            color: #999 !important;
+            color: #d8a5aa !important;
         }
      
         .postNum a:hover, .inline .postNum a:hover {
-            color: #777 !important;
+            color: #a27b7f !important;
         }
      
         .fileInfo a, .fileText a, .inline .fileInfo a, .inline .fileText a {
-            color: #777 !important;
+            color: #a5abd8 !important;
         }
      
         .fileText a:hover, .fileInfo a:hover, .inline .fileInfo a:hover, .inline .fileText a:hover {
-            color: #555 !important;
+            color: #7b80a2 !important;
         }
        
         .fileInfo a {
@@ -102,15 +106,16 @@
         }
      
         .backlink, .inline .backlink {
-            color: #666 !important;
+            color: #777 !important;
             text-decoration: none !Important;
         }
+        
         .backlink:hover, .inline .backlink:hover {
-            color:#444 !important;
+            color:#333 !important;
         }
        
         .postMessage {
-            color: #3a3a3a !important;
+            color: #646464 !important;
         }
        
         .warning > a, .warning, #errmsg {
@@ -132,7 +137,7 @@
         }
        
         .subject {
-            color: #777 !important;
+            color: #80a27b !important;
             font-weight: normal !important;
             font-style: normal !important;
             /*margin-right: 10px !important;*/
@@ -187,7 +192,7 @@
        
         .boardBanner {
             margin-bottom: 0px !important;
-            background: #f9f9f9 !important;
+            background: #fbfbfb !important;
             width: 94% !important;
             margin: 0 auto !important;
             padding-top: 40px !important;
@@ -314,14 +319,11 @@
         #boardNavDesktop a[href*="/mu/"] {
             display: inline !important;
         }
-     
-/*        #boardNavDesktop a[href*="/w/"] {
+        
+        #boardNavDesktop a[href*="/gd/"] {
             display: inline !important;
         }
-   
-        #boardNavDesktop a[href*="/wg/"] {
-            display: inline !important;
-        } */
+
      
         .navLinks {
             font-size: 0px !important;
@@ -889,7 +891,8 @@
             margin-bottom: 0px !important;
             margin-top: 30px !important;
             background-color: #f9f9f9 !important;
-            width: 70% !important;
+            width: 80% !important;
+            /*box-shadow: 1px 1px 1px rgba(0,0,0,0.3) !important;*/
         }
      
         .postContainer {
