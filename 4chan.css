@@ -1,4 +1,4 @@
-n("boards.4chan.org") {
+  @-moz-document domain("boards.4chan.org") {
         body {
           background: #fbfbfb !important;
           font-family: Lucida Grande !important;
@@ -47,7 +47,7 @@ n("boards.4chan.org") {
         }
      
         .name {
-            color: #a5abd8 !important;
+            color: #7b80a2 !important;
             font-weight: normal !important;
             text-decoration: none !important;
         }
@@ -104,15 +104,36 @@ n("boards.4chan.org") {
             color: transparent !important;
             font-size: 0px !important;
         }
+        .backlink:first-child::before {
+            margin-left: -4px !important;
+        }
+    
+        .backlink {
+            font-size: 0 !important;
+        }
      
-        .backlink, .inline .backlink {
-            color: #777 !important;
-            text-decoration: none !Important;
+        .backlink:after {
+            content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QEbFh0G1qhKlAAAAMJJREFUGNNdjjFqAmEYRN/sanCjoMkBLAOCtZewEHKFeAEbEQxkRZBYqI2QC1gtqXIAD2GTxoCEBKs0ERbU3/1SuGJwuhneDAOpoijyH3vDBy7kAYRhmFu8ryZC9UtArdY4yJfcCKgBO4wPZAdJcz+JZ5nr4n4AqqWFK0QFhBnVgxcUPPmaYvz8W40x+wacJWro+OG57NCLpG3/qX1/zEZ3DtdPT3Y+k6xrGnydhzZLE2/eyQ663XXG4s4ZuC383gSvf/KcPkhRDAYHAAAAAElFTkSuQmCC) !important;
+            font-size: 8pt !important;
+            padding-top: 3px !important;
+            margin-right: 6px !important;
         }
-        
-        .backlink:hover, .inline .backlink:hover {
-            color:#333 !important;
+    
+        .backlink:hover::after, .backlink.filtered:hover::after {
+            opacity: 0.75 !important;
+            transition: all 0.3s ease 0s;
         }
+            
+        .backlink.filtered:after {
+            opacity: 0.55 !important;
+        }
+
+        .post.op .backlink:first-child {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+        }
+
+
        
         .postMessage {
             color: #646464 !important;
@@ -879,11 +900,7 @@ n("boards.4chan.org") {
             color: #aaa !important;
             margin-left: -4px !important;
         }
-       
-        .post.op .backlink:first-child {
-            margin-left: -10px !important;
-        }
-     
+
         .thread {
             /*position: relative;
             display: table !important;*/
@@ -1351,7 +1368,7 @@ n("boards.4chan.org") {
      
     @-moz-document regexp("http://boards.4chan.org/(.|..|...|....)\\/catalog"), regexp("https://boards.4chan.org/(.|..|...|....)\\/catalog") {
         body {
-            background: #f9f9f9 !important;
+            background: #fbfbfb !important;
             font-family: Lucida Grande !important;
             font-size: 10pt !important;
             color: #646464 !important;
