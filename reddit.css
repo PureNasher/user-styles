@@ -13,7 +13,7 @@ body {
 
     background-attachment: fixed !important;
 
-    background-color: #f9f9f9 !important;
+    background-color: #fbfbfb !important;
 
     /*background-image: url("chrome://browser/skin/newtab/noise.png"), linear-gradient(rgba(255,255,255,0.5), rgba(255, 255, 255, 0.2)) !important; */
 
@@ -29,7 +29,7 @@ body {
 
 #header {
 
-    background: #f9f9f9 !important;
+    background: #fbfbfb !important;
 
     border-bottom: none !important;
 
@@ -216,7 +216,7 @@ body {
 
     #header-bottom-right {
 
-        background: #f9f9f9 !important;
+        background: #fbfbfb !important;
 
         box-shadow: none !important;
 
@@ -341,7 +341,7 @@ pagename a {
 
 
 .sidebox .subtitle {
-    background: #f9f9f9 !important;
+    background: #fbfbfb !important;
 }
 
 .sidebox .spacer {
