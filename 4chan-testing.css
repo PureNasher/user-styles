@@ -1,4 +1,4 @@
-@-moz-document domain("boards.4chan.org") {
+ @-moz-document domain("boards.4chan.org") {
         body {
           background: #fbfbfb !important;
           font-family: cure !important;
@@ -216,16 +216,16 @@
             background: #fbfbfb !important;
             width: 94% !important;
             margin: 0 auto !important;
-            padding-top: 40px !important;
-            padding-bottom: 5px !important;
-            margin-bottom: -10px !important;
+            padding-top: 28px !important;
+            padding-bottom: 0px !important;
+            margin-bottom: -20px !important;
             box-shadow: none !important;
             border-radius: 0px !important;
         }
        
         .boardTitle {
             color: #444 !important;
-            font: normal 28pt Helvetica Lt STD Light !important;
+            font: normal 22pt Helvetica Lt STD Light !important;
         }
      
         .boardSubtitle {
@@ -1428,7 +1428,7 @@
         }
              
         #settings::after {
-            content: url('http://ompldr.org/vZmJsNQ');
+            content: url('http://i46.tinypic.com/mry1wz.jpg');
             height: 16px !important;
             max-width: 10px !important;
             min-width: 10px !important;
@@ -1445,7 +1445,7 @@
         }
      
         #settings:active::after, #settings:hover::after {
-            content: url('http://ompldr.org/vZmJsNQ');
+            content: url('http://i46.tinypic.com/mry1wz.jpg');
         }
      
         #settings:active, #settings:hover {
@@ -1479,9 +1479,9 @@
         To do: prevent the settings pane to appear when search box or button is active*/
         #qf-ctrl.button, #qf-ctrl.button:hover {
             display: inline !important;
-            top: 3px !important;
+            top: 2px !important;
             right: 4% !important;
-            margin-right: 56px !important;
+            margin-right: 30px !important;
             position: fixed !important;
             font-size: 0px !important;
             color: transparent !important;
@@ -1489,11 +1489,11 @@
         }
        
         #qf-ctrl.button::before {
-            content: url("http://i.imgur.com/U3qTg.png") !important;
+            content: url("http://i46.tinypic.com/3zxuh.jpg") !important;
         }
        
         #qf-ctrl.button:active::before {
-            content: url("http://i.imgur.com/U3qTg.png") !important;
+            content: url("http://i48.tinypic.com/dfhteh.jpg") !important;
         }
        
         #qf-clear {
@@ -1531,10 +1531,15 @@
         }
         
         #toggleMsgBtn {
-            content: url('http://ompldr.org/vZmVpNg') !important;
+            display: none !important;
+        }
+            
+        
+        /*#toggleMsgBtn {
+            content: url('http://i46.tinypic.com/3zxuh.jpg') !important;
             display: inline !important;
             position: fixed !important;
-            top: 1px !important;
+            top: 2px !important;
             right: 4% !important;
             z-index: 4 !important;
             margin-right: 26px !important;
@@ -1548,13 +1553,59 @@
 
         #toggleMsgBtn::after {
             opacity: 1.0 !important;
-            content: url('http://ompldr.org/vZmVpNg') !important;
+            content: url('http://i48.tinypic.com/dfhteh.jpg') !important;
         }
       
+        .globalMessage {
+            position: fixed !important;
+            width: 60% !important;
+            height: auto !important;
+            top: 11px !important;
+            right: 20% !important;
+            padding-bottom: 4px !important;
+            padding-top: 0px !important;
+            z-index: 1;
+           
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.2) !important;
+            border-bottom-left-radius: 2px !important;
+            border-bottom-right-radius: 2px !important;
+            background: #505050 !important;
+        }
+        
+        .globalMessage.hideMobile {
+            display: none;
+        }
+       
+        #globalMessage h3 {
+            font-size: 10pt !important;
+            color: #eeeeee !important;
+            font-weight: normal !important;
+            margin: 2px !important;
+        }
+       
+        strong, h2 {
+            margin: 2px !important;
+            font-size: 10pt !important;
+            color: #eeeeee !important;
+            font-weight: normal !important;
+        }
+       
+        .globalMessage a {
+            color: #fff !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
+        }
+       
+        .globalMessage a:hover {
+            color: #ddd !important;
+        }
+
         
         .collapseIcon, .expandIcon {
             background-image: none !important;
         }
+        
+        */
         
         a#globalToggle.button.redButton.mobile.shown::after, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon {
             display: none !important;
