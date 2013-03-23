@@ -1,4 +1,4 @@
- @-moz-document domain("boards.4chan.org") {
+@-moz-document domain("boards.4chan.org") {
         body {
           background: #fbfbfb !important;
           font-family: cure !important;
@@ -1607,7 +1607,7 @@
         
         */
         
-        a#globalToggle.button.redButton.mobile.shown::after, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon {
+        a#globalToggle.button.redButton.mobile.shown::after, .globalMessage, .globalMessage a, #globalMessage h3, strong, h2, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon {
             display: none !important;
         }
         
