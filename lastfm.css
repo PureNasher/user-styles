@@ -1,4 +1,6 @@
- @namespace url(http://www.w3.org/1999/xhtml);
+/*to do: fix alignment in nav bar*/ 
+
+@namespace url(http://www.w3.org/1999/xhtml);
      
     @-moz-document domain(beta.last.fm), domain(last.fm), domain(lastfm.com.br), domain(lastfm.de), domain(lastfm.es), domain(lastfm.fr), domain(lastfm.it), domain(lastfm.pl), domain(lastfm.se), domain(lastfm.com.tr), domain(lastfm.ru), domain(lastfm.jp), domain(cn.last.fm)
     {
