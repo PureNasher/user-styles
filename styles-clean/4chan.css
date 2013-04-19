@@ -1,5 +1,4 @@
-
-z-document domain("boards.4chan.org") {
+ @-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica !important;
@@ -371,7 +370,7 @@ z-document domain("boards.4chan.org") {
             z-index: 1;
             border-bottom-left-radius: 2px !important;
             border-bottom-right-radius: 2px !important;
-            background: #transparent !important;
+            background: transparent !important;
         }
         
         .globalMessage.hideMobile {
@@ -1368,7 +1367,7 @@ z-document domain("boards.4chan.org") {
             margin-bottom: 10px !important;
             margin-left: 15px !important;
             margin-right: 15px !important;
-            color: #666 !important;
+            color: #444 !important;
         }
      
         div.closed {
