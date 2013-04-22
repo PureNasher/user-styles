@@ -1,13 +1,19 @@
- @-moz-document domain("boards.4chan.org") {
+@-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica !important;
-          font-size: 9pt !important;
+          font-size: 8pt !important;
         }
        
        
        
-        /*General colors*/
+/*
+=======================
+General colors
+=======================
+*/
+
+
         a.useremail[href*='sage']:last-of-type::after,
         a.useremail[href*='Sage']:last-of-type::after,
         a.useremail[href*='SAGE']:last-of-type::after {
@@ -130,16 +136,16 @@
             margin-left: 0px !important;
             margin-right: 0px !important;
         }
-
-
        
         .postMessage {
-            margin-left: 15px;
-            margin-right: 15px;
+            margin-left: 0px;
+            margin-right: 20px !important;
+            padding-right: 0px !important;
             margin-top: 10px;
             margin-bottom: 10px;
-            width: 98%;
+            width: 94%;
             line-height: 16px !important;
+            font-size: 8pt !important
         }
        
         .warning > a, .warning, #errmsg {
@@ -164,7 +170,6 @@
             color: #666 !important;
             font-weight: bold !important;
             font-style: normal !important;
-            /*margin-right: 10px !important;*/
         }
        
         .summary {
@@ -172,7 +177,7 @@
             float: right !important;
             margin-right: 2px !important;
             padding-bottom: 2px !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
         }
        
         .summary:hover {
@@ -180,7 +185,7 @@
         }
      
         .abbr {
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             color: #ccc !important;
         }
        
@@ -192,7 +197,14 @@
         .nameBlock .posteruid {
             color: #aaa !important;
         }
-     
+
+
+/*
+=============
+Board banner
+=============
+*/
+
         /*Things to hide*/
         hr,
         .deleteform,
@@ -251,7 +263,15 @@
             color: transparent !important;
         }
        
-    /*Top bar */
+       
+/*
+==================
+Navigation links
+==================
+*/
+
+
+        /*  to do: display boards upon hover a la hdni's 'links' menu */
         #boardNavDesktop {
             position: fixed !important;
             right: -1000px !important;
@@ -262,7 +282,7 @@
             background: #3a5976!important;
             z-index: 2 !important;
             text-align: center !important;
-	        border-top: none !important;
+            border-top: none !important;
             box-shadow: 0px 4px 3px rgba(0,0,0,0.2) !important;
             font-size: 0 !important;
             color: transparent !important;
@@ -327,13 +347,14 @@
             display: inline !important;
         }
 
-     
         .navLinks {
             font-size: 0px !important;
             color: transparent !important;
         }
        
-        /*Global message integration into the top bar*/
+/*Global message integration into the top bar*/
+        
+        /* to do: enable background for active toggle */
         #globalToggle {
             display: inline !important;
             position: fixed !important;
@@ -341,19 +362,23 @@
             right: 0% !important;
             z-index: 4 !important;
             margin-right: 62px !important;
+            padding-left: 1px !important;
             cursor: default !important;
             text-decoration: none !important;
             cursor: pointer !important;
             font-size: 0;
-            height: 16px !important;
+            height: 11px !important;
+            width: 10px !important;
+            border-radius: 3px !important;
         }
 
         #globalToggle::after {
             content: url('http://i46.tinypic.com/3zxuh.jpg');
             color: #b37d7d;
+            background: transparent !important;
         }
        
-        #globalToggle:hover::after, #globalToggle:active::after, a#globalToggle.button.redButton.mobile.shown::after{
+       a#globalToggle.button.redButton.mobile.shown::after, a#globalToggle.button.redButton.mobile.shown:active::after{
             content: url('http://i48.tinypic.com/dfhteh.jpg');
             background: #888 !important;
         }
@@ -401,7 +426,7 @@
             color: #ddd !important;
         }
         
-        /*Thread statistics and thread updater integration into the navbar*/
+/*Thread statistics and thread updater integration into the navbar*/
 
         #stats {
             float: right;
@@ -447,19 +472,10 @@
             border: none !important;
         }
        
-/*        #updater:hover > div {
-            background: #3a5976 !important;
-            text-align: left !important;
-            border-bottom-left-radius: 2px !important;
-            border-bottom-right-radius: 2px !important;
-            box-shadow: 0px 1px 1px rgba(0,0,0,0.2) !important;
-        }
-       */
         #updater input[name="Interval"] {
             font-size: 9pt !important;
             margin-left: 2px !important;
         }
-
        
         #count.new {
             background: transparent !important;
@@ -470,308 +486,8 @@
             font-size: 9pt !important;
         }
 
+/* Thread watcher integration into the navbar */
 
-           
-        /*Settings integration into the navbar*/
-        a.settingsWindowLink {
-            position: fixed !important;
-            top: 4px !important;
-            right: 0% !important;
-            margin-right: 10px !important;
-            z-index: 4 !important;
-           
-            font-family: cure !important;
-            font-size: 0 !important;
-            color: transparent !important;
-        }
-       
-        a.settingsWindowLink {
-            font-size: 9pt !important;
-            color: #ccc !important;
-            cursor: pointer !important;
-            font-family: cure !important;
-            font-size: 0 !important;
-            color: transparent !important;
-        }
-     
-        a.settingsWindowLink::before {
-            content: url('http://i46.tinypic.com/mry1wz.jpg');
-        }
-        
-        
-        /*Expand control integration into the navbar*/
-      #imgControls {
-        font-size: 0px !important;
-        color: transparent !important;
-    }
-   
-    input[type="checkbox"]#imageExpand {
-        display: none !important;
-    }
-   
-    #imgControls > *::before {
-        position: fixed !important;
-        content: url('http://i48.tinypic.com/14twj87.jpg');
-        top: 5px !important;
-        right: 0% !important;
-        margin-right: 49px !important;
-        z-index: 4 !important;
-        cursor: pointer !important;
-    }
-   
-    #imgControls >*:active::before, #imgControls >*:hover::before {
-        content: url('http://i48.tinypic.com/wmb2ah.jpg');
-    }
- 
-    .field {
-        font-family: cure !important;
-        font-size: 9pt !important;
-        background: #fff !important;
-    }    
-       
-        .prettyprint {
-            background-color: #eee !important;
-            border: none !important;
-            border-radius: 0px !important;
-            box-shadow: none !important;
-           
-            margin-bottom: -6px !important;
-            margin-top: 1px !important;
-            font-size: 9pt !important;
-            padding-bottom: 2px !important;
-            padding-top: 4px !important;
-        }
-     
-        .post.reply {
-            background: transparent !important;
-            border: none !important;
-            margin-top: -1px !important;
-            width: 100% !important;
-        }
-     
-        .hide_reply_button {
-            position: relative !important;
-            float: right !important;
-            margin-top: 2px !important;
-            margin-right: 8px !important;
-            z-index: 0 !important;
-           
-            font-family: cure !important;
-            font-size: 0px !important;
-            color: transparent !important;
-        }
-       
-        /*Disable thread hiding. To do: fix the stubs and position the button correctly!*/
-        .hide_thread_button:not(.hidden_thread) {
-            display: none !important;
-            /*font-size: 10px !important;
-            font-family: Lucida Grande !important;
-            color: #ff0000 !important;
-            float: right !important;
-            margin-right: 35px !important;
-            margin-bottom: -15px !important;
-        }
-       
-        .hide_thread_button span {
-            display: block !important;
-            z-index: 5 !important;*/
-        }
-       
-        .hide_reply_button a::before {
-            content: "-" !important;
-            font-size: 9pt !important;
-            color: #bebebe !important;
-            z-index: 5 !important;
-            position: relative !important;
-        }
-        
-        .postContainer.replyContainer.hidden, .postContainer.hide_reply_button.stub {
-            border: none !important;
-            padding-top: 0 !important;
-            margin-bottom: 5px !important;
-        }
-        
-        .hide_reply_button.stub {
-            height: 16px !important;
-            padding-top: 4px !important;
-            padding-bottom: 4px !important;
-            margin-top: 0px !important;
-            margin-bottom: 0px !important;
-            margin-right: 0px !important;
-            width: 100% !important;
-            background: transparent !important;
-            border-radius: 0px !important;
-            border: none !important;
-        }
-       
-        .hide_reply_button.stub a {
-            margin-left: 0px !important;
-           
-            color: #aaa !important;
-            font-family: cure !important;
-            font-size: 9pt !important;
-        }
-       
-        .hide_reply_button.stub a::before {
-            display: none !important;
-        }
-       
-        .hide_reply_button.stub > a:hover {
-            color: #888 !important;
-        }
-     
-        .hide_reply_button.stub span {
-            font-size: 0px !important;
-            color: transparent !important;
-            font-family: cure !important;
-        }
-       
-        .hide_reply_button.stub .menu_button {
-            font-size: 0px !important;
-            color: transparent !important;
-            font-family: cure !important;
-            margin-top: 0px !important;
-            margin-right: 4px !important;
-        }
-     
-        .hide_reply_button.stub .menu_button::before {
-            font-size: 0px !important;
-        }
-           
-     
-        .hide_reply_button.stub a:first-of-type::after {
-            float: right !important;
-            margin-top: 0px !important;
-            margin-right: 7px !important;
-            content: "+" !important;
-            font-size: 9pt !important;
-            color: #aaa !important;
-            font-family: cure !important;
-        }
-     
-        .favicon {
-            display: inline !important;
-            float: right !important;
-            margin-top: 0px !important;
-            width: 16px !important;
-            margin-left: 0px !important;
-            margin-right: -14px !important;
-            height: 16px !important;
-            opacity: 0.0 !important;
-        }
-     
-        .replylink {
-            float: right !important;
-            margin-left: 5px !important;
-            margin-right: 5px !important;
-            margin-top: 1px !important;
-            color: transparent !important;
-        }
-     
-        a.replylink {
-            font-size: 0px !important;
-        }
-     
-        .replylink:before {
-            content: url("http://imgur.com/WpNCh.png") !important;
-        }
-       
-        /*Icon that overlays the favicon*/
-        .opContainer > div .postInfo:before {
-            float: right !important;
-            content: url('http://i.imgur.com/UNhyj.png') !important;
-            margin-left: 0px !important;
-            margin-right: 4px !important;
-            margin-top: 0px !important;
-        }
-     
-        .menu_button {
-            float: right !important;
-            margin-top: 0px !important;
-            margin-right: 20px !important;
-            margin-left: 10px !important;
-            font-family: cure !important;
-            font-size: 0px !important;
-            color: transparent !important;
-        }
-     
-        .menu_button::after {
-            content: "\25BE" !important;
-            font-size: 9pt !important;
-            color: #bebebe !important;
-        }
-       
-        .post.op .menu_button::after {
-            color: #bebebe !important;
-        }
-     
-        .post.op .menu_button {
-            margin-top: 0px !important;
-            margin-right: 0px !important;
-            margin-left: 0px !important;
-        }
-     
-        #menu.reply.dialog {
-            display: block !important;
-            margin-left: 0px !important;
-            margin-top: 0px !important;
-            border: none !important;
-            border-radius: 2px !important;
-            box-shadow: 0px 1px 1px rgba(0,0,0,0.2) !important;
-        }
-     
-        .subMenu {
-            left: -110px !important;
-            width: 108px !important;
-        }
-     
-        .entry, .subMenu {
-            background: #ffffff !important;
-            border-color: #eee !important;
-            color: #777 !important;
-            font-family: limey !important;
-            font-size: 8pt !important;
-        }
-       
-        .entry:hover {
-            color: #555 !important;
-        }
-       
-        .opContainer {
-            position: relative !important;
-            display: table !important;
-            height: 100% !important;
-            width: 100% !important;
-            padding-top: 10px !important;
-            margin-top: 10px !important;
-            margin-bottom: 20px !important;
-            
-        }
-     
-        #options.reply.dialog {
-            background: #fff !important;
-            color: #555 !important;
-            border-radius: 2px !important;
-            box-shadow: 0px 1px 1px rgba(0,0,0,0.3) !important;
-            z-index: 5 !important;
-        }
-       
-        #options.reply.dialog label {
-            text-decoration: none !important;
-            font-style: normal !important;
-            color: #333 !important;
-        }
-       
-        #overlay {
-            z-index: 5 !important;
-        }
-       
-        .dialog {
-            background: #fff !important;
-            color: #333 !important;
-        }
-       
-        /*Thread watcher integration into the navbar*/
         #watcher {
             position: fixed !important;
             top: -1000px !important;
@@ -804,7 +520,7 @@
        
         #watcher::before {
             content: url('http://i46.tinypic.com/maaqzd.jpg') !important;
-            height: 24px !important;
+            height: 16px !important;
             max-width: 10px !important;
             min-width: 10px !important;           
             position: fixed !important;
@@ -848,194 +564,97 @@
             text-shadow: none !important;
         }
        
-       
-        .fileText {
-            margin-left: -5px !important;
-            font-size: 9pt !important;
-        }
-       
-        .fileInfo a {
-            text-decoration: none !important;
-            font-size: 9pt !important;
-        }
-       
-        .fileText > a {
-            margin-left: 10px !important;
-        }
-     
-        .post.reply > .file > .fileInfo, .fileInfo {
-            margin-left: -2px !important;
-            font-size: 10pt !important;
-            background: #fff !important;
-            margin-right: 2px !important;
-            margin-top: 0px !important;
-            margin-bottom: 4px !important;
-        }
-     
-        
-        .post.op .file {
-            background: #fff !important;
-            margin-right: 0px !important;
-            margin-top: 0px !important;
-            padding-bottom: 1px !important;
-            border-top-left-radius: 5px !important;
-            border-top-right-radius: 4px !important;
-        }
-       
-        .post.op .fileText a {
-            font-style: normal !important;
-        }
-       
-        .post.op .fileThumb {
-            margin-left: 22px !important;
-            margin-bottom: 16px !important;
            
-        }
-       
-        .backlink:first-child::before {
-            content: "\00B7\A0" !important;
-            color: #aaa !important;
-            margin-left: -4px !important;
-        }
-
-        .thread {
-            /*position: relative;
-            display: table !important;*/
-            margin: 0 auto !important;
-            margin-bottom: 0px !important;
-            margin-top: 30px !important;
-            background-color: transparent !important;
-            width: 80% !important;
-            /*box-shadow: 1px 1px 1px rgba(0,0,0,0.3) !important;*/
-        }
-     
-        .postContainer {
-            position: relative !important;
-            background-color: /*#f1f3f5*/ #fff !important;
-            width: 100% !important;
-            border-bottom: none !important;
-            border-left: none !important;
-            border-right: none !important;
-            border-top: 1px solid #e6e8eb;
-            padding-top: 5px !important;
-            padding-bottom: 5px !important;
-            display: table !important;
-        }
-        
-        .thread .postContainer.opContainer {
-            border-top: 1px solid #d1d5de !important;
-        }     
-        
-         .thread .postContainer {
-            margin-top: 0px !important;
-        }
-            
-     
-        .post.op .postMessage {
-            margin-top: 0px !important;
-            padding-top: 10px !important;
-            margin-right: 0px !important;
-            padding-right: 20px !important;
-        }
-     
-        .fileThumb img {
-            border-top: none !important;
-            margin-left: -18px !important;
-            margin-top: 2px !important;
-            margin-bottom: -11px !important;
-            border-radius: 1px !important;
-            box-shadow: 0px 1px 2px rgba(0,0,0,0.3) !important;
-        }
-       
-        .fileThumb {
-            margin-bottom: 15px !important;
-        }
-     
-        .post.op .subject {
-            margin-right: 2px !important;
-        }
-       
-        div .postInfo {
-            width: auto !important;
-            display: block !important;
-            margin-bottom: 0px;
-            margin-left: -2px !important;
-            margin-right: 2px !important;
-            padding-left: 5px !important;
-            margin-top: -1px !important;
-            padding-top: 2px !important;
-            padding-bottom: 2px !important;
-           
-            font-size: 9pt !important;
-            background: transparent !important;
-            border-bottom: none !important;
-            border-top: 1px #909090 !important;
-            border-top-left-radius: 0px !important;
-            border-top-right-radius: 0px !important;
-        }
-       
-        .postInfo {
-            border-top-left-radius: 0px !important;
-        }
-     
-        .opContainer {
-            margin-top: 1px !important;
-        }
-     
-        .post.op .postInfo {
-            background: transparent !important;
-            margin-right: 0px !important;
-            margin-left: 0 !important;
-        }
-       
-        .prev, .next {
-            color: #333 !important;
-            background-color: transparent !important;
-            margin-top: 1px !important;
-           
-            font-family: cure !important;
-            font-size: 9pt !important;
-        }
-       
-        .pagelist {
-            float: none !important;
-            position: relative !important;
-            display: block !important;
-            background-color: transparent !important;
-            color: #aaa !important;
-            border: none !important;
-            width: 500px !important;
-            margin: 0 auto !important;
-            margin-top: 10px !important;
-            margin-bottom: -20px !important;
-           
-            font-family: cure !important;
-            font-size: 9pt !important;
-        }
-     
-        .pagelist a {
-            color: #777 !important;
-        }
-       
-        .pagelist a:hover {
-            color: #555 !important;
-        }
-       
-        .pagelist strong {
-            font-weight: normal !important;
-            color: #333 !important;
-        }
-     
-        .cataloglink {
+        /*Settings integration into the navbar*/
+        a.settingsWindowLink {
+            position: fixed !important;
+            top: 4px !important;
+            right: 0% !important;
+            margin-right: 10px !important;
+            z-index: 4 !important;
+            font-family: limey !important;
+            font-size: 0 !important;
             color: transparent !important;
-            font-size: 0px !important;
         }
        
-        .cataloglink a {
+        a.settingsWindowLink {
             font-size: 9pt !important;
+            color: #ccc !important;
+            cursor: pointer !important;
+            font-family: limey !important;
+            font-size: 0 !important;
+            color: transparent !important;
         }
      
-        /*QR integration into the navbar, including checkbox for autohide*/
+        a.settingsWindowLink::before {
+            content: url('http://i46.tinypic.com/mry1wz.jpg');
+        }
+        
+/* Image control integration into the navbar */
+
+    /* to do: enable background for active expansion */
+      #imgControls {
+        font-size: 0px !important;
+        color: transparent !important;
+    }
+   
+    input[type="checkbox"]#imageExpand {
+        display: none !important;
+    }
+   
+    #imgControls > *::before {
+        position: fixed !important;
+        content: url('http://i48.tinypic.com/14twj87.jpg');
+        top: 5px !important;
+        right: 0% !important;
+        margin-right: 49px !important;
+        z-index: 4 !important;
+        cursor: pointer !important;
+    }
+   
+    #imgControls >*:active::before, #imgControls >*:hover::before {
+        content: url('http://i48.tinypic.com/wmb2ah.jpg');
+    }
+ 
+    .field {
+        font-family: limey !important;
+        font-size: 9pt !important;
+        background: #fff !important;
+    }    
+       
+        .prettyprint {
+            background-color: #eee !important;
+            border: none !important;
+            border-radius: 0px !important;
+            box-shadow: none !important;
+            margin-bottom: -6px !important;
+            margin-top: 1px !important;
+            font-size: 9pt !important;
+            padding-bottom: 2px !important;
+            padding-top: 4px !important;
+        }
+     
+        .post.reply {
+            background: transparent !important;
+            border: none !important;
+            margin-top: -1px !important;
+            width: 100% !important;
+        }
+     
+        .hide_reply_button {
+            position: relative !important;
+            float: right !important;
+            margin-top: 2px !important;
+            margin-right: 8px !important;
+            z-index: 0 !important;
+           
+            font-family: limey !important;
+            font-size: 0px !important;
+            color: transparent !important;
+        }
+       
+/* QR integration into the navbar */
+
         #qr {
             display: block !important;
             width: 0px !important;
@@ -1050,20 +669,6 @@
         }
      
         #qr input[type="checkbox"] {
-            /*top: 8px !important;
-            display: none !important;
-            position: fixed !important;
-            margin-top: 1px !important;
-            margin-right: 31px !important;
-            right: 4% !important;
-            width: 12px !important;
-            height: 12px !important;
-            z-index: 5;
-           
-            -moz-appearance: none !important;
-            background: transparent !important;
-            color: #404040 !important;
-            border: none !important;*/
             display: none !important;
         }
      
@@ -1077,7 +682,6 @@
             float: right !important;
             right: 4% !important;
             top: 7px !important;
-
             margin-top: 0px !important;
             margin-right: 30px !important;
             font-size: 0px !important;
@@ -1091,12 +695,13 @@
        
         #qr::before {
             content: url('http://i47.tinypic.com/2jd2weu.jpg');
-            height: 18px !important;
+            height: 16px !important;
             max-width: 12px !important;
             min-width: 12px !important;
             border-radius: 3px !important;
             padding-left: 4px !important;
             position: fixed !important;
+            padding-top: 1px !important;
             top: 2px !important;
             right: 0% !important;
             margin-right: 20px !important;
@@ -1131,7 +736,6 @@
             right: 1% !important;
             margin-right: 4px !important;
             width: 400px !important;
-           
             padding-top: 4px !important;
             padding-bottom: 3px !important;
             padding-left: 4px !important;
@@ -1145,14 +749,6 @@
             position: fixed !important;
             z-index: 5 !important;
         }
-       
-        /*#qr input::-moz-placeholder, #qr textarea::-moz-placeholder {
-            color: #aaa !important;
-            font-size: 9pt !important;
-            text-transform: lowercase !important;
-            margin-top: 0px !important;
-            margin-bottom: 0px !important;
-        }*/
      
        input[title="Name"].field {
             border: none !important;
@@ -1301,14 +897,17 @@
             box-shadow: none !important;
             border: none !important;
             border-radius: 2px !important;
-            margin: 0px !important;
+            margin: auto !important;
             margin-left: 0px !important;
+            padding-right: 10px !important;
             font-size: 10pt !important;
             background: transparent !important;
         }
      
         .inline .postContainer {
             margin: 0px !important;
+            margin-right: 10px !important;
+            padding-right: 10px !important;
         }
      
         #qp {
@@ -1330,25 +929,15 @@
         }
        
         #qp .menu_button {
-            margin-right: 4px !important;
+            margin-right: 0!important;
         }
        
         .inline .menu_button {
-            margin-right: 0px !important;
+            margin-left: 4px !important;
         }
-     
-        /*.postInfo > .container::before {
-            content: "REPLIES: " !important;
-            color: #ccc !important;
-            font-size: 9pt !important;
-        }*/
      
         .postInfo > .container {
             display: inline !important;
-            /*(position: absolute !important;
-            bottom: 2px !important;
-            right: 4px !important;*/
-     
             font-size: 9pt !important;
         }
        
@@ -1366,7 +955,8 @@
             margin-top: 10px !important;
             margin-bottom: 10px !important;
             margin-left: 15px !important;
-            margin-right: 15px !important;
+            margin-right: 20px !important;
+            padding-right: 10px !important;
             color: #444 !important;
         }
      
@@ -1377,12 +967,413 @@
         .vote {
             display: none !important;
         }
-    }
+
+
+/*
+=====================
+Threads, posts, etc.
+=====================
+*/
+
+              
+        /* to do: enable thread hiding*/
+        .hide_thread_button:not(.hidden_thread) {
+            display: none !important;
+        }
+       
+        .hide_reply_button a::before {
+            content: "-" !important;
+            font-size: 9pt !important;
+            color: #bebebe !important;
+            z-index: 5 !important;
+            position: relative !important;
+        }
+        
+        .postContainer.replyContainer.hidden, .postContainer.hide_reply_button.stub {
+            border: none !important;
+            padding-top: 0 !important;
+            margin-bottom: 5px !important;
+        }
+        
+        .hide_reply_button.stub {
+            height: 16px !important;
+            padding-top: 4px !important;
+            padding-bottom: 4px !important;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            margin-right: -1px !important;
+            margin-left: 4px !important;
+            width: 100% !important;
+            background: transparent !important;
+            border-radius: 0px !important;
+            border: none !important;
+        }
+       
+        .hide_reply_button.stub a {
+            margin-left: 0px !important;
+            color: #aaa !important;
+            font-family: limey !important;
+            font-size: 9pt !important;
+        }
+       
+        .hide_reply_button.stub a::before {
+            display: none !important;
+        }
+       
+        .hide_reply_button.stub > a:hover {
+            color: #888 !important;
+        }
      
+        .hide_reply_button.stub span {
+            font-size: 0px !important;
+            color: transparent !important;
+            font-family: limey !important;
+        }
+       
+        .hide_reply_button.stub .menu_button {
+            font-size: 0px !important;
+            color: transparent !important;
+            font-family: limey!important;
+            margin-top: 0px !important;
+            margin-right: 6px !important;
+        }
+     
+        .hide_reply_button.stub .menu_button::before {
+            font-size: 0px !important;
+        }
+           
+     
+        .hide_reply_button.stub a:first-of-type::after {
+            float: right !important;
+            margin-top: 0px !important;
+            margin-right: 9px !important;
+            content: "+" !important;
+            font-size: 9pt !important;
+            color: #aaa !important;
+            font-family: limey !important;
+        }
+     
+        .favicon {
+            display: inline !important;
+            float: right !important;
+            margin-top: 0px !important;
+            width: 16px !important;
+            margin-left: 0px !important;
+            margin-right: -14px !important;
+            height: 16px !important;
+            opacity: 0.0 !important;
+        }
+     
+        .replylink {
+            float: right !important;
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+            margin-top: 1px !important;
+            color: transparent !important;
+        }
+     
+        a.replylink {
+            font-size: 0px !important;
+        }
+     
+        .replylink:before {
+            content: url("http://imgur.com/WpNCh.png") !important;
+        }
+       
+        /*Icon that overlays the favicon*/
+        .opContainer > div .postInfo:before {
+            float: right !important;
+            content: url('http://i.imgur.com/UNhyj.png') !important;
+            margin-left: 0px !important;
+            margin-right: 4px !important;
+            margin-top: 0px !important;
+        }
+     
+        .menu_button {
+            float: right !important;
+            margin-top: 0px !important;
+            margin-right: 20px !important;
+            margin-left: 10px !important;
+            font-family: limey !important;
+            font-size: 0px !important;
+            color: transparent !important;
+        }
+     
+        .menu_button::after {
+            content: "\25BE" !important;
+            font-size: 9pt !important;
+            color: #bebebe !important;
+        }
+       
+        .post.op .menu_button::after {
+            color: #bebebe !important;
+        }
+     
+        .post.op .menu_button {
+            margin-top: 0px !important;
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+     
+        #menu.reply.dialog {
+            display: block !important;
+            margin-left: 0px !important;
+            margin-top: 0px !important;
+            border: none !important;
+            border-radius: 2px !important;
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.2) !important;
+        }
+     
+        .subMenu {
+            left: -110px !important;
+            width: 108px !important;
+        }
+     
+        .entry, .subMenu {
+            background: #ffffff !important;
+            border-color: #eee !important;
+            color: #777 !important;
+            font-family: limey !important;
+            font-size: 8pt !important;
+        }
+       
+        .entry:hover {
+            color: #555 !important;
+        }
+       
+        .opContainer {
+            position: relative !important;
+            display: table !important;
+            height: 100% !important;
+            width: 100% !important;
+            padding-top: 10px !important;
+            margin-top: 10px !important;
+            margin-bottom: 20px !important;
+            
+        }
+     
+        #options.reply.dialog {
+            background: #fff !important;
+            color: #555 !important;
+            border-radius: 2px !important;
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.3) !important;
+            z-index: 5 !important;
+        }
+       
+        #options.reply.dialog label {
+            text-decoration: none !important;
+            font-style: normal !important;
+            color: #333 !important;
+        }
+       
+        #overlay {
+            z-index: 5 !important;
+        }
+       
+        .dialog {
+            background: #fff !important;
+            color: #333 !important;
+        }
+       
+        .fileText {
+            margin-left: -5px !important;
+            font-size: 9pt !important;
+        }
+       
+        .fileInfo a {
+            text-decoration: none !important;
+            font-size: 9pt !important;
+        }
+       
+        .fileText > a {
+            margin-left: 10px !important;
+        }
+     
+        .post.reply > .file > .fileInfo, .fileInfo {
+            margin-left: -2px !important;
+            font-size: 10pt !important;
+            background: #fff !important;
+            margin-right: 2px !important;
+            margin-top: 0px !important;
+            margin-bottom: 4px !important;
+        }
+     
+        
+        .post.op .file {
+            background: #fff !important;
+            margin-right: 0px !important;
+            margin-top: 0px !important;
+            padding-bottom: 1px !important;
+            border-top-left-radius: 5px !important;
+            border-top-right-radius: 4px !important;
+        }
+       
+        .post.op .fileText a {
+            font-style: normal !important;
+        }
+       
+        .post.op .fileThumb {
+            margin-left: 22px !important;
+            margin-bottom: 16px !important;
+           
+        }
+       
+        .backlink:first-child::before {
+            content: "\00B7\A0" !important;
+            color: #aaa !important;
+            margin-left: -4px !important;
+        }
+
+        .thread {
+            margin: 0 auto !important;
+            margin-bottom: 0px !important;
+            margin-top: 30px !important;
+            background-color: transparent !important;
+            width: 80% !important;
+        }
+     
+        .postContainer {
+            position: relative !important;
+            background-color: /*#f1f3f5*/ #fff !important;
+            width: 100% !important;
+            border-bottom: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-top: 1px solid #e6e8eb;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            margin-right: 0px !important;
+            display: table !important;
+        }
+        
+        .thread .postContainer.opContainer {
+            border-top: 1px solid #d1d5de !important;
+        }     
+        
+         .thread .postContainer {
+            margin-top: 0px !important;
+        }
+            
+     
+        .post.op .postMessage {
+            margin-top: 0px !important;
+            padding-top: 10px !important;
+            margin-right: 0px !important;
+            padding-right: 20px !important;
+        }
+     
+        .fileThumb img {
+            border-top: none !important;
+            margin-left: -18px !important;
+            margin-top: 2px !important;
+            margin-bottom: -11px !important;
+            border-radius: 1px !important;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.3) !important;
+        }
+       
+        .fileThumb {
+            margin-bottom: 15px !important;
+        }
+     
+        .post.op .subject {
+            margin-right: 2px !important;
+        }
+       
+        div .postInfo {
+            width: auto !important;
+            display: block !important;
+            margin-bottom: 0px;
+            margin-left: -2px !important;
+            margin-right: 2px !important;
+            padding-left: 5px !important;
+            margin-top: -1px !important;
+            padding-top: 2px !important;
+            padding-bottom: 2px !important;
+           
+            font-size: 9pt !important;
+            background: transparent !important;
+            border-bottom: none !important;
+            border-top: 1px #909090 !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+        }
+       
+        .postInfo {
+            border-top-left-radius: 0px !important;
+        }
+     
+        .opContainer {
+            margin-top: 1px !important;
+        }
+     
+        .post.op .postInfo {
+            background: transparent !important;
+            margin-right: 0px !important;
+            margin-left: 0 !important;
+        }
+       
+        .prev, .next {
+            color: #333 !important;
+            background-color: transparent !important;
+            margin-top: 1px !important;
+           
+            font-family: limey !important;
+            font-size: 9pt !important;
+        }
+       
+        .pagelist {
+            float: none !important;
+            position: relative !important;
+            display: block !important;
+            background-color: transparent !important;
+            color: #aaa !important;
+            border: none !important;
+            width: 400px !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+            margin-top: 10px !important;
+            margin-bottom: -20px !important;
+            font-family: cure !important;
+            font-size: 9pt !important;
+        }
+     
+        .pagelist a {
+            color: #777 !important;
+        }
+       
+        .pagelist a:hover {
+            color: #555 !important;
+        }
+       
+        .pagelist strong {
+            font-weight: normal !important;
+            color: #333 !important;
+        }
+     
+        .cataloglink {
+            color: transparent !important;
+            font-size: 0px !important;
+        }
+       
+        .cataloglink a {
+            font-size: 9pt !important;
+        }
+     
+    }
+
+
+/*
+==============
+Catalog
+==============
+*/
+
+
+    /* to do: improve search implementation; update colors */
     @-moz-document regexp("http://boards.4chan.org/(.|..|...|....)\\/catalog"), regexp("https://boards.4chan.org/(.|..|...|....)\\/catalog") {
         body {
             background: #fbfbfb !important;
-            font-family: cure !important;
+            font-family: limey !important;
             font-size: 10pt !important;
             color: #646464 !important;
         }
@@ -1433,8 +1424,8 @@
             margin-right: 5px !important;
         }
         
-        
-        /*Settings integration into the navigation bar */
+/*Settings integration into the navigation bar */
+
         #settings {
             position: fixed !important;
             top: -1000px !important;
@@ -1508,8 +1499,9 @@
             margin-right: 4px !important;
         }
        
-        /*Search box integration into the navbar.
-        To do: prevent the settings pane to appear when search box or button is active*/
+/* Search box integration into the navbar */
+
+        /* to do: prevent the settings pane to appear when search box or button is active; create search icon that fits the paradigm of the icons used */
         #qf-ctrl.button, #qf-ctrl.button:hover {
             display: inline !important;
             top: 3px !important;
@@ -1563,84 +1555,7 @@
             border: none !important;
         }
         
-        #toggleMsgBtn {
-            display: none !important;
-        }
-            
-        
-        /*#toggleMsgBtn {
-            content: url('http://i46.tinypic.com/3zxuh.jpg') !important;
-            display: inline !important;
-            position: fixed !important;
-            top: 2px !important;
-            right: 4% !important;
-            z-index: 4 !important;
-            margin-right: 26px !important;
-            cursor: default !important;
-            text-decoration: none !important;
-            cursor: pointer !important;
-            color: transparent !important;
-            font-size: 0;
-            opacity: 1.0 !important;
-        }
-
-        #toggleMsgBtn::after {
-            opacity: 1.0 !important;
-            content: url('http://i48.tinypic.com/dfhteh.jpg') !important;
-        }
-      
-        .globalMessage {
-            position: fixed !important;
-            width: 60% !important;
-            height: auto !important;
-            top: 11px !important;
-            right: 20% !important;
-            padding-bottom: 4px !important;
-            padding-top: 0px !important;
-            z-index: 1;
-           
-            box-shadow: 0px 1px 1px rgba(0,0,0,0.2) !important;
-            border-bottom-left-radius: 2px !important;
-            border-bottom-right-radius: 2px !important;
-            background: #505050 !important;
-        }
-        
-        .globalMessage.hideMobile {
-            display: none;
-        }
-       
-        #globalMessage h3 {
-            font-size: 10pt !important;
-            color: #eeeeee !important;
-            font-weight: normal !important;
-            margin: 2px !important;
-        }
-       
-        strong, h2 {
-            margin: 2px !important;
-            font-size: 10pt !important;
-            color: #eeeeee !important;
-            font-weight: normal !important;
-        }
-       
-        .globalMessage a {
-            color: #fff !important;
-            font-weight: normal !important;
-            text-decoration: none !important;
-        }
-       
-        .globalMessage a:hover {
-            color: #ddd !important;
-        }
-
-        
-        .collapseIcon, .expandIcon {
-            background-image: none !important;
-        }
-        
-        */
-        
-        a#globalToggle.button.redButton.mobile.shown::after, .globalMessage, .globalMessage a, #globalMessage h3, strong, h2, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon, #togglePostForm {
+         #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after, .globalMessage, .globalMessage a, #globalMessage h3, strong, h2, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon, #togglePostForm {
             display: none !important;
         }
         
