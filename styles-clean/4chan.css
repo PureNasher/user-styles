@@ -6,7 +6,6 @@
         }
        
        
-       
 /*
 =======================
 General colors
@@ -343,7 +342,7 @@ Navigation links
             display: inline !important;
         }
         
-        #boardNavDesktop a[href*="/gd/"] {
+        #boardNavDesktop a[href*="/g/"] {
             display: inline !important;
         }
 
@@ -803,8 +802,7 @@ Navigation links
             height: 200px !important;
             max-width: 200px !important;
             margin-bottom: 0px !important;
-            font-size: 10pt !important;
-           
+            font-size: 9pt !important;
             background: #fff !important;
             color: #333 !important;
             border: none !important;
@@ -892,7 +890,14 @@ Navigation links
             width: 330px !important;
             margin-left: -1px !important;
         }
-     
+
+
+/*
+=====================
+Threads, posts, etc.
+=====================
+*/
+        
         .inline {
             box-shadow: none !important;
             border: none !important;
@@ -900,27 +905,30 @@ Navigation links
             margin: auto !important;
             margin-left: 0px !important;
             padding-right: 10px !important;
+            margin-right: 10px !important;
             font-size: 10pt !important;
             background: transparent !important;
         }
      
-        .inline .postContainer {
+        .inline .postContainer, .inline .opContainer {
             margin: 0px !important;
-            margin-right: 10px !important;
-            padding-right: 10px !important;
+            margin-right: 15px !important;
+            padding-right: 15px !important;
+            border: none !important;
         }
      
         #qp {
             box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
             border-radius: 2px !important;
-            max-width: 80% !important;
+            max-width: 100% !important;
             margin: 10px !important;
             border: none !important;
             z-index: 5 !important;
         }
        
         #qp .postContainer {
-            margin-top: 0px !important;
+            margin-top: -2px !important;
+            margin-right: 10px !important;
         }
      
         #qp .postInfo {
@@ -967,14 +975,6 @@ Navigation links
         .vote {
             display: none !important;
         }
-
-
-/*
-=====================
-Threads, posts, etc.
-=====================
-*/
-
               
         /* to do: enable thread hiding*/
         .hide_thread_button:not(.hidden_thread) {
