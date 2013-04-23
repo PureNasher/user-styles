@@ -1,4 +1,4 @@
-@namespace url(http://www.w3.org/1999/xhtml);
+mespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document url-prefix(http://ssl.reddit.com),
                url-prefix(http://www.reddit.com),
@@ -11,8 +11,8 @@
 /* body */
 
 body {
-    width: 98% !important;
-    left: 2% !important;
+    width: 99% !important;
+    left: 1% !important;
     right: 0% !important;
     background-attachment: fixed !important;
     background-color: #fff !important;
@@ -30,7 +30,6 @@ Header + navigation
 
 /* turn the nav bar into a drop-down menu */
 
-/* to do: improve the menu into something similar to hdni's drop-down menu*/
 #header {
     background: transparent!important;
     border-bottom: none !important;
@@ -39,17 +38,17 @@ Header + navigation
     #sr-header-area {
             position: fixed !important;
             right: 1% !important;
-            margin-right: 4px !important;
-            width: 88% !important;
+            margin-right: 10px !important;
+            width: 100px !important;
             top: -1000% !important;
             font-weight: normal !important;
             font-family: limey !important;
             text-align: left !important;
             background: #888 !important;
-            height: 14px !important;
+            height: 200px !important;
             line-height: 12px !important;
             padding-top: 0px !important;
-            border-top: none !important;
+            border: 2px solid !important;
             color: transparent !important;
             z-index: 1001 !important;
             border-radius: 3px !important;
@@ -57,8 +56,18 @@ Header + navigation
             padding-right: 3px !important;
             padding-top: 1px !important;
             box-shadow: 0px 3px 2px rgba(0,0,0,0.2) !important;
+            overflow: scroll !important;
         }
-
+        
+        .separator {
+            display: none !important;
+        }
+        
+        #sr-header-area .flat-list li {
+            display:block !important;
+            overflow: scroll !important;
+            padding-left: 2px !important;
+        }
        
         #sr-header-area:active, #sr-header-area:hover {
             top: 14px !important;
@@ -69,9 +78,6 @@ Header + navigation
             border-radius: 3px !important;
         }
         
-        #sr-header-area .sr-list a >* {
-            display: none !important;
-        }
         
         #sr-header-area .sr-list a[class="current"]{
             color: #f9f9f9 !important;
@@ -124,7 +130,11 @@ Header + navigation
             margin-right: 10px;
             z-index: 5;
         }
-           
+        
+        #sr-more-link:hover:before, #sr-header-area:hover #sr-more-link:before{
+            content: url('http://i.imgur.com/k1cBO8c.png') !important;
+        }
+        
         #sr-more-link:hover:before, #sr-header-area:hover::after {
             background: #888 !important;
             border-radius: 3px !important;
@@ -197,8 +207,27 @@ Header + navigation
         padding-top: 5px !important;
 
     }
+    
+    #mail {
+        margin-left: 3px !important;
+        margin-right: 6px !important;
+    }
+    
+    .user,.pref-lang  {
+        margin-left: 0px !important;
+        margin-right: 3px !important;
+    }
 
-
+    .logout {
+        margin-left: 3px !important;
+        margin-right: 0px !important;
+    }
+    
+    .menuarea a {
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+    }
+    
     #header-bottom-right {
         margin-top: 10px !important;
         background: #fff !important;
@@ -249,6 +278,11 @@ Header + navigation
 
 .pagename a {
     color: #444 !important;
+    text-decoration: none !important;
+}
+
+.pagename a:hover {
+    color: #222 !important;
 }
 
 /* turn the sidebar into a drop-down menu */
@@ -327,6 +361,10 @@ Header + navigation
 .panestack-title {
     width: 100% !important;
     text-align: center !important;
+}
+
+.comment {
+    width: 99% !important;
 }
 
 .commentarea {
@@ -425,6 +463,7 @@ Content
     width: 80% !important;
     right: 10% !important;
     left: 10% !important;
+    border-bottom: none !important;
 }
 
 .link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
@@ -583,6 +622,10 @@ Other pages
     border: none !important;
 }
 
+.usertext-edit textarea {
+    width: 100% !important;
+}
+
 #link-desc.infobar {
     background-color: transparent !important;
     color: #646464 !important;
@@ -662,9 +705,11 @@ Other pages
     overflow: hidden;
     border: none !important;
     margin-bottom: 5px;
+    margin-left: 0px !important;
+    padding-left:0px !important;
     background: transparent !important;
     top: 10px !important;
-    width: 100% !important;
+    width: 98% !important;
 }
 
     .sr-interest-bar .bubble p {
@@ -673,7 +718,7 @@ Other pages
     
     .sr-interest-bar .query-box {
         position: relative;
-        border: 1px solid #909090 !important;
+        border: 1px solid #c3c3c3 !important;
     }
     
     .sr-interest-bar .query {
@@ -681,6 +726,7 @@ Other pages
         margin: 0px;
         padding: 0px;
         outline: none !important;
+        background: transparent !important;
     }
     
     .sr-interest-bar ul.results {
@@ -724,6 +770,13 @@ Other pages
 
 .link .usertext .md {
     border: none !important;
+    background: transparent !important;
+}
+
+.sitetable {
+    width: 100% !important;
+    margin-right: -50px !important;
+    padding-right: 0px !important;
 }
 
 
@@ -732,7 +785,6 @@ Other pages
 random 
 ===========
 */
-
 
 h1 {
     font-size: 18px;
