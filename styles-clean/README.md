@@ -8,5 +8,5 @@ Requires 4chan X to work properly.
 
 
 Reddit
-![reddit](http://goput.it/2z8.png)
+![reddit](http://goput.it/pr4.png)
 Runs on top of default Reddit. I'm not adding support for RES; don't ask unless you're willing to provide the code yourself.

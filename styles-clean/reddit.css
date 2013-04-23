@@ -1,4 +1,4 @@
-@namespace url(http://www.w3.org/1999/xhtml);
+mespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document url-prefix(http://ssl.reddit.com),
                url-prefix(http://www.reddit.com),
@@ -99,6 +99,7 @@ Header + navigation
 
             #sr-header-area a:hover {
                 color: #FFF !important;
+                transition: 0.5s color ease;
             }
 
         .sr-bar .separator {
@@ -123,7 +124,7 @@ Header + navigation
             background: transparent !important;
             height: 16px !important;
             padding-top: 1px !important;
-            width: 12px !important;
+            width: 14px !important;
             position: fixed !important;
             top: 1px !important;
             right: 1% !important;
@@ -133,11 +134,13 @@ Header + navigation
         
         #sr-more-link:hover:before, #sr-header-area:hover #sr-more-link:before{
             content: url('http://i.imgur.com/k1cBO8c.png') !important;
+            transition: 0.5s color ease;
         }
         
         #sr-more-link:hover:before, #sr-header-area:hover::after {
             background: #888 !important;
             border-radius: 3px !important;
+            transition: 0.5s color ease;
          }
          
          #sr-more-link:active {
@@ -183,6 +186,7 @@ Header + navigation
 
                 .tabmenu li a:hover {
                     color: #3f3f3f !important;
+                    transition: 0.5s color ease;
                 }
 
                 .tabmenu li.selected a {
@@ -251,6 +255,7 @@ Header + navigation
             #header-bottom-right a:hover {
                 color: #3f3f3f !important;
                 text-decoration: none !important;
+                transition: 0.5s color ease;
             }
             
         .user .userkarma {
@@ -283,6 +288,7 @@ Header + navigation
 
 .pagename a:hover {
     color: #222 !important;
+    transition: 0.5s color ease;
 }
 
 /* turn the sidebar into a drop-down menu */
@@ -315,12 +321,14 @@ Header + navigation
     padding-left: 0px !important;
     margin-right: 35px !important;
     z-index: 5;
+    transition: 0.5s color ease;
 }
 
 .side:hover::before {
     content: url('http://i48.tinypic.com/2ijhgmr.jpg') !important;
     background: #888 !important;
     border-radius: 3px !important;
+    transition: 0.5s color ease;
 }
 
 .side:hover {
@@ -499,7 +507,6 @@ Content
      
     .thing .title.loggedin, .thing.p.title  a {
             color: #677996 !important;
-            font-size: 9px !important;
             line-height: 14px !important;
             text-indent: 155px;
             text-shadow: none !important;
@@ -509,6 +516,7 @@ Content
        
         .thing .title.loggedin:hover, .link .title:hover {
             color: #444 !important;
+            transition: 0.5s color ease;
         }
 
         .thing .title.loggedin:visited {
@@ -517,8 +525,10 @@ Content
         }
         
         .domain, .domain a {
-            font-family: limey !important;
-            color: #666 !important;
+            font-family: Helvetica !important;
+            font-weight: normal !important;
+            font-size: 8pt !important;
+            color: #bf7c83 !important;
         }
     
     .tagline {
@@ -546,6 +556,7 @@ Content
             .entry .buttons li a:hover {
                 color: #1c1c1c !important;
                 text-decoration: none !important;
+                transition: 0.5s color ease;
             }
             
 .expando-button {
@@ -575,11 +586,14 @@ Content
 a.author {
     margin-right: 0.5em;
     font-weight: normal;
-    color: #666 !important;
+    color: #7b80a2 !important;
+    transition: 0.5s color ease;
 }
 
-a.author:hover {
+a.author:hover, a .author:hover {
     color: #444 !important;
+    text-decoration: none !important;
+    transition: 0.5s color ease;
 }
 
 .tagline .submitter {

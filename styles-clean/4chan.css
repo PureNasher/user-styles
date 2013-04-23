@@ -604,9 +604,11 @@ Navigation links
     #imgControls > *::before {
         position: fixed !important;
         content: url('http://i48.tinypic.com/14twj87.jpg');
+        height: 12px !important;
+        width: 12px !important;
         top: 5px !important;
         right: 0% !important;
-        margin-right: 49px !important;
+        margin-right: 47px !important;
         z-index: 4 !important;
         cursor: pointer !important;
     }
@@ -614,7 +616,7 @@ Navigation links
     #imgControls >*:active::before, #imgControls >*:hover::before {
         content: url('http://i48.tinypic.com/wmb2ah.jpg');
     }
- 
+    
     .field {
         font-family: limey !important;
         font-size: 9pt !important;
@@ -1384,7 +1386,7 @@ Catalog
        
         #threads {
             margin: 0 auto !important;
-            margin-top: 24px !important;
+            margin-top: 16px !important;
             width: 94% !important;
             background-color: #f9f9f9 !important;
             box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
@@ -1452,6 +1454,7 @@ Catalog
         }
              
         #settings::after {
+            display: none !important;
             content: url('http://i46.tinypic.com/mry1wz.jpg');
             height: 22px !important;
             max-width: 10px !important;
@@ -1514,6 +1517,7 @@ Catalog
         }
        
         #qf-ctrl.button::before {
+            display: none !important;
             content: url("http://i46.tinypic.com/3zxuh.jpg") !important;
         }
        
