@@ -62,7 +62,7 @@
      
     .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
             color: #444 !important;
-            background: -moz-linear-gradient(#eee,#e4e4e4) !important;
+            background: -moz-linear-gradient(#f2f2f2,#e6e6e6) !important;
 	    box-shadow: inset 0px 3px 3px rgba(0,0,0,0.07) !important;
 	    border: 1px solid #bdbdbd !important;
      }

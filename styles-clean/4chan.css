@@ -1,4 +1,4 @@
-n("boards.4chan.org") {
+@-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica !important;
@@ -977,7 +977,16 @@ Threads, posts, etc.
         .vote {
             display: none !important;
         }
+        
+        .thread:hover .post.op .menu_button,
+        .thread:hover .replylink,
+        .thread:hover .summary,
+        .thread:hover .hide_thread_button {
+            opacity: 1 !important;
+        }
 
+
+        
        .hide_reply_button a::before {
             content: "-" !important;
             font-size: 9pt !important;
@@ -990,15 +999,14 @@ Threads, posts, etc.
         }
         
         .hide_thread_button:not(.hidden_thread):after {
-            content: "hide" !important;
+            content: "Click to hide thread." !important;
             font-size: 8pt !important;
             transition: 0.5s color ease;
-            color: #ddd !important;
-            
+            color: #bbb !important;
         }
         
         .hide_thread_button:hover:after {
-            color: #666 !important;
+            color: #888 !important;
             transition: 0.5s color ease;
         }
         
@@ -1006,13 +1014,14 @@ Threads, posts, etc.
             position: absolute !important;
             left: auto !important;
             right: 10% !important;
-            margin-right: 10px !important;
-            margin-top: 6px !important;
+            margin-right: 9px !important;
+            margin-top: 10px !important;
             height: 10px !important;
             z-index: 2 !important;
             display: block !important;
             font-size: 0 !important;
             transition: 0.5s color ease;
+            opacity: 0;
         }
         
         .hide_thread_button.hidden_thread {
