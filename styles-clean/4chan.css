@@ -1,4 +1,4 @@
-@-moz-document domain("boards.4chan.org") {
+n("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica !important;
@@ -977,18 +977,96 @@ Threads, posts, etc.
         .vote {
             display: none !important;
         }
-              
-        /* to do: enable thread hiding*/
-        .hide_thread_button:not(.hidden_thread) {
-            display: none !important;
-        }
-       
-        .hide_reply_button a::before {
+
+       .hide_reply_button a::before {
             content: "-" !important;
             font-size: 9pt !important;
             color: #bebebe !important;
-            z-index: 5 !important;
             position: relative !important;
+        }
+        
+        .hide_reply_button a::before {
+            z-index: 5 !important;
+        }
+        
+        .hide_thread_button:not(.hidden_thread):after {
+            content: "hide" !important;
+            font-size: 8pt !important;
+            transition: 0.5s color ease;
+            color: #ddd !important;
+            
+        }
+        
+        .hide_thread_button:hover:after {
+            color: #666 !important;
+            transition: 0.5s color ease;
+        }
+        
+        .hide_thread_button:not(.hidden_thread) {
+            position: absolute !important;
+            left: auto !important;
+            right: 10% !important;
+            margin-right: 10px !important;
+            margin-top: 6px !important;
+            height: 10px !important;
+            z-index: 2 !important;
+            display: block !important;
+            font-size: 0 !important;
+            transition: 0.5s color ease;
+        }
+        
+        .hide_thread_button.hidden_thread {
+            height: 16px !important;
+            padding-top: 8px !important;
+            padding-bottom: 4px !important;
+            margin-top: 45px !important;
+            margin-bottom: 45px !important;
+            margin-right: -1px !important;
+            margin-left: 0px !important;
+            width: 100% !important;
+            background: transparent !important;
+            border-radius: 0px !important;
+            border: none !important;
+            font-family: limey;
+            border-top: 1px solid #ddd !important;
+            border-bottom: 1px solid #ddd !important;
+        }
+        
+        .hide_thread_button.hidden_thread a {
+            color: #888 !important;
+        }
+        
+        .hide_thread_button.hidden_thread span {
+            font-size: 0px !important;
+        }
+        
+        .hide_thread_button.hidden_thread span:after {
+            position: absolute;
+            content: "+";
+            float: none !important;
+            right: 10% !important;
+            left: auto !important;
+            margin-right: 12px !important;
+            margin-top: -1px !important;
+            color: #aaa !important;
+            font-size: 7pt !important;
+            height: 10px !important;
+        }
+        
+        .hide_thread_button.hidden_thread .menu_button {
+            font-size: 0px !important;
+            color: transparent !important;
+            font-family: limey!important;
+            margin-top: -2px !important;
+            margin-right: 24px !important;
+        }
+        
+        .hide_thread_button.hidden_thread .menu_button .span, .hide_thread_button.hidden_thread .menu_button > span {
+            display: none !important;
+        }
+        
+        .thread > .hidden_thread ~ * {
+            display: none !important;
         }
         
         .postContainer.replyContainer.hidden, .postContainer.hide_reply_button.stub {
@@ -1036,15 +1114,14 @@ Threads, posts, etc.
             font-size: 0px !important;
             color: transparent !important;
             font-family: limey!important;
-            margin-top: 0px !important;
-            margin-right: 6px !important;
+            margin-top: -1px !important;
+            margin-right: 7px !important;
         }
      
         .hide_reply_button.stub .menu_button::before {
             font-size: 0px !important;
         }
            
-     
         .hide_reply_button.stub a:first-of-type::after {
             float: right !important;
             margin-top: 0px !important;
