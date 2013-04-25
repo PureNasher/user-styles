@@ -1,4 +1,4 @@
-mespace url(http://www.w3.org/1999/xhtml);
+@namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document url-prefix(http://ssl.reddit.com),
                url-prefix(http://www.reddit.com),
@@ -478,6 +478,8 @@ Content
 .link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
     padding: 12px 0px !important;
     margin-bottom: -10px !important;
+    border-left: none !important;
+    border-right: none !important;
 }
 
 .link.last-clicked {
@@ -544,7 +546,11 @@ Content
         font-size: 9px !important;
         font-family: limey !important;
     }
-
+    
+    .entry {
+        border: none !important;
+    }
+    
         .entry .buttons li a {
             color: #909090 !important;
             font-size: 11px !important;
