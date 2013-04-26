@@ -315,7 +315,7 @@ Header + navigation
     max-width: 12px !important;
     min-width: 12px !important;
     position: fixed !important;
-    top: 1px !important;
+    top: 0px !important;
     right: 0% !important;
     padding-top: 2px !important;
     padding-left: 0px !important;
@@ -498,7 +498,7 @@ Content
     }
 
         .link .thumbnail img {
-            border: 1px solid #1c1c1c !important;
+            border: none!important;
             box-shadow: rgba(0,0,0,0.2) 0 0 8px !important;
             width: auto !important;
         }
