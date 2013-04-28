@@ -1,10 +1,40 @@
 @-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
-          font-family: Helvetica !important;
+          font-family: Helvetica Neue !important;
           font-size: 8pt !important;
         }
-       
+        
+        
+/*
+==================
+Things to hide
+==================
+*/
+
+
+        hr, 
+        .deleteform,
+        .postingMode, 
+        .stylechanger,
+        .boardBanner > img.title, 
+        .postForm,
+        .move > span > select, 
+        .extButton,
+        h1, 
+        #imageType,
+        select#imageType, 
+        div.center,
+        .navLinks, 
+        .globalMessage.hideMobile,
+        .vote, 
+        input[type="checkbox"]#imageExpand,
+        #qr input[type="checkbox"], 
+        .close,
+        .postInfo input[type="checkbox"] {
+            display: none !important;
+        }
+
        
 /*
 =======================
@@ -22,36 +52,28 @@ General colors
             font-weight: bold !important;
         }
         
-        span.capcodeMod span.name, span.capcodeMod a:not(:hover), span.capcodeMod span.postertrip, span.capcodeMod strong.capcode {
+        span.capcodeMod span.name, 
+        span.capcodeMod a:not(:hover), 
+        span.capcodeMod span.postertrip, 
+        span.capcodeMod strong.capcode,
+        .postNum a:hover, 
+        .inline .postNum a:hover {
             color: #a27b9d !important;
         }
         
-        .useremail .name {
+        .useremail .name,
+        a.useremail:hover {
             color: #7b80a2 !important;
             text-decoration: none !important;
             font-weight: bold !important;
+            transition: 0.5s color ease;
         }
      
         .useremail .name:hover {
             color: #777 !important;
         }
        
-        a.useremail {
-            color: #aaa !important;
-            font-style: normal !important;
-            text-decoration: none !important;
-        }
-       
-        a.useremail:hover {
-            color: #888 !important;
-            transition: 0.5s color ease;
-        }
-       
-        #spoilerLabel {
-            color: #ccc !important
-        }
-     
-        .name {
+       .name {
             color: #7b80a2 !important;
             font-weight: bold !important;
             text-decoration: none !important;
@@ -60,7 +82,17 @@ General colors
         .postertrip {
             color: #bf7c83 !important;
         }
+       
+        a.useremail {
+            color: #aaa !important;
+            font-style: normal !important;
+            text-decoration: none !important;
+        }
     
+        #spoilerLabel {
+            color: #ccc !important
+        }
+     
         .dateTime {
             color: #999 !important;
             font-style: normal !important;
@@ -76,19 +108,23 @@ General colors
             color: #bf7c83 !important;
         }
      
-        .postNum a:hover, .inline .postNum a:hover {
-            color: #a27b7f !important;
-        }
-     
-        .fileInfo a, .fileText a, .inline .fileInfo a, .inline .fileText a {
+        .fileInfo a, 
+        .fileText a, 
+        .inline .fileInfo a, 
+        .inline .fileText a {
             color: #a5abd8 !important;
+            font-family: limey !important;
+            font-style: normal !important;
         }
      
-        .fileText a:hover, .fileInfo a:hover, .inline .fileInfo a:hover, .inline .fileText a:hover {
+        .fileText a:hover, 
+        .fileInfo a:hover, 
+        .inline .fileInfo a:hover, 
+        .inline .fileText a:hover {
             color: #7b80a2 !important;
         }
        
-        .fileText, .fileInfo a, .fileText a {
+        .fileText {
             font-family: limey !important;
             font-style: normal !important;
         }
@@ -107,6 +143,7 @@ General colors
             color: transparent !important;
             font-size: 0px !important;
         }
+        
         .backlink:first-child::before {
             margin-left: -4px !important;
         }
@@ -129,6 +166,7 @@ General colors
             
         .backlink.filtered:after {
             opacity: 0.55 !important;
+            transition: all 0.3s ease 0s;
         }
 
         .post.op .backlink:first-child {
@@ -157,6 +195,7 @@ General colors
             color: #677996 !important;
             text-decoration: none !important;
         }
+        
         .linkifyplus a:hover, .postMessage a:hover, #credits a:hover {
             color: #254d87 !important;
         }
@@ -178,19 +217,15 @@ General colors
             padding-bottom: 2px !important;
             font-size: 8pt !important;
         }
-       
-        .summary:hover {
-            color: #888 !important;
-        }
      
-        .abbr {
+        .abbr, 
+        .filtered, 
+        .inline .filtered, 
+        a.quotelink.filtered,
+        .summary:hover {
             font-size: 8pt !important;
             color: #ccc !important;
-        }
-       
-        .filtered, .inline .filtered, a.quotelink.filtered {
             text-decoration: none !important;
-            color: #c3c3c3 !important;
         }
        
         .nameBlock .posteruid {
@@ -204,21 +239,6 @@ Board banner
 =============
 */
 
-        /*Things to hide*/
-        hr,
-        .deleteform,
-        .postingMode,
-        .stylechanger,
-        .boardBanner > img.title,
-        .postForm,
-        .move > span > select,
-        .extButton,
-        h1,
-        #imageType,
-        select#imageType,
-        div.center {
-            display: none !important;
-        }
        
         .postNum a[title="Highlight this post"] {
             font-size: 0 !important;
@@ -248,13 +268,10 @@ Board banner
             font: normal 8pt limey !important;
         }
      
-        .boardSubtitle a {
-            color: #677996 !important;
-            text-decoration: none !important;
-        }
-       
+        .boardSubtitle a,
         .boardSubtitle a:hover {
             color: #677996 !important;
+            text-decoration: none !important;
         }
      
         #boardNavDesktopFoot, .absBotText {
@@ -269,88 +286,109 @@ Navigation links
 ==================
 */
 
+/* links menu - merges boards and settings into one drop-down menu */
 
-        /*  to do: display boards upon hover a la hdni's 'links' menu */
         #boardNavDesktop {
             position: fixed !important;
+            top: 10px !important;
             right: -1000px !important;
-            width: 100px !important;
-            top: 0px !important;
-            padding-top: 0px !important;
-            height: 14px !important;
-            background: #3a5976!important;
-            z-index: 2 !important;
-            text-align: center !important;
-            border-top: none !important;
-            box-shadow: 0px 4px 3px rgba(0,0,0,0.2) !important;
-            font-size: 0 !important;
+            left: auto !important;
+            width: auto !important;
+            overflow: hidden !important;
+            font-size: 0pt !important;
+            background: #888 !important;
             color: transparent !important;
+            border-radius: 2px !important;
+            padding: 2px !important;
+            border-top-right-radius: 0 !important;
+            border: none !important;
+            z-index: 2 !important;
+        }
+        
+
+        #boardNavDesktop a.settingsWindowLink {
+            font-size: 0px !important;
+            color: #c3c3c3 !important;
+        }
+
+        #boardNavDesktop a.settingsWindowLink:before {
+            font-size: 10px !important;
+            content: "settings" !important;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            padding-left: 6px !important;
+            border-left: 1px solid #ddd !important;
         }
        
-       
         #boardNavDesktop a {
-            top: 0px !important;
             font-family: limey !important;
             font-size: 8pt !important;
-            color: #a2a2a2 !important;
-            text-shadow: none !important;
-            margin-left: 2px !important;
+            color: #c3c3c3 !important;
+            margin: 3px !important;
             transition: 0.5s color ease;
+            display: none !important;
         }
        
         #boardNavDesktop a[class="current"]{
-            color: #f9f9f9 !important;
+            color: #fff !important;
             font-weight: normal !important;
             text-shadow: none !important;
         }
        
-        #boardNavDesktop > * {
-            display: none;
-        }
-       
-        #boardNavDesktop a::before {
-            content: none !important;
+        #boardNavDesktop a:hover {
+            color: #f9f9f9 !important;
             transition: 0.5s color ease;
         }
        
-       #boardNavDesktop a:hover {
-            color: #fff !important;
+        #boardNavDesktop a::before, #boardNavDesktop a::after {
+            content: "/";
             transition: 0.5s color ease;
-        }
-       
-        #boardNavDesktop a::after {
-            content: "\A0/" !important;
-            color: #a2a2a2 !important;
-            text-shadow: none !important;
         }
          
-        #boardNavDesktop a[href*="/a/"] {
-            display: inline !important;
-        }
-     
-        #boardNavDesktop a[href*="/a/"]::before {
-            content: "/\A0" !important;
-            color: #a2a2a2 !important;
-            text-shadow: none !important;
-        }
-     
-        #boardNavDesktop a[href*="/co/"] {
+        #boardNavDesktop a[href*="boards.4chan.org/a/"],
+        #boardNavDesktop a[href*="boards.4chan.org/co/"],
+        #boardNavDesktop a[href*="boards.4chan.org/g/"],
+        #boardNavDesktop a[href*="boards.4chan.org/mu/"],
+        #boardNavDesktop a.settingsWindowLink {
             display: inline !important;
         }
         
-        #boardNavDesktop a[href*="/mu/"] {
-            display: inline !important;
-        }
-        
-        #boardNavDesktop a[href*="/g/"] {
-            display: inline !important;
+        #boardNavDesktop::before {
+            content: url('http://i46.tinypic.com/mry1wz.jpg');
+            position: fixed !important;
+            top: 3px !important;
+            right: 0% !important;
+            margin-right: 10px !important;
+            z-index: 4 !important;
+            font-family: limey !important;
+            font-size: 0 !important;
+            color: transparent !important;
+            height: 12px!important;
+            width: 10px !important;
+            padding-top: 2px;
+            padding-left: 2px;
+            border-radius: 3px !important;
         }
 
-        .navLinks {
-            font-size: 0px !important;
-            color: transparent !important;
+        #boardNavDesktop:hover::before {
+            content: url('http://i.imgur.com/8GQaSW1.png');
+            background: #888 !important;
+            opacity: 1 !important;
         }
-       
+
+        #boardNavDesktop:hover {
+            position: fixed !important;
+            top: 10px !important;
+            float: none !important;
+            right: 0% !important;
+            margin-top: 5px !important;
+            margin-right: 10px !important;
+            cursor: default !important;
+            padding-top: 4px !important;
+            height: 16px !important;
+            opacity: 1 !important;
+        }
+        
 /*Global message integration into the top bar*/
         
         /* to do: enable background for active toggle */
@@ -397,10 +435,6 @@ Navigation links
             background: transparent !important;
         }
         
-        .globalMessage.hideMobile {
-            display: none;
-        }
-       
         #globalMessage h3 {
             font-size: 10pt !important;
             color: #888 !important;
@@ -430,7 +464,7 @@ Navigation links
         #stats {
             float: right;
             position: fixed !important;
-            top: 0px !important;
+            top: 2px !important;
             left: 0% !important;
             bottom: auto !important;
             right: auto !important;
@@ -441,12 +475,14 @@ Navigation links
             font-size: 9pt !important;
             color: #ccc !important;
             text-shadow: none !important;
-            margin-left: 6px !important;
+            margin-left: 3px !important;
             background-color: transparent !important;
         }
        
+       /* to do: make updater less shitty */
         #updater {
-            float: right;
+            float: none !important;
+            text-align: left !important;
             display: inline !important;
             position: fixed !important;
             left: 0% !important;
@@ -454,36 +490,30 @@ Navigation links
             top: 2px !important;
             bottom: auto !important;
             z-index: 3 !important;
-            height: 12px !important;
-            margin-left: 48px !important;
+            height: 10px !important;
+            margin-left: 50px !important;
             font-family: limey !important;
             font-size: 9pt !important;
-            color: #a2a2a2 !important;
+            color: #888 !important;
             text-shadow: none !important;
             background-color: transparent !important;
+            opacity: .85;
+            border-radius: 3px;
         }
        
         #updater div, #stats div {
             cursor: default !important;
         }
-       
-        #updater:hover {
-            border: none !important;
+        
+        #updater:hover div {
+            display: none !important;
         }
-       
-        #updater input[name="Interval"] {
-            font-size: 9pt !important;
-            margin-left: 2px !important;
-        }
-       
+    
         #count.new {
             background: transparent !important;
-            color: #646464 !important;
+            color: #444 !important;
         }
      
-        input[value="Update Now"], input[value="Previous"], input[value="Next"] {
-            font-size: 9pt !important;
-        }
 
 /* Thread watcher integration into the navbar */
 
@@ -494,7 +524,7 @@ Navigation links
             left: auto !important;
             width: 230px !important;
             z-index: 3 !important;
-            font-family: limey !important;           
+            font-family: limey !important;
             font-size: 9pt !important;
             background: #888 !important;
             box-shadow: 0px 6px 5px rgba(0,0,0,0.2) !important;
@@ -521,7 +551,7 @@ Navigation links
             content: url('http://i46.tinypic.com/maaqzd.jpg') !important;
             height: 16px !important;
             max-width: 10px !important;
-            min-width: 10px !important;           
+            min-width: 10px !important;
             position: fixed !important;
             top: 2px !important;
             right: 0% !important;
@@ -564,30 +594,7 @@ Navigation links
         }
        
            
-        /*Settings integration into the navbar*/
-        a.settingsWindowLink {
-            position: fixed !important;
-            top: 4px !important;
-            right: 0% !important;
-            margin-right: 10px !important;
-            z-index: 4 !important;
-            font-family: limey !important;
-            font-size: 0 !important;
-            color: transparent !important;
-        }
-       
-        a.settingsWindowLink {
-            font-size: 9pt !important;
-            color: #ccc !important;
-            cursor: pointer !important;
-            font-family: limey !important;
-            font-size: 0 !important;
-            color: transparent !important;
-        }
-     
-        a.settingsWindowLink::before {
-            content: url('http://i46.tinypic.com/mry1wz.jpg');
-        }
+
         
 /* Image control integration into the navbar */
 
@@ -595,10 +602,6 @@ Navigation links
       #imgControls {
         font-size: 0px !important;
         color: transparent !important;
-    }
-   
-    input[type="checkbox"]#imageExpand {
-        display: none !important;
     }
    
     #imgControls > *::before {
@@ -616,43 +619,6 @@ Navigation links
     #imgControls >*:active::before, #imgControls >*:hover::before {
         content: url('http://i48.tinypic.com/wmb2ah.jpg');
     }
-    
-    .field {
-        font-family: limey !important;
-        font-size: 9pt !important;
-        background: #fff !important;
-    }    
-       
-        .prettyprint {
-            background-color: #eee !important;
-            border: none !important;
-            border-radius: 0px !important;
-            box-shadow: none !important;
-            margin-bottom: -6px !important;
-            margin-top: 1px !important;
-            font-size: 9pt !important;
-            padding-bottom: 2px !important;
-            padding-top: 4px !important;
-        }
-     
-        .post.reply {
-            background: transparent !important;
-            border: none !important;
-            margin-top: -1px !important;
-            width: 100% !important;
-        }
-     
-        .hide_reply_button {
-            position: relative !important;
-            float: right !important;
-            margin-top: 2px !important;
-            margin-right: 8px !important;
-            z-index: 0 !important;
-           
-            font-family: limey !important;
-            font-size: 0px !important;
-            color: transparent !important;
-        }
        
 /* QR integration into the navbar */
 
@@ -667,10 +633,6 @@ Navigation links
             margin-right: 2px !important;
             background: transparent !important;
             border: none !important;
-        }
-     
-        #qr input[type="checkbox"] {
-            display: none !important;
         }
      
         #qr:hover input[type="checkbox"] {
@@ -726,10 +688,6 @@ Navigation links
             
         }
      
-        .close {
-            display: none !important;
-        }
-     
         #qr form {
             position: fixed !important;
             top: 16px !important;
@@ -766,7 +724,7 @@ Navigation links
         input[title="E-mail"].field {
             border: none !important;
             border-left: 1px solid #ddd !important;
-        }  
+        }
      
         input[title="Name"].field, input[title="E-mail"].field, input[title="Subject"].field {
             -moz-appearance: none !important;
@@ -899,7 +857,48 @@ Navigation links
 Threads, posts, etc.
 =====================
 */
+
+/* random disorganized stuff */
+
+        .field {
+            font-family: limey !important;
+            font-size: 9pt !important;
+            background: #fff !important;
+        }
+       
+        .prettyprint {
+            background-color: #eee !important;
+            border: none !important;
+            border-radius: 0px !important;
+            box-shadow: none !important;
+            margin-bottom: -6px !important;
+            margin-top: 1px !important;
+            font-size: 9pt !important;
+            padding-bottom: 2px !important;
+            padding-top: 4px !important;
+        }
+     
+        .post.reply {
+            background: transparent !important;
+            border: none !important;
+            margin-top: -1px !important;
+            width: 100% !important;
+        }
+     
+        .hide_reply_button {
+            position: relative !important;
+            float: right !important;
+            margin-top: 2px !important;
+            margin-right: 8px !important;
+            z-index: 0 !important;
+           
+            font-family: limey !important;
+            font-size: 0px !important;
+            color: transparent !important;
+        }
         
+/* inline and quick preview */        
+
         .inline {
             box-shadow: none !important;
             border: none !important;
@@ -945,7 +944,9 @@ Threads, posts, etc.
         .inline .menu_button {
             margin-left: 4px !important;
         }
-     
+
+/* posts - general */
+
         .postInfo > .container {
             display: inline !important;
             font-size: 9pt !important;
@@ -953,10 +954,6 @@ Threads, posts, etc.
        
         .opContainer .container {
             margin-right: -4px !important;
-        }
-       
-        .postInfo input[type="checkbox"] {
-            display: none !important;
         }
      
         .postMessage {
@@ -973,19 +970,15 @@ Threads, posts, etc.
         div.closed {
             padding: 10px !important;
         }
-        
-        .vote {
-            display: none !important;
-        }
-        
+
+/* thread and reply hiding */
+
         .thread:hover .post.op .menu_button,
         .thread:hover .replylink,
         .thread:hover .summary,
         .thread:hover .hide_thread_button {
             opacity: 1 !important;
         }
-
-
         
        .hide_reply_button a::before {
             content: "-" !important;
@@ -1090,7 +1083,7 @@ Threads, posts, etc.
             padding-bottom: 4px !important;
             margin-top: 0px !important;
             margin-bottom: 0px !important;
-            margin-right: -1px !important;
+            margin-right: -2px !important;
             margin-left: 4px !important;
             width: 100% !important;
             background: transparent !important;
@@ -1124,7 +1117,7 @@ Threads, posts, etc.
             color: transparent !important;
             font-family: limey!important;
             margin-top: -1px !important;
-            margin-right: 7px !important;
+            margin-right: 8px !important;
         }
      
         .hide_reply_button.stub .menu_button::before {
@@ -1141,6 +1134,8 @@ Threads, posts, etc.
             font-family: limey !important;
         }
      
+/* posts */
+
         .favicon {
             display: inline !important;
             float: right !important;
@@ -1168,7 +1163,6 @@ Threads, posts, etc.
             content: url("http://imgur.com/WpNCh.png") !important;
         }
        
-        /*Icon that overlays the favicon*/
         .opContainer > div .postInfo:before {
             float: right !important;
             content: url('http://i.imgur.com/UNhyj.png') !important;
@@ -1336,7 +1330,7 @@ Threads, posts, etc.
         
         .thread .postContainer.opContainer {
             border-top: 1px solid #d1d5de !important;
-        }     
+        }
         
          .thread .postContainer {
             margin-top: 0px !important;
@@ -1400,9 +1394,11 @@ Threads, posts, etc.
             margin-left: 0 !important;
         }
        
+/* page list and catalog links */       
+       
         .prev, .next {
             color: #333 !important;
-            background-color: transparent !important;
+            background: transparent !important;
             margin-top: 1px !important;
            
             font-family: limey !important;
@@ -1645,7 +1641,15 @@ Catalog
             border: none !important;
         }
         
-         #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after, .globalMessage, .globalMessage a, #globalMessage h3, strong, h2, #globalToggle::after, #globalToggle, .collapseIcon, .expandIcon, #togglePostForm {
+         #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after, 
+         .globalMessage, .globalMessage a, 
+         #globalMessage h3, #globalToggle::after, 
+         #globalToggle, strong, h2, 
+         .collapseIcon, .expandIcon, 
+         #togglePostForm, #first-run 
+         #filtered-label, #filtered-label-bottom, 
+         #hidden-label, #hidden-label-bottom, 
+         #search-label, #search-label-bottom {
             display: none !important;
         }
         
