@@ -1468,7 +1468,7 @@ Catalog
        
         #threads {
             margin: 0 auto !important;
-            margin-top: 16px !important;
+            margin-top: 26px !important;
             width: 94% !important;
             background-color: #f9f9f9 !important;
             box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
@@ -1480,7 +1480,6 @@ Catalog
         .thread {
             width: 250px !important;
             max-height: 410px !important;
-            margin: 0px !important;
             background-color: #fff !important;
             margin: 5px !important;
             box-shadow: inset 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
@@ -1646,7 +1645,7 @@ Catalog
          #globalMessage h3, #globalToggle::after, 
          #globalToggle, strong, h2, 
          .collapseIcon, .expandIcon, 
-         #togglePostForm, #first-run 
+         #togglePostForm, #first-run,
          #filtered-label, #filtered-label-bottom, 
          #hidden-label, #hidden-label-bottom, 
          #search-label, #search-label-bottom {
