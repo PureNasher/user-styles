@@ -1,4 +1,4 @@
-@-moz-document domain("boards.4chan.org") {
+n("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica Neue !important;
@@ -472,7 +472,7 @@ Navigation links
             z-index: 4 !important;
             width: auto !important;
             font-family: limey !important;
-            font-size: 9pt !important;
+            font-size:8pt !important;
             color: #ccc !important;
             text-shadow: none !important;
             margin-left: 3px !important;
@@ -491,9 +491,9 @@ Navigation links
             bottom: auto !important;
             z-index: 3 !important;
             height: 10px !important;
-            margin-left: 50px !important;
+            margin-left: 55px !important;
             font-family: limey !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             color: #888 !important;
             text-shadow: none !important;
             background-color: transparent !important;
