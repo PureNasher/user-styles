@@ -7,7 +7,6 @@
 {
 
 
-
 /* body */
 
 body {
@@ -133,7 +132,7 @@ Header + navigation
         }
         
         #sr-more-link:hover:before, #sr-header-area:hover #sr-more-link:before{
-            content: url('http://i.imgur.com/k1cBO8c.png') !important;
+            content: url('http://i.imgur.com/8GQaSW1.png') !important;
             transition: 0.5s color ease;
         }
         
@@ -311,14 +310,15 @@ Header + navigation
     content: url('http://i46.tinypic.com/maaqzd.jpg');
     text-align: center !important;
     background: transparent!important;
-    height: 14px !important;
+    height: 15px !important;
     max-width: 12px !important;
     min-width: 12px !important;
     position: fixed !important;
-    top: 0px !important;
+    top: 2px !important;
     right: 0% !important;
-    padding-top: 2px !important;
+    padding-top: 0px !important;
     padding-left: 0px !important;
+    padding-right: 0px !important;
     margin-right: 35px !important;
     z-index: 5;
     transition: 0.5s color ease;
@@ -837,8 +837,5 @@ a.helplink,
 .organic-listing {
     border: 0px none !important;
 }
-    
-    
+       
 }
-
-

@@ -1,4 +1,4 @@
-n("boards.4chan.org") {
+@-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica Neue !important;
@@ -358,7 +358,7 @@ Navigation links
             position: fixed !important;
             top: 3px !important;
             right: 0% !important;
-            margin-right: 10px !important;
+            margin-right: 9px !important;
             z-index: 4 !important;
             font-family: limey !important;
             font-size: 0 !important;
@@ -382,7 +382,7 @@ Navigation links
             float: none !important;
             right: 0% !important;
             margin-top: 5px !important;
-            margin-right: 10px !important;
+            margin-right: 9px !important;
             cursor: default !important;
             padding-top: 4px !important;
             height: 16px !important;
@@ -472,10 +472,10 @@ Navigation links
             z-index: 4 !important;
             width: auto !important;
             font-family: limey !important;
-            font-size:8pt !important;
+            font-size: 8pt !important;
             color: #ccc !important;
             text-shadow: none !important;
-            margin-left: 3px !important;
+            margin-left: 2px !important;
             background-color: transparent !important;
         }
        
@@ -491,7 +491,7 @@ Navigation links
             bottom: auto !important;
             z-index: 3 !important;
             height: 10px !important;
-            margin-left: 55px !important;
+            margin-left: 50px !important;
             font-family: limey !important;
             font-size: 8pt !important;
             color: #888 !important;
@@ -964,7 +964,7 @@ Threads, posts, etc.
             margin-left: 15px !important;
             margin-right: 20px !important;
             padding-right: 10px !important;
-            color: #444 !important;
+            color: #555 !important;
         }
      
         div.closed {
@@ -1010,7 +1010,7 @@ Threads, posts, etc.
             margin-right: 9px !important;
             margin-top: 10px !important;
             height: 10px !important;
-            z-index: 2 !important;
+            z-index: 1 !important;
             display: block !important;
             font-size: 0 !important;
             transition: 0.5s color ease;
@@ -1343,7 +1343,11 @@ Threads, posts, etc.
             margin-right: 0px !important;
             padding-right: 20px !important;
         }
-     
+        
+        img {
+            z-index: 3 !important;
+        }
+        
         .fileThumb img {
             border-top: none !important;
             margin-left: -18px !important;
