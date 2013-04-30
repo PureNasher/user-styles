@@ -1,4 +1,4 @@
-@-moz-document domain("boards.4chan.org") {
+n("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica Neue !important;
@@ -99,34 +99,9 @@ General colors
             margin-left: 4px !important;
             margin-right: 4px !important;
         }
-       
-        .fileText {
-            color: #d8a5aa !important;
-        }
      
         .postNum a, .inline .postNum a {
             color: #bf7c83 !important;
-        }
-     
-        .fileInfo a, 
-        .fileText a, 
-        .inline .fileInfo a, 
-        .inline .fileText a {
-            color: #a5abd8 !important;
-            font-family: limey !important;
-            font-style: normal !important;
-        }
-     
-        .fileText a:hover, 
-        .fileInfo a:hover, 
-        .inline .fileInfo a:hover, 
-        .inline .fileText a:hover {
-            color: #7b80a2 !important;
-        }
-       
-        .fileText {
-            font-family: limey !important;
-            font-style: normal !important;
         }
        
         a.replylink {
@@ -216,13 +191,17 @@ General colors
             margin-right: 2px !important;
             padding-bottom: 2px !important;
             font-size: 8pt !important;
+            transition: 0.5s color ease;
         }
-     
+        
+        .summary:hover {
+            transition: 0.5s color ease !important;
+        }
+        
         .abbr, 
         .filtered, 
         .inline .filtered, 
-        a.quotelink.filtered,
-        .summary:hover {
+        a.quotelink.filtered {
             font-size: 8pt !important;
             color: #ccc !important;
             text-decoration: none !important;
@@ -858,7 +837,7 @@ Threads, posts, etc.
 =====================
 */
 
-/* random disorganized stuff */
+/* misc */
 
         .field {
             font-family: limey !important;
@@ -866,16 +845,20 @@ Threads, posts, etc.
             background: #fff !important;
         }
        
-        .prettyprint {
+        .prettyprint{
             background-color: #eee !important;
             border: none !important;
-            border-radius: 0px !important;
+            border-radius: 3px !important;
             box-shadow: none !important;
-            margin-bottom: -6px !important;
-            margin-top: 1px !important;
+            margin-bottom: -8px !important;
+            margin-top: 4px !important;
+            margin-left: 0px !important;
             font-size: 9pt !important;
             padding-bottom: 2px !important;
             padding-top: 4px !important;
+            width: auto !important;
+            max-width: 100% !important;
+            overflow: scroll !important;
         }
      
         .post.reply {
@@ -891,7 +874,6 @@ Threads, posts, etc.
             margin-top: 2px !important;
             margin-right: 8px !important;
             z-index: 0 !important;
-           
             font-family: limey !important;
             font-size: 0px !important;
             color: transparent !important;
@@ -944,33 +926,7 @@ Threads, posts, etc.
         .inline .menu_button {
             margin-left: 4px !important;
         }
-
-/* posts - general */
-
-        .postInfo > .container {
-            display: inline !important;
-            font-size: 9pt !important;
-        }
-       
-        .opContainer .container {
-            margin-right: -4px !important;
-        }
-     
-        .postMessage {
-            text-align: justify !important;
-            padding-bottom: 0px !important;
-            margin-top: 10px !important;
-            margin-bottom: 10px !important;
-            margin-left: 15px !important;
-            margin-right: 20px !important;
-            padding-right: 10px !important;
-            color: #555 !important;
-        }
-     
-        div.closed {
-            padding: 10px !important;
-        }
-
+        
 /* thread and reply hiding */
 
         .thread:hover .post.op .menu_button,
@@ -1008,7 +964,7 @@ Threads, posts, etc.
             left: auto !important;
             right: 10% !important;
             margin-right: 9px !important;
-            margin-top: 10px !important;
+            margin-top: 7px !important;
             height: 10px !important;
             z-index: 1 !important;
             display: block !important;
@@ -1136,6 +1092,31 @@ Threads, posts, etc.
      
 /* posts */
 
+        
+        .postInfo > .container {
+            display: inline !important;
+            font-size: 9pt !important;
+        }
+       
+        .opContainer .container {
+            margin-right: -4px !important;
+        }
+     
+        .postMessage {
+            text-align: justify !important;
+            padding-bottom: 0px !important;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+            margin-left: 15px !important;
+            margin-right: 20px !important;
+            padding-right: 10px !important;
+            color: #555 !important;
+        }
+     
+        div.closed {
+            padding: 10px !important;
+        }
+
         .favicon {
             display: inline !important;
             float: right !important;
@@ -1256,31 +1237,7 @@ Threads, posts, etc.
             background: #fff !important;
             color: #333 !important;
         }
-       
-        .fileText {
-            margin-left: -5px !important;
-            font-size: 9pt !important;
-        }
-       
-        .fileInfo a {
-            text-decoration: none !important;
-            font-size: 9pt !important;
-        }
-       
-        .fileText > a {
-            margin-left: 10px !important;
-        }
-     
-        .post.reply > .file > .fileInfo, .fileInfo {
-            margin-left: -2px !important;
-            font-size: 10pt !important;
-            background: #fff !important;
-            margin-right: 2px !important;
-            margin-top: 0px !important;
-            margin-bottom: 4px !important;
-        }
-     
-        
+
         .post.op .file {
             background: #fff !important;
             margin-right: 0px !important;
@@ -1335,8 +1292,7 @@ Threads, posts, etc.
          .thread .postContainer {
             margin-top: 0px !important;
         }
-            
-     
+        
         .post.op .postMessage {
             margin-top: 0px !important;
             padding-top: 10px !important;
@@ -1375,7 +1331,6 @@ Threads, posts, etc.
             margin-top: -1px !important;
             padding-top: 2px !important;
             padding-bottom: 2px !important;
-           
             font-size: 9pt !important;
             background: transparent !important;
             border-bottom: none !important;
@@ -1395,8 +1350,76 @@ Threads, posts, etc.
         .post.op .postInfo {
             background: transparent !important;
             margin-right: 0px !important;
-            margin-left: 0 !important;
+            margin-left: -10px !important;
+            margin-top: 1px !important;
         }
+        
+        .post.op .fileInfo {
+            display: inline-block !important;
+            margin-left: -7px !important;
+        }
+        
+        .fileText > a {
+            margin-left: 10px !important;
+        }
+     
+        .fileInfo {
+            margin-left: -2px !important;
+            font-size: 10pt !important;
+            background: #fff !important;
+            margin-right: 2px !important;
+            margin-top: -2px !important;
+            margin-bottom: 0px !important;
+        }
+       
+        .fileText {
+            font-family: limey !important;
+            color: #c3c3c3!important;
+            margin-left: -5px !important;
+            font-size: 8pt !important;
+        }
+        
+        .fileInfo a,
+        .inline .fileInfo a,
+        .inline .fileText a {
+            opacity: 0 !important;
+            text-decoration: none !important;
+            color: #c3c3c3 !important;
+            background: transparent !important;
+            border-radius: 2px !important;
+            padding: 2px !important;
+            text-align: center !important;
+            font-family: limey !important;
+            font-size: 8pt !important;
+        }
+
+        .fileInfo a:hover,
+        .inline .fileInfo a:hover,
+        .inline .fileText a:hover {
+            background: transparent !important;
+            color: #888 !important;
+        }
+
+        .fileInfo:hover a,
+        .inline .fileInfo a:hover,
+        .inline .fileText a:hover {
+            opacity: 1 !important;
+        }
+
+        .fileText a,
+        .inline .fileText a {
+            background: transparent !important;
+            color: #a5abd8 !important;
+            opacity: 1 !important;
+        }
+
+        .fileText a:hover,
+        .inline .fileText a:hover {
+            background: transparent !important;
+            color: #7b80a2 !important;
+        }
+
+
        
 /* page list and catalog links */       
        
@@ -1404,7 +1427,6 @@ Threads, posts, etc.
             color: #333 !important;
             background: transparent !important;
             margin-top: 1px !important;
-           
             font-family: limey !important;
             font-size: 9pt !important;
         }
@@ -1466,10 +1488,6 @@ Catalog
             color: #646464 !important;
         }
        
-        #toggleMsgBtn, #styleSwitcher {
-            display: none !important;
-        }
-       
         #threads {
             margin: 0 auto !important;
             margin-top: 26px !important;
@@ -1490,13 +1508,6 @@ Catalog
             border-radius: 2px !important;
             border: 1px solid #e0e0e0 !important;
         }
-        
-        #settings {
-            position: fixed !important;
-            text-align: center !important;
-            width: 100% !important;
-        }
-
 
         .thumb {
             border-top: none !important;
@@ -1511,148 +1522,19 @@ Catalog
             margin-right: 5px !important;
         }
         
-/*Settings integration into the navigation bar */
-
-        #settings {
-            position: fixed !important;
-            top: -1000px !important;
-            right: 20% !important;
-            left: auto !important;
-            width: 16px !important;
-            z-index: 3 !important;
-            overflow: hidden !important;
-           
-            font-size: 0px !important;
-            color: transparent !important;
-            background: #505050 !important;
-            box-shadow: 0px 6px 5px rgba(0,0,0,0.2) !important;
-            border-bottom-left-radius: 3px !important;
-            border-bottom-right-radius: 3px !important;
-            border: none !important;
-            visibility: hidden !important;
-        }
-       
-        #settings > div {
-            max-width: 545px !important;
-            width: 545px !important;
-            overflow: hidden !important;
-        }
-             
-        #settings::after {
-            display: none !important;
-            content: url('http://i46.tinypic.com/mry1wz.jpg');
-            height: 22px !important;
-            max-width: 10px !important;
-            min-width: 10px !important;
-            width: 10px !important;
-            position: fixed !important;
-           
-            top: 3px !important;
-            right: 4% !important;
-            margin-right: 7px !important;
-            padding-bottom: 0px !important;
-            z-index: 3 !important;
-            cursor: pointer !important;
-            visibility: visible !important;
-        }
-     
-        #settings:active::after, #settings:hover::after {
-            content: url('http://i46.tinypic.com/mry1wz.jpg');
-        }
-     
-        #settings:active, #settings:hover {
-            position: fixed !important;
-            top: 17px !important;
-            width: 285px !important;
-            /*float: right !important;*/
-            right: 4% !important;
-            padding: 5px !important;
-            padding-top: 5px !important;
-            cursor: default !important;
-            box-shadow: inset 0px 3px 3px -1px rgba(0,0,0,0.3) !important;
-            visibility: visible !important;
-        }
-       
-        #filters-ctrl.button {
-            color: #a2a2a2 !important;
-            text-shadow: none !important;
-            text-decoration: none !important;
-            font-weight: normal !important;
-            font-size: 10pt !important;
-            font-weight: normal !important;
-        }
-       
-        select {
-            font-size: 10pt !important;
-            margin-right: 4px !important;
-        }
-       
-/* Search box integration into the navbar */
-
-        /* to do: prevent the settings pane to appear when search box or button is active; create search icon that fits the paradigm of the icons used */
-        #qf-ctrl.button, #qf-ctrl.button:hover {
-            display: inline !important;
-            top: 3px !important;
-            right: 4% !important;
-            margin-right: 30px !important;
-            position: fixed !important;
-            font-size: 0px !important;
-            color: transparent !important;
-            visibility: visible !important;
-        }
-       
-        #qf-ctrl.button::before {
-            display: none !important;
-            content: url("http://i46.tinypic.com/3zxuh.jpg") !important;
-        }
-       
-        #qf-ctrl.button:active::before {
-            content: url("http://i48.tinypic.com/dfhteh.jpg") !important;
-        }
-       
-        #qf-clear {
-            visibility: visible !important;
-            display: block !important;
-            position: fixed !important;
-            font-size: 9pt !important;
-            top: 2px !important;
-            right: 4% !important;
-            margin-right: 58px !important;
-            color: #646464 !important;
-            text-shadow: none !important;
-        }
-       
-        #qf-box {
-            -moz-appearance: none !important;
-            background: #F9F9F9 !important;
-            box-shadow: inset 0px 1px 1px #1a355e !important;
-            border: none !important;
-            border-radius: 2px !important;
-            color: #646464 !important;
-           
-            visibility: visible !important;
-            display: block !important;
-            width: 140px !important;
-            max-height: 16px !important;
-            position: fixed !important;
-            top: 1px !important;
-            margin-right: 54px !important;
-            right: 4% !important;
-        }
-       
-        #qf-box:focus {
-            border: none !important;
-        }
-        
-         #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after, 
-         .globalMessage, .globalMessage a, 
-         #globalMessage h3, #globalToggle::after, 
-         #globalToggle, strong, h2, 
-         .collapseIcon, .expandIcon, 
-         #togglePostForm, #first-run,
-         #filtered-label, #filtered-label-bottom, 
-         #hidden-label, #hidden-label-bottom, 
-         #search-label, #search-label-bottom {
+        #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after, 
+        .globalMessage, .globalMessage a, 
+        #globalMessage h3, #globalToggle::after, 
+        #globalToggle, strong, h2, 
+        .collapseIcon, .expandIcon, 
+        #togglePostForm, #first-run,
+        #filtered-label, #filtered-label-bottom, 
+        #hidden-label, #hidden-label-bottom, 
+        #search-label, #search-label-bottom,
+        #settings,
+        #qf-ctrl.button, #qf-ctrl.button:hover, 
+        #qf-clear, #qf-box,
+        #toggleMsgBtn, #styleSwitcher {
             display: none !important;
         }
         
