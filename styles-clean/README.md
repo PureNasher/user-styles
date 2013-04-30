@@ -4,10 +4,10 @@ Each style requires a font called 'limey,' a mod of Lime all but unavailable to 
 ) if you wish to download it.
 
 4chan
-![4chan](http://goput.it/cft.png)
+![4chan](http://goput.it/gf3.png)
 Requires 4chan X to work properly.
 
 
 Reddit
-![reddit](http://goput.it/img.png)
+![reddit](http://goput.it/csb.png)
 Runs on top of default Reddit. I'm not adding support for RES; don't ask unless you're willing to provide the code yourself.

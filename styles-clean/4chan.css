@@ -1,4 +1,4 @@
-n("boards.4chan.org") {
+@-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
           font-family: Helvetica Neue !important;
@@ -242,9 +242,9 @@ Board banner
         }
      
         .boardSubtitle {
-            margin-top: -2px !important;
+            margin-top: 2px !important;
             color: #666 !important;
-            font: normal 8pt limey !important;
+            font: normal 8pt Helvetica Neue !important;
         }
      
         .boardSubtitle a,
@@ -1355,8 +1355,8 @@ Threads, posts, etc.
         }
         
         .post.op .fileInfo {
-            display: inline-block !important;
-            margin-left: -7px !important;
+            display: block !important;
+            margin-left: -4px !important;
         }
         
         .fileText > a {
