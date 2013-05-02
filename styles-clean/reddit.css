@@ -1,4 +1,4 @@
-mespace url(http://www.w3.org/1999/xhtml);
+@namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document url-prefix(http://ssl.reddit.com),
                url-prefix(http://www.reddit.com),
@@ -15,8 +15,8 @@ body {
     right: 0% !important;
     background-attachment: fixed !important;
     background-color: #fff !important;
-    font-family: Helvetica !important;
-    font-size: 9px !important;
+    font-family: Lucida Grande !important;
+    font-size: 7pt !important;
     margin-left: 0% !important;
 }
 
@@ -122,7 +122,7 @@ Header + navigation
             text-align: center !important;
             background: transparent !important;
             height: 16px !important;
-            padding-top: 1px !important;
+            padding-top: 2px !important;
             width: 14px !important;
             position: fixed !important;
             top: 1px !important;
@@ -169,13 +169,13 @@ Header + navigation
             padding-top: 0px !important;
             margin-top: 38px !important;
             position: absolute !important;
-            font-family: limey !important;
+            font-family: Helvetica Neue !important;
         }
 
             .tabmenu li a {
                 background: transparent !important;
                 color: #909090 !important;
-                font-size: 9px !important;
+                font-size: 10px !important;
                 font-weight: 300 !important;
                 padding: 0px 6px !important;
                 transition: 0.5s color ease;
@@ -208,7 +208,6 @@ Header + navigation
         box-shadow: none !important;
         height: 40px !important;
         padding-top: 5px !important;
-
     }
     
     #mail {
@@ -233,9 +232,9 @@ Header + navigation
     
     #header-bottom-right {
         margin-top: 10px !important;
-        background: #fff !important;
+        background: transparent !important;
         box-shadow: none !important;
-        font-size: 9px !important;
+        font-size: 10px !important;
         font-weight: 300 !important;
         padding: 3px !important;
         width: 80% !important;
@@ -243,7 +242,7 @@ Header + navigation
         left:10% !important;
         text-align: center !important;
         position: relative !important;
-        font-family: limey !important;
+        font-family: Helvetica Neue !important;
     }
     
         #header-bottom-right a {
@@ -490,10 +489,11 @@ Content
 
 .link .title {
     font-weight: bold !important;
+    margin-left: 0px !important;
 }
 
     .lk .thumbnail {
-        margin-right: auto !important;
+        margin-right: auto!important;
         width: auto !important;
     }
 
@@ -501,6 +501,7 @@ Content
             border: none!important;
             box-shadow: rgba(0,0,0,0.2) 0 0 8px !important;
             width: auto !important;
+            margin-right: 3px !important;
         }
 
     .thing p.title {
@@ -513,7 +514,7 @@ Content
             text-indent: 155px;
             text-shadow: none !important;
             transition: 0.5s ease all;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
     }
        
         .thing .title.loggedin:hover, .link .title:hover {
@@ -527,33 +528,33 @@ Content
         }
         
         .domain, .domain a {
-            font-family: Helvetica !important;
-            font-weight: normal !important;
-            font-size: 8pt !important;
+            font-family: Lucida Grande !important;
+            font-weight: bold !important;
+            font-size: 7pt !important;
             color: #bf7c83 !important;
         }
     
     .tagline {
-        margin-left: 8px !important;
-        color: #999 !important;
-        font-size: 8pt !important;
-        font-family: Helvetica !important;
-        margin-top: 8px !important;
+        margin-left: 10px !important;
+        color: #888!important;
+        font-size: 7pt !important;
+        font-family: Lucida Grande !important;
+        margin-top: 7px !important;
     }
-
+    
     .link .flat-list {
         margin-top: 4px !important;
-        font-size: 9px !important;
-        font-family: limey !important;
+        margin-left: 2px !important;
     }
     
     .entry {
         border: none !important;
+        margin-left: 5px !important;
     }
     
         .entry .buttons li a {
-            color: #909090 !important;
-            font-size: 11px !important;
+            color: #999 !important;
+            font-size: 7pt !important;
             font-weight: normal !important;
             padding: 0 8px 3px !important;
             transition: 0.5s ease all;
@@ -577,6 +578,7 @@ Content
     color: #677996 !important;
     background: none !important;
     text-align: left;
+    margin-left: 2px !important;
 }
 
 .title.click {
@@ -744,6 +746,7 @@ Other pages
     .sr-interest-bar .query-box {
         position: relative;
         border: 1px solid #c3c3c3 !important;
+        height: auto !important;
     }
     
     .sr-interest-bar .query {
@@ -752,6 +755,7 @@ Other pages
         padding: 0px;
         outline: none !important;
         background: transparent !important;
+        height: auto !important;
     }
     
     .sr-interest-bar ul.results {
