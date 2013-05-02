@@ -1,11 +1,14 @@
+/*
+==================
+general content
+==================
+*/
+
+
     #appcontent,
     #appcontent > #content,
     #appcontent > #content > tabbox > tabpanels {
       background: #fbfbfb !important;
-    }
-     
-    #main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="Source Chart"]):not([chromehidden="menubar toolbar directories extrachrome "]) #content browser:not([src]) {
-       opacity: 0 !important;
     }
      
     .tabbrowser-arrowscrollbox > .scrollbutton-up,
@@ -25,10 +28,125 @@
     .tab-throbber[progress] {
         display: none !important;
     }
+
+/*
+=============================================
+buttons - resized from hdni's userchrome
+=============================================
+*/
+
+    #TabsToolbar, #TabsToolbar #unified-back-forward-button {
+	background: -moz-linear-gradient(#f2f2f2,#e3e3e3) !important;
+	border-bottom: 1px solid !important;
+	border-bottom-color: #bbb !important;
+	}
+
+    #back-button,
+    #forward-button,
+    #reload-button,
+    #stop-button,
+    .tab-close-button,
+    #appmenu-toolbar-button {
+        background: -moz-linear-gradient(#f2f2f2,#e3e3e3) !important;
+        border:0!important;
+        margin:0!important;
+        padding:0!important;
+        -moz-appearance:none!important;
+    }
+   
+    #reload-button {
+	-moz-appearance: none !important;
+        width: 23px !important;
+        margin: 4px !important;
+        margin-bottom: 3px !important;
+        margin-right: 0px !important;
+        margin-left: 5px !important;
+        background: -moz-linear-gradient(#f5f5f5,#f2f2f2) !important;
+        border: 1px solid #bdbdbd !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.07) !important;
+    }
+    
+    #back-button {
+	    -moz-appearance: none !important;
+	    width: 23px !important;
+	    margin: 4px !important;
+	    margin-bottom: 3px !important;
+	    margin-right: 0px !important;
+	    margin-left: 5px !important;
+	    background: -moz-linear-gradient(#f5f5f5,#f2f2f2) !important;
+	    border: 1px solid #bdbdbd !important;
+	    border-radius: 3px !important;
+	    border-top-right-radius: 0px !important;
+	    border-bottom-right-radius: 0px !important;
+	    box-shadow: 0px 1px 1px rgba(0,0,0,0.07) !important;
+	}
+
+    #forward-button {
+	    -moz-appearance: none !important;
+    	    width: 23px !important;
+ 	    margin: 4px !important;
+	    margin-left: 0px !important;
+	    margin-bottom: 3px !important;
+	    margin-right: 0px !important;
+	    background: -moz-linear-gradient(#f5f5f5,#f2f2f2) !important;
+	    border: 1px solid #bdbdbd !important;
+	    border-left: 0px !important;
+	    border-radius: 3px !important;
+	    border-top-left-radius: 0px !important;
+	    border-bottom-left-radius: 0px !important;
+	    box-shadow: 0px 1px 1px rgba(0,0,0,0.07) !important;
+	}
+
+    #back-button .toolbarbutton-icon {
+	    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAMAAAAm/38fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAllBMVEUAAAA6OjpAQEA5OTk2NjZHR0c7Ozs4ODgZGRk5OTkwMDA6Ojo8PDw/Pz86Ojo9PT1AQEBAQEA6Ojo8PDxAQEBAQEA6Ojo8PDxAQEBAQEA8PDxAQEBAQEA9PT1AQEBBQUFAQEBAQEBAQEBAQEBAQEA7OztAQEBAQEA/Pz87OztAQEBAQEBAQEBAQEBAQEA/Pz9AQECqqqoFZvyFAAAAL3RSTlMAAAAAAAAAAAAsBD3UcUHa9nI84Nk1O+XXK+POL71kQeM75TzgNUHa9nI91HEsBK4l17cAAAABYktHRDHZ2x1yAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdklEQVQoz2NgoDdgZMQhzsnFhFWcm4cXiwQzCx+/voAgpjirkLC+gYgohgSbmLiBgYQkplF8UgYG0jJMmBKyBgYGctjcJK+AQweTohLIDnZMCSZlFQMDEVUGLDJq6gYamth8zqSlrcOBNayYdPWwhhXIOAZ6AgCB+wgaEuxdEQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMy0wNS0wMlQxMzozMzoxMiswMDowMPMOG1sAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTMtMDUtMDJUMTM6MzM6MTIrMDA6MDCCU6PnAAAAAElFTkSuQmCC) !important;
+	    -moz-image-region: rect(0px, 24px, 18px, 0px)!important;
+	    opacity: 0.6 !important;
+	    margin-top: -7px !important;
+	}
+
+    #back-button:hover .toolbarbutton-icon {
+	    opacity: 1.0 !important;
+	    transition: all 0.3s ease 0s;
+	}	
+
+    #forward-button .toolbarbutton-icon {
+	    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAMAAAAm/38fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAllBMVEUAAAA6OjpAQEA2NjY5OTlHR0c7Ozs4ODgZGRkwMDA5OTk/Pz88PDw6OjpAQEBAQEA9PT06OjpAQEBAQEA8PDw6OjpAQEBAQEA8PDw6OjpAQEBAQEA8PDxAQEA9PT1AQEBBQUFAQEBAQEA7OztAQEBAQEA7Ozs/Pz9AQEBAQEBAQEBAQEBAQEBAQEBAQEA/Pz9AQECqqqqhNlFVAAAAL3RSTlMAAAAAAAAAAAAELHHUPXL22kE12eA8K9flOy/O42S940HlOzXgPHL22kFx1D0ELG+EOdYAAAABYktHRDHZ2x1yAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVQoz73OyRKCQAwE0CGCgKAwILIquIALW///1ynnxCt97FepjlJrxjDkntydLOT5e1EOwRzqjckhijEfE4sLnVIgy7ccqCiBSkvzZwCXPxd1w8BeNq43YnCPgUdLHLonXm+hV86nH4T6Nz5OYr+8pdbOF4UzCBdmoVehAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEzLTA1LTAyVDEzOjMzOjQxKzAwOjAwigYPogAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMy0wNS0wMlQxMzozMzo0MSswMDowMPtbtx4AAAAASUVORK5CYII=) !important;
+	    -moz-image-region: rect(0px, 24px, 18px, 0px)!important;
+	    opacity: 0.6 !important;
+	    margin-top: -7px !important;
+    }
+    
+    #back-button:active,
+    #forward-button:active {
+	    background: -moz-linear-gradient(#f8f8f8,#eaeaea) !important;
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.17) !important;
+            transition: all 0.3s ease 0s;
+    }
+
+    #back-button:active,
+    #forward-button:active {
+	    box-shadow: inset 0px -1px 3px rgba(0,0,0,0.07) !important;
+            background: -moz-linear-gradient(#e8e8e8,#e1e1e1) !important;
+            transition: all 0.3s ease 0s;
+    }
      
+    #forward-button:hover .toolbarbutton-icon {
+	    opacity: 1.0 !important;
+	    transition: all 0.3s ease 0s;
+	}	 
+
     #main-window:not([disablechrome]) #navigator-toolbox[tabsontop=true] {
 	border-bottom: none !important;
     }
+
+
+/*
+==========
+tabs
+==========
+*/
+
 	
     tab {
 	border-bottom: none !important;
@@ -63,19 +181,19 @@
             background: -moz-linear-gradient(#f5f5f5,#f2f2f2) !important;
 	    border: 1px solid #bdbdbd !important;
 	    border-radius: 3px !important;
-	    box-shadow: 0px 0px 3px rgba(0,0,0,0.08) !important; 
+	    box-shadow: 0px 1px 1px rgba(0,0,0,0.07) !important; 
 	    width: 18px !important;
     }
      
     .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
             color: #444 !important;
-            background: -moz-linear-gradient(#e3e3e3,#e9e9e9) !important;
+            background: -moz-linear-gradient(#dfdfdf,#d4d4d4) !important;
 	    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.12) !important;
 	    border: 1px solid #b6b6b6 !important;
      }
     
     .tabbrowser-tab:hover {
-	    box-shadow: inset 1px 2px 2px rgba(0,0,0,0.07) !important;
+	    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.07) !important;
 	    transition: .05s ease all;
 	    color: #595959 !important;
 	    border-color: #bdbdbd !important;
@@ -84,7 +202,7 @@
     .tabbrowser-tab .tab-text {
             margin-left: 3px !important;
             margin-right: 3px !important;
-            margin-top: 0px !important;
+            margin-top: 1px !important;
             font-size: 11px !important;
             font-family: Lucida Grande !important;
     }
@@ -107,3 +225,6 @@
         margin-right: -8px;
     }
 
+    #main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="Source Chart"]):not([chromehidden="menubar toolbar directories extrachrome "]) #content browser:not([src]) {
+       opacity: 0 !important;
+    }

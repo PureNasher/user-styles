@@ -1,8 +1,8 @@
 @-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
-          font-family: Helvetica Neue !important;
-          font-size: 8pt !important;
+          font-family: Lucida Grande !important;
+          font-size: 7pt !important;
         }
         
         
@@ -13,23 +13,23 @@ Things to hide
 */
 
 
-        hr, 
+        hr,
         .deleteform,
-        .postingMode, 
+        .postingMode,
         .stylechanger,
-        .boardBanner > img.title, 
+        .boardBanner > img.title,
         .postForm,
-        .move > span > select, 
+        .move > span > select,
         .extButton,
-        h1, 
+        h1,
         #imageType,
-        select#imageType, 
+        select#imageType,
         div.center,
-        .navLinks, 
+        .navLinks,
         .globalMessage.hideMobile,
-        .vote, 
+        .vote,
         input[type="checkbox"]#imageExpand,
-        #qr input[type="checkbox"], 
+        #qr input[type="checkbox"],
         .close,
         .postInfo input[type="checkbox"] {
             display: none !important;
@@ -48,15 +48,15 @@ General colors
         a.useremail[href*='SAGE']:last-of-type::after {
             content: " (sage)" !important;
             color: #a27b9d !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             font-weight: bold !important;
         }
         
-        span.capcodeMod span.name, 
-        span.capcodeMod a:not(:hover), 
-        span.capcodeMod span.postertrip, 
+        span.capcodeMod span.name,
+        span.capcodeMod a:not(:hover),
+        span.capcodeMod span.postertrip,
         span.capcodeMod strong.capcode,
-        .postNum a:hover, 
+        .postNum a:hover,
         .inline .postNum a:hover {
             color: #a27b9d !important;
         }
@@ -107,7 +107,7 @@ General colors
         a.replylink {
             color: #ccc !important;
             text-decoration: none !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
         }
      
         a.replylink:hover {
@@ -198,9 +198,9 @@ General colors
             transition: 0.5s color ease !important;
         }
         
-        .abbr, 
-        .filtered, 
-        .inline .filtered, 
+        .abbr,
+        .filtered,
+        .inline .filtered,
         a.quotelink.filtered {
             font-size: 8pt !important;
             color: #ccc !important;
@@ -275,7 +275,7 @@ Navigation links
             width: auto !important;
             overflow: hidden !important;
             font-size: 0pt !important;
-            background: #888 !important;
+            background: #aaa !important;
             color: transparent !important;
             border-radius: 2px !important;
             padding: 2px !important;
@@ -351,7 +351,7 @@ Navigation links
 
         #boardNavDesktop:hover::before {
             content: url('http://i.imgur.com/8GQaSW1.png');
-            background: #888 !important;
+            background: #aaa !important;
             opacity: 1 !important;
         }
 
@@ -396,16 +396,16 @@ Navigation links
        
        a#globalToggle.button.redButton.mobile.shown::after, a#globalToggle.button.redButton.mobile.shown:active::after{
             content: url('http://i48.tinypic.com/dfhteh.jpg');
-            background: #888 !important;
+            background: #aaa !important;
         }
        
         .globalMessage {
             position: relative !important;
-            width: 60% !important;
+            width: 80% !important;
             height: auto !important;
             top: 12px !important;
-            right: 20% !important;
-            left: 20% !important;
+            right: 10% !important;
+            left: 10% !important;
             padding-bottom: 0px !important;
             padding-top: 4px !important;
             z-index: 1;
@@ -424,7 +424,7 @@ Navigation links
         strong, h2 {
             margin: 2px !important;
             font-size: 10pt !important;
-            color: #eeeeee !important;
+            color: inherit !important;
             font-weight: normal !important;
         }
        
@@ -441,33 +441,30 @@ Navigation links
 /*Thread statistics and thread updater integration into the navbar*/
 
         #stats {
-            float: right;
             position: fixed !important;
-            top: 2px !important;
-            left: 0% !important;
-            bottom: auto !important;
-            right: auto !important;
+            right: 0% !important;
+            left: auto !important;
+            bottom: 2px !important;
+            top: auto !important;
             border: none !important;
             z-index: 4 !important;
             width: auto !important;
             font-family: limey !important;
             font-size: 8pt !important;
-            color: #ccc !important;
+            color: #bbb !important;
+            margin-right: 12px;
             text-shadow: none !important;
-            margin-left: 2px !important;
             background-color: transparent !important;
+            font-family: Helvetica Neue !important;
         }
        
        /* to do: make updater less shitty */
         #updater {
+            display: none !important;
             float: none !important;
             text-align: left !important;
-            display: inline !important;
             position: fixed !important;
-            left: 0% !important;
-            right: auto !important;
-            top: 2px !important;
-            bottom: auto !important;
+            
             z-index: 3 !important;
             height: 10px !important;
             margin-left: 50px !important;
@@ -479,19 +476,7 @@ Navigation links
             opacity: .85;
             border-radius: 3px;
         }
-       
-        #updater div, #stats div {
-            cursor: default !important;
-        }
-        
-        #updater:hover div {
-            display: none !important;
-        }
-    
-        #count.new {
-            background: transparent !important;
-            color: #444 !important;
-        }
+
      
 
 /* Thread watcher integration into the navbar */
@@ -505,7 +490,7 @@ Navigation links
             z-index: 3 !important;
             font-family: limey !important;
             font-size: 9pt !important;
-            background: #888 !important;
+            background: #aaa !important;
             box-shadow: 0px 6px 5px rgba(0,0,0,0.2) !important;
             border-bottom-left-radius: 3px !important;
             border-bottom-right-radius: 3px !important;
@@ -544,7 +529,7 @@ Navigation links
      
         #watcher:active::before, #watcher:hover::before {
             content: url('http://i48.tinypic.com/2ijhgmr.jpg') !important;
-            background: #888 !important;
+            background: #aaa !important;
             border-radius: 3px !important;
         }
      
@@ -643,8 +628,8 @@ Navigation links
             border-radius: 3px !important;
             padding-left: 4px !important;
             position: fixed !important;
-            padding-top: 1px !important;
-            top: 2px !important;
+            padding-top: 3px !important;
+            top: 1px !important;
             right: 0% !important;
             margin-right: 20px !important;
             z-index: 5;
@@ -652,7 +637,8 @@ Navigation links
      
         #qr:hover::before {
             content: url('http://i46.tinypic.com/34r88ci.jpg') !important;
-            background: #888 !important;
+            background: #aaa !important;
+            opacity: 1;
         }
      
         #qr > div {
@@ -664,7 +650,6 @@ Navigation links
             display: block !important;
             top: 0px !important;
             float: right !important;
-            
         }
      
         #qr form {
@@ -678,9 +663,8 @@ Navigation links
             padding-bottom: 3px !important;
             padding-left: 4px !important;
             padding-right: 4px !important;
-            background: #888 !important;
+            background: #aaa !important;
             border-radius: 3px !important;
-            box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.3) !important;
         }
        
         #qr form:hover, #qr form:focus {
@@ -741,7 +725,7 @@ Navigation links
             height: 200px !important;
             max-width: 200px !important;
             margin-bottom: 0px !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             background: #fff !important;
             color: #333 !important;
             border: none !important;
@@ -749,7 +733,7 @@ Navigation links
        
         form > div > input[type="submit"] {
             position: absolute !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             float: right !important;
             width: 70px !important;
             height: 26px !important;
@@ -770,7 +754,7 @@ Navigation links
             margin-top: 0px !important;
             margin-left: 1px !important;
             margin-bottom: 0px !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             height: 26px !important;
             border: none !important;
             background: #fff !important;
@@ -789,7 +773,7 @@ Navigation links
             -moz-appearance: none;
             background: #fff !important;
             color: #333 !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             border: none !important;
             border-top: 1px solid #eee !important;
             border-bottom-left-radius: 2px !important;
@@ -801,7 +785,7 @@ Navigation links
      
         form > div > input[type="file"] > input[type="button"] {
             position: absolute !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
             float: right;
             width: 70px !important;
             height: 26px !important;
@@ -840,25 +824,25 @@ Threads, posts, etc.
 /* misc */
 
         .field {
-            font-family: limey !important;
-            font-size: 9pt !important;
+            font-family: Helvetica Neue !important;
+            font-size: 8pt !important;
             background: #fff !important;
         }
        
         .prettyprint{
-            background-color: #eee !important;
-            border: none !important;
+            background-color: #f5f5f5 !important;
+            border: 1px solid #e5e5e5 !important;
             border-radius: 3px !important;
             box-shadow: none !important;
-            margin-bottom: -8px !important;
-            margin-top: 4px !important;
+            margin-bottom: 0px !important;
+            margin-top: 8px !important;
             margin-left: 0px !important;
             font-size: 9pt !important;
             padding-bottom: 2px !important;
             padding-top: 4px !important;
-            width: auto !important;
-            max-width: 100% !important;
+            width: inherit !important;
             overflow: scroll !important;
+            vertical-align: middle !important;
         }
      
         .post.reply {
@@ -879,7 +863,7 @@ Threads, posts, etc.
             color: transparent !important;
         }
         
-/* inline and quick preview */        
+/* inline and quick preview */
 
         .inline {
             box-shadow: none !important;
@@ -985,7 +969,7 @@ Threads, posts, etc.
             background: transparent !important;
             border-radius: 0px !important;
             border: none !important;
-            font-family: limey;
+            font-family: Helvetica Neue;
             border-top: 1px solid #ddd !important;
             border-bottom: 1px solid #ddd !important;
         }
@@ -1014,7 +998,7 @@ Threads, posts, etc.
         .hide_thread_button.hidden_thread .menu_button {
             font-size: 0px !important;
             color: transparent !important;
-            font-family: limey!important;
+            font-family: Helvetica Neue !important;
             margin-top: -2px !important;
             margin-right: 24px !important;
         }
@@ -1050,8 +1034,8 @@ Threads, posts, etc.
         .hide_reply_button.stub a {
             margin-left: 0px !important;
             color: #aaa !important;
-            font-family: limey !important;
-            font-size: 9pt !important;
+            font-family: Helvetica Neue !important;
+            font-size: 8pt !important;
         }
        
         .hide_reply_button.stub a::before {
@@ -1071,9 +1055,9 @@ Threads, posts, etc.
         .hide_reply_button.stub .menu_button {
             font-size: 0px !important;
             color: transparent !important;
-            font-family: limey!important;
+            font-family: Helvetica Neue !important;
             margin-top: -1px !important;
-            margin-right: 8px !important;
+            margin-right: 7px !important;
         }
      
         .hide_reply_button.stub .menu_button::before {
@@ -1083,11 +1067,11 @@ Threads, posts, etc.
         .hide_reply_button.stub a:first-of-type::after {
             float: right !important;
             margin-top: 0px !important;
-            margin-right: 9px !important;
+            margin-right: 8px !important;
             content: "+" !important;
             font-size: 9pt !important;
             color: #aaa !important;
-            font-family: limey !important;
+            font-family: Helvetica Neue !important;
         }
      
 /* posts */
@@ -1095,7 +1079,7 @@ Threads, posts, etc.
         
         .postInfo > .container {
             display: inline !important;
-            font-size: 9pt !important;
+            font-size: 8pt !important;
         }
        
         .opContainer .container {
@@ -1157,7 +1141,7 @@ Threads, posts, etc.
             margin-top: 0px !important;
             margin-right: 20px !important;
             margin-left: 10px !important;
-            font-family: limey !important;
+            font-family: Helvetica Neue !important;
             font-size: 0px !important;
             color: transparent !important;
         }
@@ -1174,8 +1158,8 @@ Threads, posts, etc.
      
         .post.op .menu_button {
             margin-top: 0px !important;
-            margin-right: 0px !important;
-            margin-left: 0px !important;
+            margin-right: 2px !important;
+            margin-left: 4px !important;
         }
      
         #menu.reply.dialog {
@@ -1256,12 +1240,6 @@ Threads, posts, etc.
             margin-bottom: 16px !important;
            
         }
-       
-        .backlink:first-child::before {
-            content: "\00B7\A0" !important;
-            color: #aaa !important;
-            margin-left: -4px !important;
-        }
 
         .thread {
             margin: 0 auto !important;
@@ -1269,6 +1247,7 @@ Threads, posts, etc.
             margin-top: 30px !important;
             background-color: transparent !important;
             width: 80% !important;
+            
         }
      
         .postContainer {
@@ -1278,7 +1257,7 @@ Threads, posts, etc.
             border-bottom: none !important;
             border-left: none !important;
             border-right: none !important;
-            border-top: 1px solid #e6e8eb;
+            border-top: 1px solid #f2f2f2;
             padding-top: 5px !important;
             padding-bottom: 5px !important;
             margin-right: 0px !important;
@@ -1286,7 +1265,7 @@ Threads, posts, etc.
         }
         
         .thread .postContainer.opContainer {
-            border-top: 1px solid #d1d5de !important;
+            border-top: 1px solid #eee !important;
         }
         
          .thread .postContainer {
@@ -1331,12 +1310,10 @@ Threads, posts, etc.
             margin-top: -1px !important;
             padding-top: 2px !important;
             padding-bottom: 2px !important;
-            font-size: 9pt !important;
+            font-size:8pt !important;
             background: transparent !important;
             border-bottom: none !important;
             border-top: 1px #909090 !important;
-            border-top-left-radius: 0px !important;
-            border-top-right-radius: 0px !important;
         }
        
         .postInfo {
@@ -1364,33 +1341,32 @@ Threads, posts, etc.
         }
      
         .fileInfo {
-            margin-left: -2px !important;
-            font-size: 10pt !important;
+            margin-left: 0px !important;
+            font-size: 8pt !important;
             background: #fff !important;
             margin-right: 2px !important;
-            margin-top: -2px !important;
+            margin-top: 0px !important;
             margin-bottom: 0px !important;
         }
        
         .fileText {
-            font-family: limey !important;
+            font-family: Helvetica Neue !important;
             color: #c3c3c3!important;
             margin-left: -5px !important;
-            font-size: 8pt !important;
+            font-size: 8px !important;
         }
         
         .fileInfo a,
         .inline .fileInfo a,
         .inline .fileText a {
-            opacity: 0 !important;
             text-decoration: none !important;
             color: #c3c3c3 !important;
             background: transparent !important;
             border-radius: 2px !important;
             padding: 2px !important;
             text-align: center !important;
-            font-family: limey !important;
-            font-size: 8pt !important;
+            font-family: Helvetica Neue !important;
+            font-size: 10px !important;
         }
 
         .fileInfo a:hover,
@@ -1400,17 +1376,10 @@ Threads, posts, etc.
             color: #888 !important;
         }
 
-        .fileInfo:hover a,
-        .inline .fileInfo a:hover,
-        .inline .fileText a:hover {
-            opacity: 1 !important;
-        }
-
         .fileText a,
         .inline .fileText a {
             background: transparent !important;
             color: #a5abd8 !important;
-            opacity: 1 !important;
         }
 
         .fileText a:hover,
@@ -1421,53 +1390,77 @@ Threads, posts, etc.
 
 
        
-/* page list and catalog links */       
+/* page list and catalog links */
        
-        .prev, .next {
-            color: #333 !important;
-            background: transparent !important;
-            margin-top: 1px !important;
-            font-family: limey !important;
-            font-size: 9pt !important;
-        }
-       
-        .pagelist {
-            float: none !important;
-            position: relative !important;
-            display: block !important;
-            background-color: transparent !important;
-            color: #aaa !important;
-            border: none !important;
-            width: 400px !important;
-            text-align: center !important;
-            margin: 0 auto !important;
-            margin-top: 10px !important;
-            margin-bottom: -20px !important;
-            font-family: cure !important;
-            font-size: 9pt !important;
-        }
-     
-        .pagelist a {
-            color: #777 !important;
-        }
-       
-        .pagelist a:hover {
-            color: #555 !important;
-        }
-       
-        .pagelist strong {
-            font-weight: normal !important;
-            color: #333 !important;
-        }
-     
-        .cataloglink {
-            color: transparent !important;
-            font-size: 0px !important;
-        }
-       
-        .cataloglink a {
-            font-size: 9pt !important;
-        }
+.pagelist {
+    float: none !important;
+    width: 450px !important;
+    margin: 0 auto !important;
+    margin-bottom: -18px !important;
+    font-size: 12px !important;
+    color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.pages {
+    margin-top: -2px !important;
+}
+
+.pages a {
+    color: #7c818a !important;
+}
+
+.pages strong {
+    color: #121821 !important;
+}
+
+.pagelist .cataloglink a {
+    color: #aaa !important;
+    font-size: 8pt !important;
+    font-family: limey;
+}
+
+.pages.cataloglink {
+    margin: 0 !important;
+    margin-left: 5px !important;
+    background: transparent !important;
+    border-radius: 2px !important;
+    opacity: 0.65 !important;
+    border: none !important;
+    text-transform: lowercase !important;
+    padding: 2px !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.pagelist .cataloglink a:hover {
+    color: #fff !important;
+}
+
+.pagelist .prev input, .pagelist .next input {
+    -moz-appearance: none !important;
+    background: #b8bfcc !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 2px !important;
+    opacity: 0.65 !important;
+    padding: 1px !important;
+    text-transform: lowercase !important;
+    cursor: pointer !important;
+    font-size: 8pt !important;
+    font-family: limey !important;
+}
+
+.pagelist .prev input:hover,
+.pagelist .next input:hover,
+.pagelist .cataloglink:hover {
+    background: #5c6066 !important;
+    opacity: 1 !important;
+    color: #fff !important;
+}
+
+
      
     }
 
@@ -1522,17 +1515,17 @@ Catalog
             margin-right: 5px !important;
         }
         
-        #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after, 
-        .globalMessage, .globalMessage a, 
-        #globalMessage h3, #globalToggle::after, 
-        #globalToggle, strong, h2, 
-        .collapseIcon, .expandIcon, 
+        #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after,
+        .globalMessage, .globalMessage a,
+        #globalMessage h3, #globalToggle::after,
+        #globalToggle, strong, h2,
+        .collapseIcon, .expandIcon,
         #togglePostForm, #first-run,
-        #filtered-label, #filtered-label-bottom, 
-        #hidden-label, #hidden-label-bottom, 
+        #filtered-label, #filtered-label-bottom,
+        #hidden-label, #hidden-label-bottom,
         #search-label, #search-label-bottom,
         #settings,
-        #qf-ctrl.button, #qf-ctrl.button:hover, 
+        #qf-ctrl.button, #qf-ctrl.button:hover,
         #qf-clear, #qf-box,
         #toggleMsgBtn, #styleSwitcher {
             display: none !important;
