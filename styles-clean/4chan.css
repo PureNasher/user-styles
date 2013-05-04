@@ -5,6 +5,11 @@
           font-size: 7pt !important;
         }
         
+        #content, div.board {
+          margin-left: -4px !important;
+          width: 100% !important;
+        }
+        
         
 /*
 ==================
