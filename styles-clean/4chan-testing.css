@@ -5,6 +5,11 @@
           font-size: 7pt !important;
         }
         
+        #content, div.board {
+          margin-left: -4px !important;
+          width: 100% !important;
+        }
+        
         
 /*
 ==================
@@ -62,7 +67,7 @@ General colors
             color: #a27b9d !important;
         }
         
-        .useremail .name,
+        .useremail,
         a.useremail:hover {
             color: #7b80a2 !important;
             text-decoration: none !important;
@@ -202,7 +207,8 @@ General colors
         .abbr,
         .filtered,
         .inline .filtered,
-        a.quotelink.filtered {
+        a.quotelink.filtered,
+        .quoteLink, .deadlink {
             font-size: 8pt !important;
             color: #ccc !important;
             text-decoration: none !important;
@@ -240,6 +246,7 @@ Board banner
         .boardTitle {
             color: #444 !important;
             font: normal 20pt Helvetica Lt STD Light !important;
+            
         }
      
         .boardSubtitle {
@@ -741,9 +748,8 @@ Threads, posts, etc.
             position: absolute !important;
             left: auto !important;
             right: 7% !important;
-            margin-right: 11px !important;
+            margin-right: 8px !important;
             margin-top: 2px !important;
-            height: 10px !important;
             z-index: 1 !important;
             display: block !important;
             font-size: 0 !important;
@@ -768,6 +774,10 @@ Threads, posts, etc.
             border-bottom: 1px solid #ddd !important;
         }
         
+        .hide_thread_button.hidden_thread .thread {
+            border: none !important;
+        }
+        
         .hide_thread_button.hidden_thread a {
             color: #888 !important;
         }
@@ -780,12 +790,12 @@ Threads, posts, etc.
             position: absolute;
             content: "\2297";
             float: none !important;
-            right: 10% !important;
+            right: 7% !important;
             left: auto !important;
-            margin-right: 12px !important;
+            margin-right: 11px !important;
             margin-top: -1px !important;
             color: #aaa !important;
-            font-size: 7pt !important;
+            font-size: 8pt !important;
             height: 10px !important;
         }
         
@@ -931,7 +941,7 @@ Threads, posts, etc.
         .opContainer > div .postInfo:before {
             float: right !important;
             content: url('http://i.imgur.com/UNhyj.png') !important;
-            margin-left: 0px !important;
+            margin-left: 2px !important;
             margin-right: 6px !important;
             margin-top: 0px !important;
         }
@@ -1287,6 +1297,11 @@ Catalog
             box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
             border-radius: 2px !important;
             border: 1px solid #e0e0e0 !important;
+        }
+        
+        .boardBanner {
+            display: inherit !important;
+            position: inherit !important;
         }
         
         .thread {
