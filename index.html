@@ -1,71 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Styles by phallus</title>
+    <meta charset=UTF-8>
+    <title>Styles ~<==3</title>
+    <meta name=description content='penis penis penis'>
+    <link rel='shortcut icon' href=favicon.gif>
+    <script>
+(function(){
+  var d = document;
+  function $(s){return d.querySelector(s, d.body)}
+  function id(i){return $('[data-id='+i+']')}
+  function a(i){return $('[href="#'+i+'"]')}
+  window.addEventListener('hashchange', function(e) {
+    var next = e.newURL.match(/#(.*)$/)[1];
+    if(id(next)) {
+      $('.active').className = null;
+      $('.on').className = null;
+      id(next).className = 'active';
+      a(next).className = 'on';
+    }
+  }, false);
+  d.addEventListener('DOMContentLoaded', function loaded() {
+    var hash, el;
+    d.removeEventListener('DOMContentLoaded', loaded, false);
+    $('.install').addEventListener('click', function() {
+      // No botnet here! mayhem pls
+    }, false);
+    hash = window.location.hash.slice(1) || 'install';
+    el = id(hash) || id('install');
+    el.className = 'active';
+    a(el.dataset.id).className = 'on';
+  }, false);
+})();
+    </script>
+    <style>
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('BebasNeue-webfont.woff') format('woff'),
+       url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+::-moz-selection{background:rgba(195,0,255,.2)}
+::selection{background:rgba(195,0,255,.2)}
+body {
+  color: #373737;
+  background: #F0F0F0;
+  font-family: sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0;
+}
+a {
+  color: #7c96c9;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: color .3s ease-in-out;
+  -moz-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+a:hover {
+  color: #3a5976;
+}
+a:focus {
+  text-decoration: underline;
+}
+head, title {
+  display: block;
+}
+title {
+  font-family: 'BebasNeueRegular';
+  color: #3a5976;
+  cursor: default;
+  background: #7E149F;
+  background: -webkit-linear-gradient(#30303a, #3a5976);
+  background: -moz-linear-gradient(#30303a, #3a5976);
+  background: -o-linear-gradient(#30303a, #3a5976);
+  background: linear-gradient(#30303a, #3a5976);
+  font: 700 150px BebasNeueRegular, sans-serif;
+  letter-spacing: 10px;
+  text-align: center;
+  text-shadow: 0 1px 0 #30303a, 0 2px 0 #3a5967, 0 3px 0 #3a5976, 0 4px 0 #7c96c9, 0 5px 0 #86b2b4, 0 6px 0 #a8c9eb, 0 7px 0 #b6d0d2; //0 8px 0 #78118D, 0 9px 0 #741188, 0 10px 0 #741188, 0 22px 40px #506, 0 4px 10px #506;
+}
+title, nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+nav {
+  background: #30303a;
+  box-shadow: 0 0px 10px #20202f;
+  text-align: center;
+}
+nav > div {
+  width: 700px;
+  display: inline-block;
+}
+nav > div > div {
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+}
+nav a > div {
+  display: block !important;
+}
+nav a {
+  color: #EEE;
+  display: inline-block;
+  font: 1.5em BebasNeueRegular, sans-serif;
+  padding: 10px 0;
+  text-shadow: 0 1px 1px #000, 0 2px 1px #000;
+  vertical-align: text-top;
+  width: 115px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  nav a {
+    width: auto;
+  }
+}
+nav a:hover {
+  color: #a8c9eb;
+}
+.on {
+  color: #7c96c9;
+}
+section {
+  display: none;
+  font-size: 8pt;
+  font-family: Lucida Grande;
+  line-height: 23px;
+  margin: 10px auto 50px;
+  width: 700px;
+}
+.active {
+  display: block;
+}
+h1 {
+  text-align: center;
+}
+h1 > a {
+  font: 700 52px BebasNeueRegular, sans-serif;
+  text-shadow: 0 1px 1px #FFF, 0 2px 1px #FFF, 0 3px 1px #FFF;
+}
+h5 {
+  text-align: center;
+  margin: -1.67em 0 1.67em 0;
+}
+hr {
+  background: -webkit-linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  background: -moz-linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  background: -o-linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  background: linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  border: none;
+  height: 1px;
+}
+code, pre {
+  background: #EEE;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  box-shadow: inset 0 0 8px #DDD;
+  color: #555;
+  padding: 0 2px;
+  text-shadow: 0 1px 0 #FFF;
+}
+code {
+  white-space: nowrap;
+}
+.chrome::before, .firefox::before, .opera::before {
+  content: '';
+  background-image: url(data:image/png;base64,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);
+  display: inline-block;
+  margin-right: 4px;
+  height: 16px;
+  vertical-align: text-top;
+  width: 15px;
+}
+.firefox::before {
+  width: 16px;
+  background-position: -15px 0;
+}
+.opera::before {
+  background-position: -31px 0;
+}
+    </style>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <nav>
+      <div><div>
+        <a href=#install>Installation</a>
+        <a href=#4chan>4chan</a>
+        <a href=#reddit>Reddit</a>
+        <a><div class=g-plusone></div></a>
+      </div></div>
+    </nav>
+    <section data-id=install>
+      <p>The styles work in <b class=firefox>Firefox</b> 19.x, as far as I know.</p>
 
-        <header>
-          <h1>Styles</h1>
-          <h2>the styles I use in firefox</h2>
-        </header>
+      <h1><a class=install href=https://github.com/phallus/user-styles/tree/master/styles-clean>Install the styles</a></h1>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/phallus/user-styles/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/phallus/user-styles/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/phallus/user-styles" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+      <b class=firefox>Firefox</b>:
+      <ol>
+        <li>If you don't have Stylish...</li>
+          <ol>
+            <li>Install <a href=https://addons.mozilla.org/firefox/addon/stylish/>Stlyish</a>.</li>
+            <li>Restart Firefox.</li>
+          </ol>
+        </li>
+        <li>Create a new style.</li>
+        <li>Copy the code from the style of your choice into the new style.</li>
+        <li>Save and apply.</li>
+      </ol>
 
-        <hr>
+      <b class=others>Chrome, Opera, et. al.</b>:
+      <ol>
+        <li>Not my problem.</li>
+      </ol>
 
-        <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <footer>
-          Styles is maintained by <a href="https://github.com/phallus">phallus</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
-    </div>
+    </section>
+    <section data-id=4chan>
+      <ul>
+        <li><a href=/https://github.com/phallus/user-styles/blob/master/styles-clean/4chan.css>Stable</a>
+          <ul>
+		<li>Requires 4chan X to work!</li>
+		<li>Compression of QR, Thread Watcher, Global Toggle, Settings Link, and Image Expansion into fixed icons</li>
+		<li>Supports reply and thread hiding</li>
+		<li>Removes most attention from the post themselves while retaining aesthetic appeal</li>
+          </ul>
+        </li>
+        <li><a href=/https://github.com/phallus/user-styles/blob/master/styles-clean/4chan-testing.css>Testing</a>
+          <ul>
+		<li>Removes multiple features I rarely or never use (namely, the thread watcher, global toggle, and visible thread updater)</li>
+		<li>All other features (sans QR) are transparent and absolutely positioned; they can be accessed via hovering</li>
+		<li>Aims for an even more minimalist experience than does stable</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section data-id=reddit>
+      <ul>
+	<li><a href=/https://github.com/phallus/user-styles/blob/master/styles-clean/reddit.css>Stable</a>
+	  <ul>
+		<li>Runs on top of default reddit</li>
+		<li>Turns the sidebox and reddits bar into drop-down menus</li>
+		<li>Aims for the same miminalist aesthetic of the 4chan style</li>
+		<li>Does NOT and WILL NOT support RES</li>
+	  </ul>
+	</li>
+        <li><a href=/https://github.com/phallus/user-styles/blob/master/styles-clean/reddit-testing.css>Testing</a>
+          <ul>
+		<li>Unlike its 4chan equivalent, this style adds very few new features sans different placement and style of menus</li>
+	  </ul>
+	</li>
+      </ul>
+    </section>
   </body>
 </html>
