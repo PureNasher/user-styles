@@ -2,7 +2,7 @@ Clean styles in the vein of the aesthetic seen in OS X and hdni's projects. Inte
 
 4chan
 ![4chan](http://i.imgur.com/9r2J6p9.png)
-Requires [4chan](http://phallus.github.io/4chan-x/) X to work properly.
+Requires [4chan X](http://phallus.github.io/4chan-x/) to work properly.
 
 
 Reddit
