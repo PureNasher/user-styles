@@ -10,14 +10,19 @@
 /* body */
 
 body {
-    width: 99% !important;
-    left: 1% !important;
+    width: 100% !important;
+    left: 0% !important;
     right: 0% !important;
     background-attachment: fixed !important;
     background-color: #fff !important;
     font-family: Lucida Grande !important;
     font-size: 7pt !important;
     margin-left: 0% !important;
+}
+
+.content {
+    margin-left: -4px !important;
+    width: 99% !important;
 }
 
 /*
@@ -32,14 +37,15 @@ Header + navigation
 #header {
     background: transparent!important;
     border-bottom: none !important;
+    height: 70px !important;
 }
 
     #sr-header-area {
             position: fixed !important;
-            left: 0% !important;
-            margin-left: 4px !important;
+            right: 0% !important;
+            margin-right: 60px !important;
             width: 100px !important;
-            bottom: -1000% !important;
+            top: -1000% !important;
             font-weight: normal !important;
             font-family: limey !important;
             text-align: left !important;
@@ -48,9 +54,9 @@ Header + navigation
             line-height: 12px !important;
             padding-top: 0px !important;
             border: 2px solid #888 !important;
-            z-index: 10011234321 !important;
+            z-index: 1001 !important;
             border-radius: 3px !important;
-            border-bottom-left-radius: 0px !important;
+            border-top-left-radius: 0px !important;
             padding-left: 3px !important;
             padding-right: 3px !important;
             padding-top: 1px !important;
@@ -69,7 +75,7 @@ Header + navigation
         }
        
         #sr-header-area:active, #sr-header-area:hover {
-            bottom: 13px !important;
+            top: 14px !important;
         }
         
         #sr-header-area:hover #sr-more-link:before {
@@ -113,8 +119,6 @@ Header + navigation
             position: fixed !important;
             right: -1000px !important;;
             padding-top: 1px !important;
-            border-bottom-left-radius: 0px !important;
-            border-bottom-right-radius: 0px !important;
         }
 
         #sr-more-link:before {
@@ -122,20 +126,20 @@ Header + navigation
             text-align: center !important;
             background: transparent !important;
             position: fixed !important;
-            bottom: 1px !important;
-            left: 0% !important;
+            top: 2px !important;
+            right: 0% !important;
             padding: 2px !important;
             padding-top: 1px !important;
             padding-bottom: 0px !important;
-            z-index: 5 !important;
-            margin-left: 4px;
+            margin-right: 60px;
             text-transform: none !important;
             font-family: Lucida Grande !important;
+            opacity:0;
         }
         
         #sr-more-link:hover:before, #sr-header-area:hover #sr-more-link:before{
             color: #fff !important;
-            transition: 0.5s color ease;
+            opacity: 1 !important;
         }
         
         #sr-more-link:hover:before, #sr-header-area:hover::after {
@@ -144,17 +148,14 @@ Header + navigation
             transition: 0.5s color ease;
          }
          
-         #sr-more-link:active {
-            top: 14px !important;
+         /*#sr-more-link:active {
             margin-right: 4px !important;
             width: 40px !important;
             border-radius: 3px !important;
             text-align: left !important;
-         }
+         }*/
          
 /* user menu; links */
-
-  
 
     #header-img {
         display: none !important
@@ -162,23 +163,33 @@ Header + navigation
     }
         .tabmenu {
             vertical-align: 0px !important;
-            width: 100% !important;
+            margin-left: -4px !important;
+            width: 60% !important;
+            left:19%!important;
+            right:21%!important;
             text-align: center !important;
-            padding-top: 0px !important;
-            margin-top: 38px !important;
+            top: 0px !important;           
+            margin-top: 2px !important;
             position: absolute !important;
-            font-family: Helvetica Neue !important;
+            font-family: Lucida Gande !important;
+            opacity: 0;
+            height: 24px;
+        }
+        
+        .tabmenu:hover {
+            opacity: 1 !important;
         }
 
             .tabmenu li a {
                 background: transparent !important;
                 color: #909090 !important;
-                font-size: 10px !important;
+                font-size: 8pt !important;
                 font-weight: 300 !important;
-                padding: 0px 6px !important;
+                padding: 0px 0px !important;
                 transition: 0.5s color ease;
                 border: 0px none !important;
                 margin-left: -1px !important;
+                font-family: Lucida Gande !important;
             }
 
                 .tabmenu li a:hover {
@@ -206,6 +217,7 @@ Header + navigation
         box-shadow: none !important;
         height: 40px !important;
         padding-top: 5px !important;
+        width: 100% !important;
     }
     
     #mail {
@@ -223,8 +235,17 @@ Header + navigation
         margin-right: 0px !important;
     }
     
+    .menuarea {
+        width: 100% !important;
+        left: 1% !important;
+    }
+    
+    .menuarea .spacer {
+        margin-left: 2% !important;
+    }
+    
     .menuarea a {
-        margin-left: 3px !important;
+        margin-left: 4px !important;
         margin-right: 3px !important;
     }
     
@@ -232,12 +253,12 @@ Header + navigation
         margin-top: 10px !important;
         background: transparent !important;
         box-shadow: none !important;
-        font-size: 10px !important;
+        font-size: 8pt !important;
         font-weight: 300 !important;
         padding: 3px !important;
-        width: 80% !important;
-        right:10% !important;
-        left:10% !important;
+        width: 84% !important;
+        left: 7% !important;
+        right: 9% !important;
         text-align: center !important;
         position: relative !important;
         font-family: Helvetica Neue !important;
@@ -268,13 +289,16 @@ Header + navigation
 
 .pagename {
     left: 0px !important;
-    width: 100% !important;
+    width: 84% !important;
+    left:7% !important;
+    right: 9% !important;
     position: absolute;
     text-align: center !important;
     text-decoration: none !important;
     bottom: 0px !important;
     font: normal 24pt Helvetica Lt STD Light !important;
     top: 4px !important;
+    margin-top: 16px !important;
 }
 
 .pagename a {
@@ -283,11 +307,17 @@ Header + navigation
 }
 
 .pagename a:hover {
-    color: #222 !important;
+    color: #444 !important;
     transition: 0.5s color ease;
 }
 
-/* turn the sidebar into a drop-down menu */
+
+/* 
+===========
+sidebox
+===========
+*/
+
 
 .side {
     background: #FFF !important;
@@ -299,7 +329,7 @@ Header + navigation
     width: 180px !important;
     right: 0% !important;
     margin-right: 10px !important;
-    bottom: -100% !important;
+    top: -100% !important;
     z-index: 1000 !important;
 
 }
@@ -311,27 +341,26 @@ Header + navigation
     text-align: center !important;
     background: transparent!important;
     position: fixed !important;
-    bottom: 1px !important;
+    top: 2px !important;
     right: 0% !important;
     margin-right: 10px !important;
     padding: 2px !important;
     padding-top: 1px !important;
-    padding-bottom: 0px !important;
     z-index: 5;
-    transition: 0.5s color ease;
+    opacity: 0;
 }
 
 .side:hover::before {
     color: #fff !important;
     background: #888 !important;
     border-radius: 3px !important;
-    border-bottom-right-radius: 0px !important;
     transition: 0.5s color ease;
+    opacity: 1 !important;
 }
 
 .side:hover {
     position: fixed !important;
-    bottom: 12px !important;
+    top: 14px !important;
 }
 
 .sidebox .subtitle {
@@ -367,6 +396,8 @@ Header + navigation
 .panestack-title {
     width: 100% !important;
     text-align: center !important;
+    margin-left: -4px !important;
+    border-bottom: none!important;
 }
 
 .comment {
@@ -375,6 +406,7 @@ Header + navigation
 
 .commentarea {
     width: 100% !important;
+    margin-left: -4px !important;
 }
 
 .titlebox h1 {
@@ -479,9 +511,7 @@ Content
 
 .link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
     padding: 12px 0px !important;
-    margin-bottom: -10px !important;
-    border-left: none !important;
-    border-right: none !important;
+    margin-bottom: -6px !important;
 }
 
 .link.last-clicked {
@@ -541,12 +571,13 @@ Content
         margin-left: 10px !important;
         color: #888!important;
         font-size: 7pt !important;
-        font-family: Lucida Grande !important;
+        font-family: Helvetica Neue !important;
         margin-top: 7px !important;
+        opacity: .8;
     }
     
     .link .flat-list {
-        margin-top: 4px !important;
+        margin-top: 3px !important;
         margin-left: 2px !important;
     }
     
@@ -557,10 +588,11 @@ Content
     
         .entry .buttons li a {
             color: #999 !important;
-            font-size: 7pt !important;
+            font-size: 7px !important;
             font-weight: normal !important;
             padding: 0 8px 3px !important;
             transition: 0.5s ease all;
+            font-family: Lucida Grande !important;
         }
         
             .entry .buttons li a:hover {
@@ -838,7 +870,8 @@ a.helplink,
 .titlebox .tagline,
 .users-online,
 .sidecontentbox .title h1,
-.bottommenu {
+.bottommenu,
+#errorPageContainer, #errorTitle, #ad-frame, #ad_main  {
     display: none !important;
 }
 
