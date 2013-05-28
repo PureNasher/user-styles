@@ -12,10 +12,10 @@
         
         
 /*
-==================
-Things to hide
-==================
-*/
+ * ==================
+ * Things to hide
+ * ==================
+ * */
 
 
         hr,
@@ -33,8 +33,8 @@ Things to hide
         .navLinks,
         .globalMessage.hideMobile,
         .vote,
-        input[type="checkbox"]#imageExpand,
-        input[type="checkbox"]#prefetch,
+        /*input[type="checkbox"]#imageExpand,
+ *         input[type="checkbox"]#prefetch,*/
         #qr input[type="checkbox"],
         .close,
         .postInfo input[type="checkbox"],
@@ -45,10 +45,10 @@ Things to hide
 
        
 /*
-=======================
-General colors
-=======================
-*/
+ * =======================
+ * General colors
+ * =======================
+ * */
 
         a.useremail[href*='sage']:last-of-type::after,
         a.useremail[href*='Sage']:last-of-type::after,
@@ -221,10 +221,10 @@ General colors
 
 
 /*
-=============
-Board banner
-=============
-*/
+ * =============
+ * Board banner
+ * =============
+ * */
 
 
         .boardBanner {
@@ -264,21 +264,21 @@ Board banner
        
        
 /*
-==================
-Navigation Links
-==================
-*/
+ * ==================
+ * Navigation Links
+ * ==================
+ * */
 
 
 /* top items - to do: compress into single absolutely-positioned menu */
 
         #boardNavDesktop {
-            position: absolute !important;
+            position: fixed !important;
             top: 2px !important;
             width: auto !important;
             right: 0% !important;
             left: auto !important;
-            height: 20px;
+            height: 24px;
             overflow: hidden !important;
             font-size: 0pt !important;
             background: transparent !important;
@@ -311,17 +311,37 @@ Navigation Links
             color: #bbb!important;
             content: "Expand images";
             top: 2px !important;
-            position: absolute !important;
+            position: fixed !important;
             text-align: center !important;
+            height: 24px !important;
             width: auto !important;
             z-index: 10 !important;
             opacity: 0 !important;
         }
     
-        #imgControls > *:hover::before, #boardNavDesktop:hover {
+        #imgControls > *:hover::before, #boardNavDesktop:hover, #prefetch:hover::before {
             opacity: 1 !important;
         }
-       
+        
+        #prefetch::before {
+            font-size: 8pt !important;
+            color: #bbb!important;
+            content: "Prefetch images";
+            top: 16px !important;
+            position: fixed !important;
+            text-align: center !important;
+            height: 24px !important;
+            width: auto !important;
+            z-index: 10 !important;
+            opacity: 0 !important;
+        }
+        
+        input[type="checkbox"]#imageExpand,
+        input[type="checkbox"]#prefetch {
+            opacity: 0 !important;
+            position:fixed !important;
+        }
+        
         #boardNavDesktop a {
             font-size: 8pt !important;
             color: #c3c3c3 !important;
@@ -444,10 +464,10 @@ Navigation Links
        
 
 /* 
-=================
-Quick Reply 
-=================
-*/
+ * =================
+ * Quick Reply 
+ * =================
+ * */
 
 
         #qr {
@@ -654,10 +674,10 @@ Quick Reply
 
 
 /*
-=====================
-Threads, posts, etc.
-=====================
-*/
+ * =====================
+ * Threads, posts, etc.
+ * =====================
+ * */
 
 
 /* code blocks - to do: fix alignment of non-code text */
@@ -684,15 +704,21 @@ Threads, posts, etc.
             border: none !important;
             border-radius: 2px !important;
             margin: auto !important;
-            margin-left: 0px !important;
+            margin-left: 20px !important;
             margin-top: 10px !important;
             margin-bottom: 0px !important;
             padding-right: 10px !important;
             margin-right: 10px !important;
             font-size: 10pt !important;
             background: transparent !important;
+            display: block !important;
         }
-     
+        
+        .inline .post {
+            margin-left: 10px !important;
+        }
+        
+        
         .inline .postContainer, .inline .opContainer {
             margin: 0px !important;
             margin-right: 15px !important;
@@ -1291,10 +1317,10 @@ Threads, posts, etc.
 
 
 /*
-==============
-Catalog
-==============
-*/
+ * ==============
+ * Catalog
+ * ==============
+ * */
 
 
     /* to do: improve search implementation; update colors */
