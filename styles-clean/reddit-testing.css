@@ -26,10 +26,10 @@ body {
 }
 
 /*
-====================
-Header + navigation
-====================
-*/
+ * ====================
+ * Header + navigation
+ * ====================
+ * */
 
 
 /* turn the nav bar into a drop-down menu */
@@ -149,11 +149,11 @@ Header + navigation
          }
          
          /*#sr-more-link:active {
-            margin-right: 4px !important;
-            width: 40px !important;
-            border-radius: 3px !important;
-            text-align: left !important;
-         }*/
+ *             margin-right: 4px !important;
+ *                         width: 40px !important;
+ *                                     border-radius: 3px !important;
+ *                                                 text-align: left !important;
+ *                                                          }*/
          
 /* user menu; links */
 
@@ -313,10 +313,10 @@ Header + navigation
 
 
 /* 
-===========
-sidebox
-===========
-*/
+ * ===========
+ * sidebox
+ * ===========
+ * */
 
 
 .side {
@@ -329,7 +329,7 @@ sidebox
     width: 180px !important;
     right: 0% !important;
     margin-right: 10px !important;
-    top: -100% !important;
+    top: -1000% !important;
     z-index: 1000 !important;
 
 }
@@ -375,6 +375,24 @@ sidebox
     background: transparent !important;
 }
 
+.flairselector, .drop-choices { 
+    z-index: 1001 !important;
+    position: fixed !important;
+    width: 135px !important;
+    opacity: 100% !important;
+    right: 5% !important;
+    left: auto !important;
+    top: 325px !important;
+    font-family: lemon !important;
+}
+
+.flairselector li.selected {   
+    border: none !important;
+    color: #444 !important;
+    background: #ccc !important;
+}
+    
+
 .titlebox {
     font-size: larger;
     text-align: center !important;
@@ -401,6 +419,7 @@ sidebox
 }
 
 .comment {
+    margin-top: 8px !important;
     width: 99% !important;
 }
 
@@ -438,6 +457,11 @@ sidebox
     font-weight: normal !important;
     line-height: 29px;
     letter-spacing: 0px !important;
+    z-index: 5 !important;
+}
+
+.morelink .nub, .morelink:hover .nub, .mlhn  {
+    z-index: inherit !important;
 }
 
 .linkinfo {
@@ -484,10 +508,10 @@ sidebox
 
 
 /* 
-================
-Content
-================
-*/
+ * ================
+ * Content
+ * ================
+ * */
 
 /* links */
 
@@ -645,10 +669,10 @@ a.author:hover, a .author:hover {
 
 
 /* 
-===============
-Other pages
-===============
-*/
+ * ===============
+ * Other pages
+ * ===============
+ * */
 
 
 /* submitting a link */
@@ -845,10 +869,10 @@ Other pages
 
 
 /* 
-===========
-random 
-===========
-*/
+ * ===========
+ * random 
+ * ===========
+ * */
 
 h1 {
     font-size: 18px;
@@ -862,12 +886,11 @@ h1 {
 #ad-frame,
 .infobar.welcome,
 .titlebox .md,
-.sidecontentbox .content,
 a.helplink,
+.sidecontentbox .content,
 .titlebox .age,
 .titlebox .bottom,
 .titlebox form.flairtoggle,
-.titlebox .tagline,
 .users-online,
 .sidecontentbox .title h1,
 .bottommenu,
