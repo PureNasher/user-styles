@@ -47,7 +47,7 @@ body {
             width: 100px !important;
             top: -1000% !important;
             font-weight: normal !important;
-            font-family: limey !important;
+            font-family: lemon !important;
             text-align: left !important;
             background: #fff !important;
             height: 200px !important;
@@ -475,7 +475,7 @@ body {
 }
 
     .linkinfo .date {
-        font-family: limey !important;
+        font-family: lemon !important;
     }
     
     .linkinfo .score .word {
@@ -493,7 +493,7 @@ body {
     }
 
     .linkinfo .upvotes, .linkinfo .downvotes {
-        font-family: limey !important;
+        font-family: lemon !important;
         font-size: 8pt !important;
         color: #646464 !important;
     }
@@ -540,8 +540,7 @@ body {
 
 .link.last-clicked {
     color: #3f3f3f !important;
-    border-left: none !important;
-    border-right: none !important;
+    background: #fcfcfc !important;
 }
 
 .link .title {
@@ -625,6 +624,19 @@ body {
                 transition: 0.5s color ease;
             }
             
+.linkflairlabel {
+    height: 10px !important;
+    padding: 2px !important;
+    padding-top: 0px !important;
+    margin-bottom: -2px !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.flair, .linkflairlabel {
+    padding-top: 0px !important;
+}
+            
 .expando-button {
     display: none !important
 }
@@ -665,6 +677,10 @@ a.author:hover, a .author:hover {
 
 .tagline .submitter {
     color: #999;
+}
+
+#noresults, .error {
+    margin-left: 15px !important;
 }
 
 
