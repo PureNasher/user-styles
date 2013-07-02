@@ -1,3 +1,5 @@
+@import "https://rawgithub.com/phallus/user-styles/master/styles-clean/4chan-testing.css";
+
 @-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
@@ -39,7 +41,7 @@
         .close,
         .postInfo input[type="checkbox"],
         .fileDeletedRes,
-        #updater, #watcher, #qr .move {
+        #updater, #watcher, #qr .move, .ad-plea {
             display: none !important;
         }
 
@@ -247,6 +249,7 @@
             margin-top: 2px !important;
             color: #666 !important;
             font: normal 8pt Helvetica Neue !important;
+            margin-bottom: 12px !important;
         }
      
         .boardSubtitle a,
