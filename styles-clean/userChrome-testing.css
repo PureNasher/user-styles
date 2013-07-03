@@ -27,7 +27,7 @@ general
     }
      
     #main-window:not([disablechrome]) #navigator-toolbox[tabsontop=true] {
-	border-bottom: 2px solid #30303a !important;
+	border-bottom: 2px solid #20202f !important;
     }
 
 	
@@ -40,7 +40,7 @@ tabs
     
     tab {
 	border-bottom: 2px solid !important;
-	border-bottom-color: #30303a !important;
+	border-bottom-color: #20202f !important;
     }
     
     tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
@@ -48,25 +48,25 @@ tabs
         border-radius: 0px !important;
         background-image: none !important;
         margin-top: 0px !important;
-	height:16px !important;
+		height:16px !important;
     }
      
     tabs#tabbrowser-tabs {
         background: #20202f !important;
         padding: 2px !important;
         margin-left: -1px !important;
-	margin-right: -1px !important;
+		margin-right: -1px !important;
         text-align: center !important;
     }
      
     .tabbrowser-tab {
             max-height: 12px !important;
             margin-left: 2px !important;
-	    margin-right: 1px !important;
+	    	margin-right: 1px !important;
             padding-top: 0px !important;
-	    padding-bottom: 8px !important;
-	    border-radius: 3px !important;
-	    border: none !important;
+	    	padding-bottom: 8px !important;
+	    	border-radius: 3px !important;
+	    	border: none !important;
             color: #ddd !important;
             background: #595961 !important;
     }
@@ -80,7 +80,7 @@ tabs
     .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
             color: #ddd !important;
             background: #30303a !important;
-	    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.12) !important;
+		    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.12) !important;
      }
      
     .tabbrowser-tab .tab-text {
