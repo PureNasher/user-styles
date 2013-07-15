@@ -544,7 +544,11 @@ body {
     margin-right: 2px !important;
 }
 
-.link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
+.link.promotedlink, .organic-listing .link.promotedlink,.organic-listing .promoted {
+    display: none !important;
+}
+
+organic-listing, .organic-listing .link{
     padding: 12px 0px !important;
     margin-bottom: -6px !important;
 }
