@@ -466,6 +466,10 @@ body {
     z-index: 5 !important;
 }
 
+.morelink a {
+    margin-left: -6px !important;
+}
+
 .morelink .nub, .morelink:hover .nub, .mlhn  {
     z-index: inherit !important;
 }
