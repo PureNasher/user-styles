@@ -452,6 +452,11 @@ body {
     font-family: lemon !important;
 }
 
+.md h2 {
+    font-size: 8px !important;
+    font-family: lemon !important;
+}
+
 .morelink {
     text-align: center;
     font-size: 11px !important;
