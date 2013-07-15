@@ -913,15 +913,15 @@ h1 {
 .infobar.welcome,
 a.helplink,
 .sidecontentbox .content,
+.users-online,
 .titlebox .age,
 .titlebox .bottom,
 .titlebox form.flairtoggle
-.users-online,
 .sidecontentbox .title h1,
 .bottommenu,
-#errorPageContainer, #errorTitle, #ad-frame, #ad_main  {
+#errorPageContainer, #errorTitle, #ad-frame, #ad_main {
     display: none !important;
- 
+}
 
 .organic-listing {
     border: 0px none !important;
