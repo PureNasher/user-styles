@@ -375,12 +375,12 @@ body {
     background: transparent !important;
 }
 
-.flairselector, .drop-choices { 
+.flairselector { 
     z-index: 1001 !important;
     position: fixed !important;
-    width: 135px !important;
+    width: 155px !important;
     opacity: 100% !important;
-    right: 5% !important;
+    right: 4% !important;
     left: auto !important;
     top: 325px !important;
     font-family: lemon !important;
@@ -441,14 +441,13 @@ body {
 
 .titlebox h1 a {
     display: none !important;
-    color: black !important;
-    font-family: Helvetica !important;
-    font-size: 8pt !important;
-    text-align: center !important;
-    width: 100% !important;
-    position: absolute;
-    top: -3px;
-    left: -5px !important;
+}
+
+.titlebox .md {
+    display: block !important;
+    overflow: scroll !important;
+    height: 200px !important;
+    border: 1px solid #ddd !important;
 }
 
 .morelink {
@@ -536,6 +535,10 @@ body {
 .link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
     padding: 12px 0px !important;
     margin-bottom: -6px !important;
+}
+
+.organic-listing .sponsored-tagline {
+    margin-right: -20px !important;
 }
 
 .link.last-clicked {
@@ -901,18 +904,17 @@ h1 {
 .goldvertisement,
 #ad-frame,
 .infobar.welcome,
-.titlebox .md,
 a.helplink,
 .sidecontentbox .content,
 .titlebox .age,
 .titlebox .bottom,
-.titlebox form.flairtoggle,
+.titlebox form.flairtoggle
 .users-online,
 .sidecontentbox .title h1,
 .bottommenu,
 #errorPageContainer, #errorTitle, #ad-frame, #ad_main  {
     display: none !important;
-}
+ 
 
 .organic-listing {
     border: 0px none !important;
