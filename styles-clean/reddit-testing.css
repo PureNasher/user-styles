@@ -603,8 +603,15 @@ body {
             font-weight: bold !important;
             font-size: 7pt !important;
             color: #bf7c83 !important;
+            transition: 0.5s color ease;
         }
-    
+        
+        .domain:hover, .domain a:hover {
+            color: #ae5a63 !important;
+            text-decoration: none !important;
+            transition: 0.5s color ease;
+        }
+        
     .tagline {
         margin-left: 10px !important;
         color: #888!important;
