@@ -331,7 +331,6 @@ body {
     margin-right: 10px !important;
     top: -1000% !important;
     z-index: 1000 !important;
-
 }
 
 .side::before {
@@ -446,8 +445,11 @@ body {
 .titlebox .md {
     display: block !important;
     overflow: scroll !important;
-    height: 200px !important;
+    height: 100px !important;
+    padding: 3px !important;
+    text-align: left !important;
     border: 1px solid #ddd !important;
+    font-family: lemon !important;
 }
 
 .morelink {
