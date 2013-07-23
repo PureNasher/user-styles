@@ -379,7 +379,7 @@ body {
     z-index: 1001 !important;
     position: fixed !important;
     width: 155px !important;
-    opacity: 100% !important;
+    opacity: 1 !important;
     right: 4% !important;
     left: auto !important;
     top: 325px !important;
@@ -923,6 +923,8 @@ h1 {
     text-align: center !important;
 }
 
+div.contents,
+body.with-listing-chooser .listing-chooser.initialized,
 #search input,
 .goldvertisement,
 #ad-frame,
