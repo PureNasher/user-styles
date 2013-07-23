@@ -1,4 +1,4 @@
-The styles I use in Firefox. Everything I currently use is marked as 'testing.'
+The styles I use in Firefox.
 
 To install a style, simply copy the code of the desired style into a blank Stylish style.
 

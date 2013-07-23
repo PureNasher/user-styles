@@ -10,8 +10,8 @@
 /* body */
 
 body {
-    width: 99% !important;
-    left: 1% !important;
+    width: 100% !important;
+    left: 0% !important;
     right: 0% !important;
     background-attachment: fixed !important;
     background-color: #fff !important;
@@ -20,11 +20,16 @@ body {
     margin-left: 0% !important;
 }
 
+.content {
+    margin-left: -4px !important;
+    width: 99% !important;
+}
+
 /*
-====================
-Header + navigation
-====================
-*/
+ * ====================
+ * Header + navigation
+ * ====================
+ * */
 
 
 /* turn the nav bar into a drop-down menu */
@@ -32,25 +37,26 @@ Header + navigation
 #header {
     background: transparent!important;
     border-bottom: none !important;
+    height: 70px !important;
 }
 
     #sr-header-area {
             position: fixed !important;
-            right: 1% !important;
-            margin-right: 10px !important;
+            right: 0% !important;
+            margin-right: 60px !important;
             width: 100px !important;
             top: -1000% !important;
             font-weight: normal !important;
-            font-family: limey !important;
+            font-family: lemon !important;
             text-align: left !important;
-            background: #888 !important;
+            background: #fff !important;
             height: 200px !important;
             line-height: 12px !important;
             padding-top: 0px !important;
-            border: 2px solid !important;
-            color: transparent !important;
+            border: 2px solid #888 !important;
             z-index: 1001 !important;
             border-radius: 3px !important;
+            border-top-right-radius: 0px !important;
             padding-left: 3px !important;
             padding-right: 3px !important;
             padding-top: 1px !important;
@@ -78,8 +84,8 @@ Header + navigation
         }
         
         
-        #sr-header-area .sr-list a[class="current"]{
-            color: #f9f9f9 !important;
+        #sr-header-area .sr-list a[class="current"], #sr-header-area .selected a{
+            color: #888!important;
             font-weight: normal !important;
             text-shadow: none !important;
         }
@@ -89,7 +95,7 @@ Header + navigation
         }
 
         #sr-header-area a {
-            color: #ccc !important;
+            color: #bbb !important;
             font-size: 9px !important;
             text-decoration: none !important;
             transition: 0.5s color ease;
@@ -97,7 +103,7 @@ Header + navigation
         }
 
             #sr-header-area a:hover {
-                color: #FFF !important;
+                color: #aaa !important;
                 transition: 0.5s color ease;
             }
 
@@ -106,10 +112,8 @@ Header + navigation
         }
         
         #sr-more-link {
-            background: #888!important;
+            background: inherit!important;
             color: #FFF !important;
-            height: 15px !important;
-            line-height: 12px !important;
             font-weight: normal !important;
             text-align: center !important;
             position: fixed !important;
@@ -118,45 +122,41 @@ Header + navigation
         }
 
         #sr-more-link:before {
-            content: url('http://i46.tinypic.com/mry1wz.jpg') !important;
+            content: 'reddits' !important;
             text-align: center !important;
             background: transparent !important;
-            height: 16px !important;
-            padding-top: 2px !important;
-            width: 14px !important;
             position: fixed !important;
-            top: 1px !important;
-            right: 1% !important;
-            margin-right: 10px;
-            z-index: 5;
+            top: 2px !important;
+            right: 0% !important;
+            padding: 2px !important;
+            padding-top: 1px !important;
+            padding-bottom: 0px !important;
+            margin-right: 60px;
+            text-transform: none !important;
+            font-family: Lucida Grande !important;
+            border-bottom-right-radius: 0px !important;
+            opacity:0;
         }
         
         #sr-more-link:hover:before, #sr-header-area:hover #sr-more-link:before{
-            content: url('http://i.imgur.com/8GQaSW1.png') !important;
-            transition: 0.5s color ease;
+            color: #fff !important;
+            opacity: 1 !important;
         }
         
         #sr-more-link:hover:before, #sr-header-area:hover::after {
-            background: #888 !important;
+            color: #fff !important;
             border-radius: 3px !important;
             transition: 0.5s color ease;
          }
          
-         #sr-more-link:active {
-            top: 14px !important;
-            margin-right: 4px !important;
-            width: 40px !important;
-            border-radius: 3px !important;
-            text-align: left !important;
-         }
+         /*#sr-more-link:active {
+ *             margin-right: 4px !important;
+ *                         width: 40px !important;
+ *                                     border-radius: 3px !important;
+ *                                                 text-align: left !important;
+ *                                                          }*/
          
 /* user menu; links */
-
-#sr-header-area .selected a {
-    color: #fff !important;
-    font-weight: normal !important;
-}
-  
 
     #header-img {
         display: none !important
@@ -164,23 +164,33 @@ Header + navigation
     }
         .tabmenu {
             vertical-align: 0px !important;
-            width: 100% !important;
+            margin-left: 2px !important;
+            width: 60% !important;
+            left:19%!important;
+            right:21%!important;
             text-align: center !important;
-            padding-top: 0px !important;
-            margin-top: 38px !important;
+            top: 0px !important;           
+            margin-top: 2px !important;
             position: absolute !important;
-            font-family: Helvetica Neue !important;
+            font-family: Lucida Gande !important;
+            opacity: 0;
+            height: 24px;
+        }
+        
+        .tabmenu:hover {
+            opacity: 1 !important;
         }
 
             .tabmenu li a {
                 background: transparent !important;
                 color: #909090 !important;
-                font-size: 10px !important;
+                font-size: 8pt !important;
                 font-weight: 300 !important;
-                padding: 0px 6px !important;
+                padding: 0px 0px !important;
                 transition: 0.5s color ease;
                 border: 0px none !important;
                 margin-left: -1px !important;
+                font-family: Lucida Gande !important;
             }
 
                 .tabmenu li a:hover {
@@ -208,6 +218,7 @@ Header + navigation
         box-shadow: none !important;
         height: 40px !important;
         padding-top: 5px !important;
+        width: 100% !important;
     }
     
     #mail {
@@ -225,8 +236,17 @@ Header + navigation
         margin-right: 0px !important;
     }
     
+    .menuarea {
+        width: 100% !important;
+        left: 1% !important;
+    }
+    
+    .menuarea .spacer {
+        margin-left: 2% !important;
+    }
+    
     .menuarea a {
-        margin-left: 3px !important;
+        margin-left: 4px !important;
         margin-right: 3px !important;
     }
     
@@ -234,12 +254,12 @@ Header + navigation
         margin-top: 10px !important;
         background: transparent !important;
         box-shadow: none !important;
-        font-size: 10px !important;
+        font-size: 8pt !important;
         font-weight: 300 !important;
         padding: 3px !important;
-        width: 80% !important;
-        right:10% !important;
-        left:10% !important;
+        width: 84% !important;
+        left: 7% !important;
+        right: 9% !important;
         text-align: center !important;
         position: relative !important;
         font-family: Helvetica Neue !important;
@@ -270,13 +290,16 @@ Header + navigation
 
 .pagename {
     left: 0px !important;
-    width: 100% !important;
+    width: 84% !important;
+    left:7% !important;
+    right: 9% !important;
     position: absolute;
     text-align: center !important;
     text-decoration: none !important;
     bottom: 0px !important;
     font: normal 24pt Helvetica Lt STD Light !important;
     top: 4px !important;
+    margin-top: 16px !important;
 }
 
 .pagename a {
@@ -285,11 +308,17 @@ Header + navigation
 }
 
 .pagename a:hover {
-    color: #222 !important;
+    color: #444 !important;
     transition: 0.5s color ease;
 }
 
-/* turn the sidebar into a drop-down menu */
+
+/* 
+ * ===========
+ * sidebox
+ * ===========
+ * */
+
 
 .side {
     background: #FFF !important;
@@ -299,40 +328,39 @@ Header + navigation
     padding: 16px !important;
     float: right !important;
     width: 180px !important;
-    right: 1% !important;
-    top: -100% !important;
+    right: 0% !important;
+    margin-right: 10px !important;
+    top: -1000% !important;
     z-index: 1000 !important;
-
 }
 
 .side::before {
-    content: url('http://i46.tinypic.com/maaqzd.jpg');
+    content: 'sidebox';
+    font-family: Lucida Grande !important;
+    color: #bbb !important;
     text-align: center !important;
     background: transparent!important;
-    height: 14px !important;
-    max-width: 12px !important;
-    min-width: 12px !important;
     position: fixed !important;
-    top: 1px !important;
+    top: 2px !important;
     right: 0% !important;
-    padding-top: 2px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    margin-right: 35px !important;
+    margin-right: 10px !important;
+    padding: 2px !important;
+    padding-top: 1px !important;
     z-index: 5;
-    transition: 0.5s color ease;
+    opacity: 0;
 }
 
 .side:hover::before {
-    content: url('http://i48.tinypic.com/2ijhgmr.jpg') !important;
+    color: #fff !important;
     background: #888 !important;
     border-radius: 3px !important;
     transition: 0.5s color ease;
+    opacity: 1 !important;
 }
 
 .side:hover {
     position: fixed !important;
-    top: 15px !important;
+    top: 14px !important;
 }
 
 .sidebox .subtitle {
@@ -346,6 +374,24 @@ Header + navigation
     min-height: 41px;
     background: transparent !important;
 }
+
+.flairselector { 
+    z-index: 1001 !important;
+    position: fixed !important;
+    width: 155px !important;
+    opacity: 1 !important;
+    right: 4% !important;
+    left: auto !important;
+    top: 325px !important;
+    font-family: lemon !important;
+}
+
+.flairselector li.selected {   
+    border: none !important;
+    color: #444 !important;
+    background: #ccc !important;
+}
+    
 
 .titlebox {
     font-size: larger;
@@ -368,14 +414,18 @@ Header + navigation
 .panestack-title {
     width: 100% !important;
     text-align: center !important;
+    margin-left: -4px !important;
+    border-bottom: none!important;
 }
 
 .comment {
+    margin-top: 8px !important;
     width: 99% !important;
 }
 
 .commentarea {
     width: 100% !important;
+    margin-left: -4px !important;
 }
 
 .titlebox h1 {
@@ -391,14 +441,21 @@ Header + navigation
 
 .titlebox h1 a {
     display: none !important;
-    color: black !important;
-    font-family: Helvetica !important;
-    font-size: 8pt !important;
-    text-align: center !important;
-    width: 100% !important;
-    position: absolute;
-    top: -3px;
-    left: -5px !important;
+}
+
+.titlebox .md {
+    display: block !important;
+    overflow: scroll !important;
+    max-height: 100px !important;
+    padding: 3px !important;
+    text-align: left !important;
+    border: 1px solid #ddd !important;
+    font-family: lemon !important;
+}
+
+.md h2 {
+    font-size: 8px !important;
+    font-family: lemon !important;
 }
 
 .morelink {
@@ -407,6 +464,15 @@ Header + navigation
     font-weight: normal !important;
     line-height: 29px;
     letter-spacing: 0px !important;
+    z-index: 5 !important;
+}
+
+.morelink a {
+    margin-left: -6px !important;
+}
+
+.morelink .nub, .morelink:hover .nub, .mlhn  {
+    z-index: inherit !important;
 }
 
 .linkinfo {
@@ -420,7 +486,7 @@ Header + navigation
 }
 
     .linkinfo .date {
-        font-family: limey !important;
+        font-family: lemon !important;
     }
     
     .linkinfo .score .word {
@@ -438,7 +504,7 @@ Header + navigation
     }
 
     .linkinfo .upvotes, .linkinfo .downvotes {
-        font-family: limey !important;
+        font-family: lemon !important;
         font-size: 8pt !important;
         color: #646464 !important;
     }
@@ -453,38 +519,47 @@ Header + navigation
 
 
 /* 
-================
-Content
-================
-*/
+ * ================
+ * Content
+ * ================
+ * */
 
 /* links */
 
 .link {
     color: #777 !important;
-    border-top: 1px solid #c3c3c3 !important;
-    min-height: 60px;
+    border: 1px solid #eee !important;
+    min-height: 50px;
     padding: 12px 0 !important;
     position: relative !important;
     background: transparent !important;
     margin-bottom: -1px !important;
-    width: 80% !important;
-    right: 10% !important;
-    left: 10% !important;
-    border-bottom: none !important;
+    width: 84% !important;
+    right: 8% !important;
+    left: 8% !important;
 }
 
-.link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
+.link .rank {
+    margin-left: 4px !important;
+    margin-right: 2px !important;
+}
+
+.link.promotedlink, .organic-listing .link.promotedlink,.organic-listing .promoted {
+    display: none !important;
+}
+
+organic-listing, .organic-listing .link{
     padding: 12px 0px !important;
-    margin-bottom: -10px !important;
-    border-left: none !important;
-    border-right: none !important;
+    margin-bottom: -6px !important;
+}
+
+.organic-listing .sponsored-tagline {
+    margin-right: -20px !important;
 }
 
 .link.last-clicked {
     color: #3f3f3f !important;
-    border-left: none !important;
-    border-right: none !important;
+    background: #fcfcfc !important;
 }
 
 .link .title {
@@ -532,18 +607,26 @@ Content
             font-weight: bold !important;
             font-size: 7pt !important;
             color: #bf7c83 !important;
+            transition: 0.5s color ease;
         }
-    
+        
+        .domain:hover, .domain a:hover {
+            color: #ae5a63 !important;
+            text-decoration: none !important;
+            transition: 0.5s color ease;
+        }
+        
     .tagline {
         margin-left: 10px !important;
         color: #888!important;
         font-size: 7pt !important;
-        font-family: Lucida Grande !important;
+        font-family: Helvetica Neue !important;
         margin-top: 7px !important;
+        opacity: .8;
     }
     
     .link .flat-list {
-        margin-top: 4px !important;
+        margin-top: 3px !important;
         margin-left: 2px !important;
     }
     
@@ -554,10 +637,11 @@ Content
     
         .entry .buttons li a {
             color: #999 !important;
-            font-size: 7pt !important;
+            font-size: 7px !important;
             font-weight: normal !important;
             padding: 0 8px 3px !important;
             transition: 0.5s ease all;
+            font-family: Lucida Grande !important;
         }
         
             .entry .buttons li a:hover {
@@ -565,6 +649,19 @@ Content
                 text-decoration: none !important;
                 transition: 0.5s color ease;
             }
+            
+.linkflairlabel {
+    height: 10px !important;
+    padding: 2px !important;
+    padding-top: 0px !important;
+    margin-bottom: -2px !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.flair, .linkflairlabel {
+    padding-top: 0px !important;
+}
             
 .expando-button {
     display: none !important
@@ -608,12 +705,16 @@ a.author:hover, a .author:hover {
     color: #999;
 }
 
+#noresults, .error {
+    margin-left: 15px !important;
+}
+
 
 /* 
-===============
-Other pages
-===============
-*/
+ * ===============
+ * Other pages
+ * ===============
+ * */
 
 
 /* submitting a link */
@@ -810,10 +911,10 @@ Other pages
 
 
 /* 
-===========
-random 
-===========
-*/
+ * ===========
+ * random 
+ * ===========
+ * */
 
 h1 {
     font-size: 18px;
@@ -822,19 +923,22 @@ h1 {
     text-align: center !important;
 }
 
+div.contents,
+body.with-listing-chooser .listing-chooser.initialized,
 #search input,
 .goldvertisement,
 #ad-frame,
 .infobar.welcome,
-.titlebox .md,
-.sidecontentbox .content,
 a.helplink,
+.sidecontentbox .content,
+.users-online,
+.titlebox .tagline,
 .titlebox .age,
 .titlebox .bottom,
 .titlebox form.flairtoggle,
-.titlebox .tagline,
-.users-online,
-.sidecontentbox .title h1 {
+.sidecontentbox .title h1,
+.bottommenu,
+#errorPageContainer, #errorTitle, #ad-frame, #ad_main {
     display: none !important;
 }
 

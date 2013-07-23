@@ -1,7 +1,9 @@
+@import "https://rawgithub.com/phallus/user-styles/master/styles-clean/4chan-testing.css";
+
 @-moz-document domain("boards.4chan.org") {
         body {
           background: #fff!important;
-          font-family: Lucida Grande !important;
+          font-family: "Lucida Grande", sans-serif !important;
           font-size: 7pt !important;
         }
         
@@ -12,10 +14,10 @@
         
         
 /*
-==================
-Things to hide
-==================
-*/
+ * ==================
+ * Things to hide
+ * ==================
+ * */
 
 
         hr,
@@ -33,20 +35,22 @@ Things to hide
         .navLinks,
         .globalMessage.hideMobile,
         .vote,
-        input[type="checkbox"]#imageExpand,
+        /*input[type="checkbox"]#imageExpand,
+ *         input[type="checkbox"]#prefetch,*/
         #qr input[type="checkbox"],
         .close,
-        .postInfo input[type="checkbox"] {
+        .postInfo input[type="checkbox"],
+        .fileDeletedRes,
+        #updater, #watcher, #qr .move, .ad-plea {
             display: none !important;
         }
 
        
 /*
-=======================
-General colors
-=======================
-*/
-
+ * =======================
+ * General colors
+ * =======================
+ * */
 
         a.useremail[href*='sage']:last-of-type::after,
         a.useremail[href*='Sage']:last-of-type::after,
@@ -66,7 +70,7 @@ General colors
             color: #a27b9d !important;
         }
         
-        .useremail .name,
+        .useremail,
         a.useremail:hover {
             color: #7b80a2 !important;
             text-decoration: none !important;
@@ -158,8 +162,6 @@ General colors
             margin-left: 0px;
             margin-right: 20px !important;
             padding-right: 0px !important;
-            margin-top: 10px;
-            margin-bottom: 10px;
             width: 94%;
             line-height: 16px !important;
             font-size: 8pt !important
@@ -206,7 +208,8 @@ General colors
         .abbr,
         .filtered,
         .inline .filtered,
-        a.quotelink.filtered {
+        a.quotelink.filtered,
+        .quoteLink, .deadlink {
             font-size: 8pt !important;
             color: #ccc !important;
             text-decoration: none !important;
@@ -218,38 +221,35 @@ General colors
 
 
 /*
-=============
-Board banner
-=============
-*/
+ * =============
+ * Board banner
+ * =============
+ * */
 
-       
-        .postNum a[title="Highlight this post"] {
-            font-size: 0 !important;
-            color: transparent !important;
-        }
-       
+
         .boardBanner {
             margin-bottom: 0px !important;
             background: transparent !important;
-            width: 94% !important;
+            width: 98% !important;
             margin: 0 auto !important;
-            padding-top: 10px !important;
-            padding-bottom: 0px !important;
-            margin-bottom: -20px !important;
+            margin-top: 15px !important;
+            margin-bottom: -25px !important;
             box-shadow: none !important;
             border-radius: 0px !important;
+            text-align: center !important;
         }
        
         .boardTitle {
             color: #444 !important;
-            font: normal 24pt Helvetica Lt STD Light !important;
+            font: normal 20pt Helvetica Lt STD Light !important;
+            
         }
      
         .boardSubtitle {
             margin-top: 2px !important;
             color: #666 !important;
             font: normal 8pt Helvetica Neue !important;
+            margin-bottom: 12px !important;
         }
      
         .boardSubtitle a,
@@ -265,62 +265,105 @@ Board banner
        
        
 /*
-==================
-Navigation links
-==================
-*/
+ * ==================
+ * Navigation Links
+ * ==================
+ * */
 
-/* links menu - merges boards and settings into one drop-down menu */
+
+/* top items - to do: compress into single absolutely-positioned menu */
 
         #boardNavDesktop {
             position: fixed !important;
-            top: 10px !important;
-            right: -1000px !important;
-            left: auto !important;
+            top: 16px !important;
             width: auto !important;
+            right: 0% !important;
+            left: auto !important;
+            height: 20px;
             overflow: hidden !important;
             font-size: 0pt !important;
-            background: #aaa !important;
+            background: transparent !important;
             color: transparent !important;
-            border-radius: 2px !important;
-            padding: 2px !important;
-            border-top-right-radius: 0 !important;
-            border: none !important;
             z-index: 2 !important;
+            text-align: center !important;
+            opacity: 0 !important;
         }
-        
-
-        #boardNavDesktop a.settingsWindowLink {
+    
+        #boardNavDesktop a.settingsWindowLink, #boardNavDesktop #imgControls {
             font-size: 0px !important;
             color: #c3c3c3 !important;
         }
 
         #boardNavDesktop a.settingsWindowLink:before {
-            font-size: 10px !important;
+            font-size: 7pt !important;
             content: "settings" !important;
-            margin-right: 0 !important;
+            margin-right: 10px !important;
             margin-left: 0 !important;
-            padding-left: 6px !important;
-            border-left: 1px solid #ddd !important;
         }
-       
+        
+        
+        #imgControls, #prefetch {
+            font-size: 0px !important;
+            color: transparent !important;
+        }
+        
+        #imgControls > *::before {
+            font-size: 7pt !important;
+            color: #bbb!important;
+            content: "Expand images";
+            left: auto !important;
+            right: 0% !important;
+            margin-right: 12px !important;
+            top: 30px !important;
+            position: fixed !important;
+            text-align: center !important;
+            height: 24px !important;
+            width: auto !important;
+            z-index: 10 !important;
+            opacity: 0 !important;
+        }
+    
+        #imgControls > *:hover::before, #boardNavDesktop:hover, #prefetch:hover::before {
+            opacity: 1 !important;
+        }
+        
+        #prefetch::before {
+            font-size: 7pt !important;
+            left: auto !important;
+            right: 0% !important;
+            color: #bbb!important;
+            content: "Prefetch images";
+            top: 45px !important;
+            position: fixed !important;
+            text-align: center !important;
+            margin-right: 12px !important;
+            height: 20px !important;
+            width: auto !important;
+            z-index: 10 !important;
+            opacity: 0 !important;
+        }
+        
+        input[type="checkbox"]#imageExpand,
+        input[type="checkbox"]#prefetch {
+            opacity: 0 !important;
+            position:fixed !important;
+        }
+        
         #boardNavDesktop a {
-            font-family: limey !important;
-            font-size: 8pt !important;
+            font-size: 7pt !important;
             color: #c3c3c3 !important;
-            margin: 3px !important;
             transition: 0.5s color ease;
             display: none !important;
         }
        
         #boardNavDesktop a[class="current"]{
-            color: #fff !important;
+            color: #888 !important;
             font-weight: normal !important;
             text-shadow: none !important;
         }
        
         #boardNavDesktop a:hover {
-            color: #f9f9f9 !important;
+            color: #aaa !important;
             transition: 0.5s color ease;
         }
        
@@ -337,49 +380,32 @@ Navigation links
             display: inline !important;
         }
         
-        #boardNavDesktop::before {
-            content: url('http://i46.tinypic.com/mry1wz.jpg');
+/* thread stats */
+
+        #stats {
             position: fixed !important;
-            top: 3px !important;
-            right: 0% !important;
-            margin-right: 9px !important;
+            left: 0% !important;
+            right: auto !important;
+            bottom: 2px !important;
+            top: auto !important;
+            border: none !important;
             z-index: 4 !important;
-            font-family: limey !important;
-            font-size: 0 !important;
-            color: transparent !important;
-            height: 12px!important;
-            width: 10px !important;
-            padding-top: 2px;
-            padding-left: 2px;
-            border-radius: 3px !important;
+            width: auto !important;
+            font-size: 7pt !important;
+            color: #bbb !important;
+            margin-left: 4px;
+            text-shadow: none !important;
+            background-color: transparent !important;
+            font-family: Lucida Grande !important;
         }
 
-        #boardNavDesktop:hover::before {
-            content: url('http://i.imgur.com/8GQaSW1.png');
-            background: #aaa !important;
-            opacity: 1 !important;
-        }
-
-        #boardNavDesktop:hover {
-            position: fixed !important;
-            top: 10px !important;
-            float: none !important;
-            right: 0% !important;
-            margin-top: 5px !important;
-            margin-right: 9px !important;
-            cursor: default !important;
-            padding-top: 4px !important;
-            height: 16px !important;
-            opacity: 1 !important;
-        }
         
-/*Global message integration into the top bar*/
+/* global message - to do: integrate into top items */
         
-        /* to do: enable background for active toggle */
         #globalToggle {
             display: inline !important;
-            position: fixed !important;
-            top: 5px !important;
+            position: absolute !important;
+            top: -1000% !important;
             right: 0% !important;
             z-index: 4 !important;
             margin-right: 62px !important;
@@ -442,206 +468,42 @@ Navigation links
         .globalMessage a:hover {
             color: #ddd !important;
         }
-        
-/*Thread statistics and thread updater integration into the navbar*/
+       
 
-        #stats {
-            position: fixed !important;
-            right: 0% !important;
-            left: auto !important;
-            bottom: 2px !important;
-            top: auto !important;
-            border: none !important;
-            z-index: 4 !important;
-            width: auto !important;
-            font-family: limey !important;
-            font-size: 8pt !important;
-            color: #bbb !important;
-            margin-right: 12px;
-            text-shadow: none !important;
-            background-color: transparent !important;
-            font-family: Helvetica Neue !important;
-        }
-       
-       /* to do: make updater less shitty */
-        #updater {
-            display: none !important;
-            float: none !important;
-            text-align: left !important;
-            position: fixed !important;
-            
-            z-index: 3 !important;
-            height: 10px !important;
-            margin-left: 50px !important;
-            font-family: limey !important;
-            font-size: 8pt !important;
-            color: #888 !important;
-            text-shadow: none !important;
-            background-color: transparent !important;
-            opacity: .85;
-            border-radius: 3px;
-        }
+/* 
+ * =================
+ * Quick Reply 
+ * =================
+ * */
 
-     
-
-/* Thread watcher integration into the navbar */
-
-        #watcher {
-            position: fixed !important;
-            top: -1000px !important;
-            right: 0px !important;
-            left: auto !important;
-            width: 230px !important;
-            z-index: 3 !important;
-            font-family: limey !important;
-            font-size: 9pt !important;
-            background: #aaa !important;
-            box-shadow: 0px 6px 5px rgba(0,0,0,0.2) !important;
-            border-bottom-left-radius: 3px !important;
-            border-bottom-right-radius: 3px !important;
-            border: none !important;
-        }
-       
-        #watcher > div {
-            max-width: 300px !important;
-            width: 300px !important;
-            overflow: hidden !important;
-        }
-       
-        #watcher .move {
-            font-size: 0px !important;
-            height: 10px !important;
-            margin-top: -10px !important;
-            cursor: default !important;
-            z-index: 3 !important;
-        }
-       
-        #watcher::before {
-            content: url('http://i46.tinypic.com/maaqzd.jpg') !important;
-            height: 16px !important;
-            max-width: 10px !important;
-            min-width: 10px !important;
-            position: fixed !important;
-            top: 2px !important;
-            right: 0% !important;
-            padding-left: 2px !important;
-            margin-right: 35px !important;
-            padding-bottom: 0px !important;
-            padding-top: 2px !important;
-            z-index: 3 !important;
-            cursor: pointer !important;
-        }
-     
-        #watcher:active::before, #watcher:hover::before {
-            content: url('http://i48.tinypic.com/2ijhgmr.jpg') !important;
-            background: #aaa !important;
-            border-radius: 3px !important;
-        }
-     
-        #watcher:active, #watcher:hover {
-            position: fixed !important;
-            z-index: 3 !important;
-            top: 16px !important;
-            float: right !important;
-            right: 1% !important;
-            margin-top: 0px !important;
-            margin-right: 4px !important;
-            cursor: default !important;
-            border-radius: 3px !important;
-            box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.3) !important;
-        }
-       
-        #watcher a {
-            color: #eee !important;
-            text-decoration: none !important;
-            margin-left: -2px !important;
-        }
-       
-        #watcher a[href="javascript:;"] {
-            color: #ababab !important;
-            text-shadow: none !important;
-        }
-       
-           
-
-        
-/* Image control integration into the navbar */
-
-    /* to do: enable background for active expansion */
-      #imgControls {
-        font-size: 0px !important;
-        color: transparent !important;
-    }
-   
-    #imgControls > *::before {
-        position: fixed !important;
-        content: url('http://i48.tinypic.com/14twj87.jpg');
-        height: 12px !important;
-        width: 12px !important;
-        top: 5px !important;
-        right: 0% !important;
-        margin-right: 47px !important;
-        z-index: 4 !important;
-        cursor: pointer !important;
-    }
-   
-    #imgControls >*:active::before, #imgControls >*:hover::before {
-        content: url('http://i48.tinypic.com/wmb2ah.jpg');
-    }
-       
-/* QR integration into the navbar */
 
         #qr {
             display: block !important;
-            width: 0px !important;
-            height: 0px !important;
-            top: 20px !important;
-            float: right !important;
-            right: 1% !important;
-            z-index: 5;
-            margin-right: 2px !important;
-            background: transparent !important;
-            border: none !important;
         }
      
         #qr:hover input[type="checkbox"] {
             top: 8px !important;
         }
-     
-        #qr .move {
-            display: none !important;
-            position: fixed !important;
-            float: right !important;
-            right: 4% !important;
-            top: 7px !important;
-            margin-top: 0px !important;
-            margin-right: 30px !important;
-            font-size: 0px !important;
-            color: transparent !important;
-            background-color: transparent !important;
-            height: 25px !important;
-            max-width: 15px !important;
-            min-width: 15px !important;
-            cursor: default !important;
-        }
        
         #qr::before {
-            content: url('http://i47.tinypic.com/2jd2weu.jpg');
-            height: 16px !important;
-            max-width: 12px !important;
-            min-width: 12px !important;
+            content: 'Post';
             border-radius: 3px !important;
-            padding-left: 4px !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
             position: fixed !important;
-            padding-top: 3px !important;
-            top: 1px !important;
+            bottom: 1px !important;
             right: 0% !important;
-            margin-right: 20px !important;
+            padding-right: 4px;
+            padding-left: 4px !important;
+            padding-bottom: 1px !important;
+            margin-right: 10px !important;
             z-index: 5;
+            font-size: 7pt !important;
+            color: #bbb;
         }
      
-        #qr:hover::before {
-            content: url('http://i46.tinypic.com/34r88ci.jpg') !important;
+        #qr:hover::before, #qr select #qr:hover::before {
+            color: #fff;
             background: #aaa !important;
             opacity: 1;
         }
@@ -659,24 +521,23 @@ Navigation links
      
         #qr form {
             position: fixed !important;
-            top: 16px !important;
+            bottom: 12px !important;
             float: right !important;
-            right: 1% !important;
-            margin-right: 4px !important;
+            right: 0% !important;
+            margin-right: 10px !important;
             width: 400px !important;
-            padding-top: 4px !important;
+            padding: 4px !important;
             padding-bottom: 3px !important;
-            padding-left: 4px !important;
-            padding-right: 4px !important;
             background: #aaa !important;
             border-radius: 3px !important;
+            border-bottom-right-radius: 0px !important;
         }
        
         #qr form:hover, #qr form:focus {
             position: fixed !important;
             z-index: 5 !important;
         }
-     
+       
        input[title="Name"].field {
             border: none !important;
             border-left: 1px solid #eee !important;
@@ -696,11 +557,11 @@ Navigation links
      
         input[title="Name"].field, input[title="E-mail"].field, input[title="Subject"].field {
             -moz-appearance: none !important;
+            font-family: Lucida Grande !important;
             position: relative !important;
             margin-bottom: 0px !important;
             height: 26px !important;
-           
-            font-size: 10pt !important;
+            font-size: 7pt !important;
             background: #fff !important;
             color: #333 !important;
             border-bottom: 1px solid #eee !important;
@@ -730,7 +591,8 @@ Navigation links
             height: 200px !important;
             max-width: 200px !important;
             margin-bottom: 0px !important;
-            font-size: 8pt !important;
+            font-size: 7pt !important;
+            font-family: Lucida Grande !important;
             background: #fff !important;
             color: #333 !important;
             border: none !important;
@@ -744,7 +606,6 @@ Navigation links
             height: 26px !important;
             margin-top: -26px !important;
             margin-left: 50px !important;
-           
             -moz-appearance: none !important;
             background: #fff !important;
             color: #ccc !important;
@@ -759,7 +620,7 @@ Navigation links
             margin-top: 0px !important;
             margin-left: 1px !important;
             margin-bottom: 0px !important;
-            font-size: 8pt !important;
+            font-size: 7pt !important;
             height: 26px !important;
             border: none !important;
             background: #fff !important;
@@ -774,11 +635,10 @@ Navigation links
         form > div > input[type="file"] > * {
             width: 330px !important;
             height: 23px !important;
-           
             -moz-appearance: none;
             background: #fff !important;
             color: #333 !important;
-            font-size: 8pt !important;
+            font-size: 7pt !important;
             border: none !important;
             border-top: 1px solid #eee !important;
             border-bottom-left-radius: 2px !important;
@@ -821,18 +681,13 @@ Navigation links
 
 
 /*
-=====================
-Threads, posts, etc.
-=====================
-*/
+ * =====================
+ * Threads, posts, etc.
+ * =====================
+ * */
 
-/* misc */
 
-        .field {
-            font-family: Helvetica Neue !important;
-            font-size: 8pt !important;
-            background: #fff !important;
-        }
+/* code blocks - to do: fix alignment of non-code text */
        
         .prettyprint{
             background-color: #f5f5f5 !important;
@@ -840,32 +695,13 @@ Threads, posts, etc.
             border-radius: 3px !important;
             box-shadow: none !important;
             margin-bottom: 0px !important;
-            margin-top: 8px !important;
+            margin-top: 4px !important;
             margin-left: 0px !important;
             font-size: 9pt !important;
             padding-bottom: 2px !important;
             padding-top: 4px !important;
             width: inherit !important;
             overflow: scroll !important;
-            vertical-align: middle !important;
-        }
-     
-        .post.reply {
-            background: transparent !important;
-            border: none !important;
-            margin-top: -1px !important;
-            width: 100% !important;
-        }
-     
-        .hide_reply_button {
-            position: relative !important;
-            float: right !important;
-            margin-top: 2px !important;
-            margin-right: 8px !important;
-            z-index: 0 !important;
-            font-family: limey !important;
-            font-size: 0px !important;
-            color: transparent !important;
         }
         
 /* inline and quick preview */
@@ -876,17 +712,25 @@ Threads, posts, etc.
             border-radius: 2px !important;
             margin: auto !important;
             margin-left: 0px !important;
+            margin-top: 10px !important;
+            margin-bottom: 0px !important;
             padding-right: 10px !important;
             margin-right: 10px !important;
             font-size: 10pt !important;
             background: transparent !important;
+            display: block !important;
         }
-     
+        
+        .inline .post {
+            margin-left: px !important;
+        }
+        
+        
         .inline .postContainer, .inline .opContainer {
             margin: 0px !important;
             margin-right: 15px !important;
             padding-right: 15px !important;
-            border: none !important;
+            border: 1px solid #eee !important;
         }
      
         #qp {
@@ -907,14 +751,6 @@ Threads, posts, etc.
             width: 100% !important;
             display: block !important;
         }
-       
-        #qp .menu_button {
-            margin-right: 0!important;
-        }
-       
-        .inline .menu_button {
-            margin-left: 4px !important;
-        }
         
 /* thread and reply hiding */
 
@@ -925,11 +761,24 @@ Threads, posts, etc.
             opacity: 1 !important;
         }
         
+        .hide_reply_button {
+            position: relative !important;
+            float: right !important;
+            margin-top: 0px !important;
+            margin-right: 8px !important;
+            z-index: 0 !important;
+            font-family: limey !important;
+            font-size: 0px !important;
+            color: transparent !important;
+        }
+        
        .hide_reply_button a::before {
-            content: "-" !important;
-            font-size: 9pt !important;
+            content: "\2296" !important;
+            font-size: 8pt !important;
             color: #bebebe !important;
             position: relative !important;
+            font-family: Helvetica Neue !important;
+            margin-right: 0px !important;
         }
         
         .hide_reply_button a::before {
@@ -938,7 +787,7 @@ Threads, posts, etc.
         
         .hide_thread_button:not(.hidden_thread):after {
             content: "Click to hide thread." !important;
-            font-size: 8pt !important;
+            font-size: 7pt !important;
             transition: 0.5s color ease;
             color: #bbb !important;
         }
@@ -951,10 +800,9 @@ Threads, posts, etc.
         .hide_thread_button:not(.hidden_thread) {
             position: absolute !important;
             left: auto !important;
-            right: 10% !important;
-            margin-right: 9px !important;
-            margin-top: 7px !important;
-            height: 10px !important;
+            right: 7% !important;
+            margin-right: 8px !important;
+            margin-top: 2px !important;
             z-index: 1 !important;
             display: block !important;
             font-size: 0 !important;
@@ -975,8 +823,13 @@ Threads, posts, etc.
             border-radius: 0px !important;
             border: none !important;
             font-family: Helvetica Neue;
+            font-size: 7pt !important;
             border-top: 1px solid #ddd !important;
             border-bottom: 1px solid #ddd !important;
+        }
+        
+        .hide_thread_button.hidden_thread .thread {
+            border: none !important;
         }
         
         .hide_thread_button.hidden_thread a {
@@ -989,14 +842,14 @@ Threads, posts, etc.
         
         .hide_thread_button.hidden_thread span:after {
             position: absolute;
-            content: "+";
+            content: "\2297";
             float: none !important;
-            right: 10% !important;
+            right: 7% !important;
             left: auto !important;
-            margin-right: 12px !important;
+            margin-right: 11px !important;
             margin-top: -1px !important;
             color: #aaa !important;
-            font-size: 7pt !important;
+            font-size: 8pt !important;
             height: 10px !important;
         }
         
@@ -1072,15 +925,21 @@ Threads, posts, etc.
         .hide_reply_button.stub a:first-of-type::after {
             float: right !important;
             margin-top: 0px !important;
-            margin-right: 8px !important;
-            content: "+" !important;
-            font-size: 9pt !important;
+            margin-right: 10px !important;
+            content: "\2297" !important;
+            font-size: 8pt !important;
             color: #aaa !important;
             font-family: Helvetica Neue !important;
         }
      
 /* posts */
 
+        .post.reply {
+            background: transparent !important;
+            border: none !important;
+            margin-top: -1px !important;
+            width: 98% !important;
+        }
         
         .postInfo > .container {
             display: inline !important;
@@ -1092,9 +951,9 @@ Threads, posts, etc.
         }
      
         .postMessage {
-            text-align: justify !important;
+            text-align: left !important;
             padding-bottom: 0px !important;
-            margin-top: 10px !important;
+            margin-top: 4px !important;
             margin-bottom: 10px !important;
             margin-left: 15px !important;
             margin-right: 20px !important;
@@ -1119,7 +978,7 @@ Threads, posts, etc.
      
         .replylink {
             float: right !important;
-            margin-left: 5px !important;
+            margin-left: 2px !important;
             margin-right: 5px !important;
             margin-top: 1px !important;
             color: transparent !important;
@@ -1136,16 +995,16 @@ Threads, posts, etc.
         .opContainer > div .postInfo:before {
             float: right !important;
             content: url('http://i.imgur.com/UNhyj.png') !important;
-            margin-left: 0px !important;
-            margin-right: 4px !important;
+            margin-left: 2px !important;
+            margin-right: 6px !important;
             margin-top: 0px !important;
         }
      
-        .menu_button {
-            float: right !important;
+        .menu_button, .post.op .menu_button {
+            float: none !important;
             margin-top: 0px !important;
-            margin-right: 20px !important;
-            margin-left: 10px !important;
+            margin-right: 6px !important;
+            margin-left: 4px !important;
             font-family: Helvetica Neue !important;
             font-size: 0px !important;
             color: transparent !important;
@@ -1155,16 +1014,6 @@ Threads, posts, etc.
             content: "\25BE" !important;
             font-size: 9pt !important;
             color: #bebebe !important;
-        }
-       
-        .post.op .menu_button::after {
-            color: #bebebe !important;
-        }
-     
-        .post.op .menu_button {
-            margin-top: 0px !important;
-            margin-right: 2px !important;
-            margin-left: 4px !important;
         }
      
         #menu.reply.dialog {
@@ -1201,7 +1050,6 @@ Threads, posts, etc.
             padding-top: 10px !important;
             margin-top: 10px !important;
             margin-bottom: 20px !important;
-            
         }
      
         #options.reply.dialog {
@@ -1249,19 +1097,17 @@ Threads, posts, etc.
         .thread {
             margin: 0 auto !important;
             margin-bottom: 0px !important;
-            margin-top: 30px !important;
+            margin-top: 20px !important;
+            padding-left: 0px !important;
             background-color: transparent !important;
-            width: 80% !important;
-            
+            width: 86% !important;
+            border: 1px solid #eee !important;
         }
      
         .postContainer {
             position: relative !important;
-            background-color: /*#f1f3f5*/ #fff !important;
+            background-color: #fff !important;
             width: 100% !important;
-            border-bottom: none !important;
-            border-left: none !important;
-            border-right: none !important;
             border-top: 1px solid #f2f2f2;
             padding-top: 5px !important;
             padding-bottom: 5px !important;
@@ -1270,7 +1116,7 @@ Threads, posts, etc.
         }
         
         .thread .postContainer.opContainer {
-            border-top: 1px solid #eee !important;
+            border-top: none !important;
         }
         
          .thread .postContainer {
@@ -1290,7 +1136,7 @@ Threads, posts, etc.
         
         .fileThumb img {
             border-top: none !important;
-            margin-left: -18px !important;
+            margin-left: -12px !important;
             margin-top: 2px !important;
             margin-bottom: -11px !important;
             border-radius: 1px !important;
@@ -1305,16 +1151,18 @@ Threads, posts, etc.
             margin-right: 2px !important;
         }
        
+/* file info */
+       
         div .postInfo {
             width: auto !important;
             display: block !important;
-            margin-bottom: 0px;
+            margin-bottom: 4px;
             margin-left: -2px !important;
             margin-right: 2px !important;
             padding-left: 5px !important;
             margin-top: -1px !important;
             padding-top: 2px !important;
-            padding-bottom: 2px !important;
+            padding-bottom: 0px !important;
             font-size:8pt !important;
             background: transparent !important;
             border-bottom: none !important;
@@ -1324,21 +1172,18 @@ Threads, posts, etc.
         .postInfo {
             border-top-left-radius: 0px !important;
         }
-     
-        .opContainer {
-            margin-top: 1px !important;
-        }
-     
+
         .post.op .postInfo {
             background: transparent !important;
             margin-right: 0px !important;
-            margin-left: -10px !important;
+            margin-left: 0px !important;
             margin-top: 1px !important;
         }
         
         .post.op .fileInfo {
             display: block !important;
-            margin-left: -4px !important;
+            margin-left: 2px !important;
+            margin-bottom: 0px !important;
         }
         
         .fileText > a {
@@ -1346,12 +1191,13 @@ Threads, posts, etc.
         }
      
         .fileInfo {
-            margin-left: 0px !important;
-            font-size: 8pt !important;
-            background: #fff !important;
+            margin-left: 4px !important;
+            font-size: 7pt !important;
+            background: transparent !important;
             margin-right: 2px !important;
-            margin-top: 0px !important;
-            margin-bottom: 0px !important;
+            margin-top: -4px !important;
+            margin-bottom: -3px !important;
+            display: table !important;
         }
        
         .fileText {
@@ -1359,6 +1205,7 @@ Threads, posts, etc.
             color: #c3c3c3!important;
             margin-left: -5px !important;
             font-size: 8px !important;
+            opacity: 0 !important;
         }
         
         .fileInfo a,
@@ -1368,13 +1215,14 @@ Threads, posts, etc.
             color: #c3c3c3 !important;
             background: transparent !important;
             border-radius: 2px !important;
-            padding: 2px !important;
+            padding: 0px !important;
             text-align: center !important;
             font-family: Helvetica Neue !important;
             font-size: 10px !important;
+            opacity: 0 !important;
         }
 
-        .fileInfo a:hover,
+        .postContainer:hover .fileInfo a,10
         .inline .fileInfo a:hover,
         .inline .fileText a:hover {
             background: transparent !important;
@@ -1392,119 +1240,134 @@ Threads, posts, etc.
             background: transparent !important;
             color: #7b80a2 !important;
         }
+        
+        .postContainer:hover .fileText,
+        .postContainer:hover .fileInfo a,
+        .inline .fileInfo a:hover,
+        .inline .fileText a:hover {
+            opacity: 1 !important;
+        }
 
-
+/* page list and catalog links - from hdni's clean; reorganized to work for me */
        
-/* page list and catalog links */
-       
-.pagelist {
-    float: none !important;
-    width: 450px !important;
-    margin: 0 auto !important;
-    margin-bottom: -18px !important;
-    font-size: 12px !important;
-    color: transparent !important;
-    background: transparent !important;
-    border: none !important;
-}
+        .pagelist {
+            float: none !important;
+            width: 450px !important;
+            margin: 0 auto !important;
+            margin-top: 3px !important;
+            margin-bottom: -18px !important;
+            font-size: 12px !important;
+            color: transparent !important;
+            background: transparent !important;
+            border: none !important;
+            font-size: 8pt !important;
+        }
 
-.pages {
-    margin-top: -2px !important;
-}
+        .pages {
+            margin-top: -2px !important;
+        }
+    
+        .pages a {
+            color: #7c818a !important;
+            font-size: 8pt !important;
+        }
+    
+        .pages strong {
+            color: #121821 !important;
+            font-size: 8pt !important;
+        }
 
-.pages a {
-    color: #7c818a !important;
-}
+        .pagelist .cataloglink a {
+            color: #aaa !important;
+            font-size: 8pt !important;
+        }
 
-.pages strong {
-    color: #121821 !important;
-}
+        .pages.cataloglink {
+            margin: 0 !important;
+            margin-left: 5px !important;
+            background: transparent !important;
+            border-radius: 2px !important;
+            opacity: 0.65 !important;
+            border: none !important;
+            text-transform: lowercase !important;
+            padding: 2px !important;
+            margin-top: 2px !important;
+            padding-top: 0px !important;
+        }
 
-.pagelist .cataloglink a {
-    color: #aaa !important;
-    font-size: 8pt !important;
-    font-family: limey;
-}
+        .pagelist .cataloglink a:hover {
+            color: #fff !important;
+        }
 
-.pages.cataloglink {
-    margin: 0 !important;
-    margin-left: 5px !important;
-    background: transparent !important;
-    border-radius: 2px !important;
-    opacity: 0.65 !important;
-    border: none !important;
-    text-transform: lowercase !important;
-    padding: 2px !important;
-    margin-top: 0px !important;
-    padding-top: 0px !important;
-}
+        .pagelist .prev input, .pagelist .next input {
+            -moz-appearance: none !important;
+            margin-top: 1px !important;
+            background: transparent !important;
+            color: #aaa!important;
+            border: none !important;
+            border-radius: 2px !important;
+            opacity: 0.65 !important;
+            padding: 1px !important;
+            padding-top: 0px !important;
+            text-transform: lowercase !important;
+            cursor: pointer !important;
+            font-size: 8pt !important;
+            font-family: Lucida Grande !important;
+        }
 
-.pagelist .cataloglink a:hover {
-    color: #fff !important;
-}
-
-.pagelist .prev input, .pagelist .next input {
-    -moz-appearance: none !important;
-    background: #b8bfcc !important;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 2px !important;
-    opacity: 0.65 !important;
-    padding: 1px !important;
-    text-transform: lowercase !important;
-    cursor: pointer !important;
-    font-size: 8pt !important;
-    font-family: limey !important;
-}
-
-.pagelist .prev input:hover,
-.pagelist .next input:hover,
-.pagelist .cataloglink:hover {
-    background: #5c6066 !important;
-    opacity: 1 !important;
-    color: #fff !important;
-}
-
-
+        .pagelist .prev input:hover,
+        .pagelist .next input:hover,
+        .pagelist .cataloglink:hover {
+            background: #5c6066 !important;
+            opacity: 1 !important;
+            color: #fff !important;
+        }
      
     }
 
 
 /*
-==============
-Catalog
-==============
-*/
+ * ==============
+ * Catalog
+ * ==============
+ * */
 
 
     /* to do: improve search implementation; update colors */
     @-moz-document regexp("http://boards.4chan.org/(.|..|...|....)\\/catalog"), regexp("https://boards.4chan.org/(.|..|...|....)\\/catalog") {
+        
         body {
             background: #fbfbfb !important;
-            font-family: limey !important;
+            font-family: lemon !important;
             font-size: 10pt !important;
             color: #646464 !important;
         }
        
         #threads {
             margin: 0 auto !important;
-            margin-top: 26px !important;
+            margin-top: 28px !important;
+            margin-bottom: 10px !important;
             width: 94% !important;
             background-color: #f9f9f9 !important;
             box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
             border-radius: 2px !important;
             border: 1px solid #e0e0e0 !important;
         }
-       
-        /* Override the .thread properties defined for the boards */
+        
+        .boardBanner {
+            display: inherit !important;
+            position: inherit !important;
+        }
+        
         .thread {
-            width: 250px !important;
-            max-height: 410px !important;
+            width: 240px !important;
+            max-height: 300px !important;
             background-color: #fff !important;
             margin: 5px !important;
             box-shadow: inset 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
             border-radius: 2px !important;
             border: 1px solid #e0e0e0 !important;
+            padding-left: 0px !important;
         }
 
         .thumb {
@@ -1520,6 +1383,11 @@ Catalog
             margin-right: 5px !important;
         }
         
+        .extended-small .teaser, .extended-large .teaser {
+            font-size: 7px !important;
+            font-family: Lucida Grande !important;
+        }
+        
         #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after,
         .globalMessage, .globalMessage a,
         #globalMessage h3, #globalToggle::after,
@@ -1532,7 +1400,8 @@ Catalog
         #settings,
         #qf-ctrl.button, #qf-ctrl.button:hover,
         #qf-clear, #qf-box,
-        #toggleMsgBtn, #styleSwitcher {
+        #toggleMsgBtn, #styleSwitcher,
+        .boardNavDesktop, .boardnav {
             display: none !important;
         }
         
