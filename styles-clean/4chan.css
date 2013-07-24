@@ -376,7 +376,7 @@
         #boardNavDesktop a[href*="boards.4chan.org/co/"],
         #boardNavDesktop a[href*="boards.4chan.org/g/"],
         #boardNavDesktop a[href*="boards.4chan.org/mu/"],
-        #boardNavDesktop a[href*="boards.4chan.org/wg/"],
+        #boardNavDesktop a[href*="boards.4chan.org/diy/"],
         #boardNavDesktop a.settingsWindowLink {
             display: inline !important;
         }
