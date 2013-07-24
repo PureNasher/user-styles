@@ -387,14 +387,14 @@
             position: fixed !important;
             left: 0% !important;
             right: auto !important;
-            bottom: 3px !important;
+            bottom: 0px !important;
             top: auto !important;
             border: none !important;
             z-index: 4 !important;
             width: auto !important;
             font-size: 6pt !important;
             color: #bbb !important;
-            margin-left: 3px !important;
+            margin-left: 4px !important;
             text-shadow: none !important;
             background-color: transparent !important;
             font-family: Lucida Grande !important;
@@ -404,7 +404,7 @@
             position: fixed !important;
             left: 0% !important;
             right: auto !important;
-            margin-left: 2px;
+            margin-left: 4px;
             bottom: 15px !important;
             color: #bbb !important;
         }
@@ -452,7 +452,7 @@
         
         #count.new {
             color: #444 !important;
-			background: transparent !important;
+            background: transparent !important;
         }
 
         #stats .move, #updater .move {
@@ -923,12 +923,9 @@
             margin-right: 24px !important;
         }
         
-        .hide_thread_button.hidden_thread .menu_button .span, .hide_thread_button.hidden_thread .menu_button > span {
+        .hidden_thread {
             display: none !important;
-        }
-        
-        .thread > .hidden_thread ~ * {
-            display: none !important;
+            border: none !important;
         }
         
         .postContainer.replyContainer.hidden, .postContainer.hide_reply_button.stub {
