@@ -451,7 +451,8 @@
         }
         
         #count.new {
-            color: #444;
+            color: #444 !important;
+			background: transparent !important;
         }
 
         #stats .move, #updater .move {
