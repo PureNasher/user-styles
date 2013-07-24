@@ -923,7 +923,7 @@
             margin-right: 24px !important;
         }
         
-        .hidden_thread {
+        .hidden_thread, .thread > .hidden_thread ~ * {
             display: none !important;
             border: none !important;
         }
