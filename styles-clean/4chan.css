@@ -407,6 +407,11 @@
             margin-left: 4px;
             bottom: 15px !important;
             color: #bbb !important;
+            background: transparent !important;
+        }
+        
+        #updater.reply.dialog:not(:hover) {
+            background: transparent !important;
         }
 
         #updater.reply.dialog {
