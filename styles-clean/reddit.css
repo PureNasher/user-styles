@@ -1,4 +1,4 @@
-ce url(http://www.w3.org/1999/xhtml);
+@namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document url-prefix(http://ssl.reddit.com),
                url-prefix(http://www.reddit.com),
@@ -379,6 +379,7 @@ body {
     z-index: 1001 !important;
     position: fixed !important;
     top: 130px !important;
+    display: none !important;
 }
 
 .flairselector { 
@@ -834,6 +835,27 @@ div.usertext, .usertext-edit textarea {
     border-radius:10px;
 }
 
+.sitetable.linklisting {
+    width: 84% !important;
+    border: 1px solid #eee !important;
+    margin-left: 8% !important;
+    padding-bottom: 10px !important;
+}
+
+.subreddit {
+    border-top: 1px solid #eee !important;
+    padding: 4px !important;
+}
+
+.subreddit:first-of-type {
+    border-top: none !important;
+    padding-top: 10px !important;
+}
+
+.subreddit .usertext .md {
+    margin-top: 5px !important;
+}
+
 #url {
     color: #3f3f3f !important;
     background: #fff !important;
@@ -885,8 +907,13 @@ div.usertext, .usertext-edit textarea {
     
     .sr-interest-bar .query-box {
         position: relative;
-        border: 1px solid #c3c3c3 !important;
+        border: 1px solid #eee!important;
         height: auto !important;
+        margin-top: -10px !important;
+    }
+    
+    .sr-interest-bar .query-box:active, .sr-interest-bar .query-box:hover {
+        border: 1px solid #ccc !important;
     }
     
     .sr-interest-bar .query {
