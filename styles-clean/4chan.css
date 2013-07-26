@@ -1236,13 +1236,13 @@
             background: transparent !important;
             margin-right: 0px !important;
             margin-left: 0px !important;
-            margin-top: 1px !important;
         }
         
         .post.op .fileInfo {
             display: block !important;
             margin-left: 2px !important;
             margin-bottom: 0px !important;
+            margin-top: 0px !important;
         }
         
         .fileText > a {
