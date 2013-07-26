@@ -838,8 +838,8 @@ div.usertext, .usertext-edit textarea {
 .subreddit {
     border: 1px solid #eee !important;
     padding: 4px !important;
-    width: 84% !important;
-    margin-left: 8% !important;
+    width: 82% !important;
+    margin-left: 9% !important;
     margin-top: -11px !important;
 }
 
@@ -890,7 +890,7 @@ div.usertext, .usertext-edit textarea {
     overflow: hidden;
     border: none !important;
     margin-bottom: 5px;
-    margin-left: 0px !important;
+    margin-left: 5px !important;
     padding-left:0px !important;
     background: transparent !important;
     top: 10px !important;
