@@ -835,21 +835,17 @@ div.usertext, .usertext-edit textarea {
     border-radius:10px;
 }
 
-.sitetable.linklisting {
-    width: 84% !important;
-    border: 1px solid #eee !important;
-    margin-left: 8% !important;
-    padding-bottom: 10px !important;
-}
-
 .subreddit {
-    border-top: 1px solid #eee !important;
+    border: 1px solid #eee !important;
     padding: 4px !important;
+    width: 84% !important;
+    margin-left: 8% !important;
+    margin-top: -11px !important;
 }
 
 .subreddit:first-of-type {
-    border-top: none !important;
     padding-top: 10px !important;
+    margin-top: 0px !important;
 }
 
 .subreddit .usertext .md {
