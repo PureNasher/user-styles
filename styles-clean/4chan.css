@@ -1412,6 +1412,11 @@
             border: 1px solid #e0e0e0 !important;
         }
         
+        #boardNavDesktop {
+            margin-right: 10px !important;
+            font-family: Lucida Grande !important;
+        }
+        
         .boardBanner {
             display: inherit !important;
             position: inherit !important;
@@ -1458,8 +1463,7 @@
         #settings,
         #qf-ctrl.button, #qf-ctrl.button:hover,
         #qf-clear, #qf-box,
-        #toggleMsgBtn, #styleSwitcher,
-        .boardNavDesktop, .boardnav {
+        #toggleMsgBtn, #styleSwitcher {
             display: none !important;
         }
         
