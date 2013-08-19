@@ -41,8 +41,10 @@
         .close,
         .postInfo input[type="checkbox"],
         .fileDeletedRes,
+        .MPURLIcon, .MPSoundUploaderSoundLabel, .MPVideoInfoDisplay,
         #updater:hover .move, #watcher, #qr .move, .ad-plea {
             display: none !important;
+            box-shadow: none !important;
         }
 
        
@@ -218,6 +220,17 @@
         .nameBlock .posteruid {
             color: #aaa !important;
         }
+        
+        .MPIconedURLText, .MPReplacedURL {
+           vertical-align: inherit !important;
+           color: #a27b9d !important;
+           transition: 0.5s color ease !important;
+        }
+        
+        .MPIconedURLText:hover, .MPReplacedURL:hover {
+            color: #7b80a2 !important;
+            transition: 0.5s color ease !important;
+        }   
 
 
 /*
@@ -541,6 +554,7 @@
 
         #qr {
             display: block !important;
+            z-index: 10000000 !important;
         }
      
         #qr:hover input[type="checkbox"] {
@@ -794,21 +808,25 @@
      
         #qp {
             border-radius: 2px !important;
-            max-width: 90% !important;
+            max-width: 600px !important;
             margin: 5px !important;
-            border: 1px solid #ddd !important;
+            margin-right: 1% !important;
+            margin-left: 1% !important;
             z-index: 5 !important;
             box-shadow: none !important;
+            border: 1px solid #ddd !important;
         }
        
         #qp .postContainer {
             margin-top: -2px !important;
-            margin-right: 0px !important;
+            margin-right: -5px !important;
             border-top: none !important;
+            width: 90% !important;
+            padding: 5px !important;
         }
         
         #qp .postInfo {
-            width: 100% !important;
+            width: 90% !important;
             display: block !important;
         }
         
@@ -1108,20 +1126,6 @@
             margin-top: 10px !important;
             margin-bottom: 20px !important;
         }
-     
-        #options.reply.dialog {
-            background: #fff !important;
-            color: #555 !important;
-            border-radius: 2px !important;
-            box-shadow: 0px 1px 1px rgba(0,0,0,0.3) !important;
-            z-index: 5 !important;
-        }
-       
-        #options.reply.dialog label {
-            text-decoration: none !important;
-            font-style: normal !important;
-            color: #333 !important;
-        }
        
         #overlay {
             z-index: 5 !important;
@@ -1305,7 +1309,110 @@
         .inline .fileText a:hover {
             opacity: 1 !important;
         }
+           
+/* settings menu */    
+    
+        #options.reply.dialog {
+            border: none !important;
+            background: #fff !important;
+            border-radius: 2px !important;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3) !important;
+            height: 500px !important;
+        }
 
+        #options.reply.dialog label {
+            text-decoration: none !important;
+            color: #2e3033 !important;
+        }
+
+        #optionsbar {
+            color: #b8bfcc !important;
+            border-bottom: 1px solid #e6e8eb !important;
+            padding: 5px !important;
+            margin: -5px !important;
+            border-top-left-radius: 2px !important;
+            border-top-right-radius: 2px !important;
+        }
+
+        #options.reply.dialog #optionsbar label {
+            color: #5c6066 !important;
+        }
+
+        #options.reply.dialog .description {
+            color: #5c6066 !important;
+            font-size: 10px !important;
+            font-family: Helvetica Neue !important;
+        }
+
+        #options.reply.dialog #content label {
+            color: #33414d !important;
+        }
+
+        #overlay {
+            z-index: 5 !important;
+        }
+        
+        .imp-exp {
+            padding: 5px !important;
+            padding-bottom: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        
+        select {
+            width: 150px !important;
+            -moz-appearance: none !important;
+            background: transparent !important;
+            color: #aaa!important;
+            border: none !important;
+            border-radius: 2px !important;
+            margin: 4px !important;
+            margin-bottom: 0px !important;
+        }
+        
+        button {
+            -moz-appearance: none !important;
+            background: transparent !important;
+            color: #aaa!important;
+            border: none !important;
+            border-radius: 2px !important;
+            opacity: 0.65 !important;
+            padding: 1px !important;
+            padding-top: 0px !important;
+            text-transform: lowercase !important;
+            cursor: pointer !important;
+            font-size: 9px !important;
+            font-family: Lucida Grande !important;
+        }
+        
+        button:hover, select:hover {
+            background: #5c6066 !important;
+            opacity: 1 !important;
+            color: #fff !important;
+        }
+        
+        #content textarea {
+            width: 590px !important;
+            margin-left: 4px !important;
+            font-size: 8px !important;
+            color: #999 !important;
+            max-height: 450px !important;
+        }
+        
+        .field {
+            border: 1px solid #eee !important;
+        }
+        
+        .field:hover, .field:focus, .field:active {
+            border: 1px solid #ccc !important;
+            color: #666 !important;
+        }
+        
+        td {
+            font-size: 10px !important;
+            font-family: Helvetica Neue !important;
+        }
+
+    
 /* page list and catalog links - from hdni's clean; reorganized to work for me */
        
         .pagelist {
