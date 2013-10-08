@@ -21,15 +21,16 @@ body {
 }
 
 .content {
-    margin-left: -4px !important;
+    margin-left: 0px !important;
     width: 99% !important;
+    left: auto !important;
 }
 
 /*
- * ====================
- * Header + navigation
- * ====================
- * */
+====================
+Header + navigation
+====================
+*/
 
 
 /* turn the nav bar into a drop-down menu */
@@ -150,11 +151,11 @@ body {
          }
          
          /*#sr-more-link:active {
- *             margin-right: 4px !important;
- *                         width: 40px !important;
- *                                     border-radius: 3px !important;
- *                                                 text-align: left !important;
- *                                                          }*/
+            margin-right: 4px !important;
+            width: 40px !important;
+            border-radius: 3px !important;
+            text-align: left !important;
+         }*/
          
 /* user menu; links */
 
@@ -314,10 +315,10 @@ body {
 
 
 /* 
- * ===========
- * sidebox
- * ===========
- * */
+===========
+sidebox
+===========
+*/
 
 
 .side {
@@ -434,11 +435,6 @@ body {
     width: 99% !important;
 }
 
-.commentarea {
-    width: 100% !important;
-    margin-left: -4px !important;
-}
-
 .titlebox h1 {
     color: black !important;
     font-family: Helvetica !important;
@@ -530,18 +526,18 @@ body {
 
 
 /* 
- * ================
- * Content
- * ================
- * */
+================
+Content
+================
+*/
 
 /* links */
 
 .link {
     color: #777 !important;
     border: 1px solid #eee !important;
-    min-height: 50px;
-    padding: 12px 0 !important;
+    min-height: 50px !important;
+    padding: 12px 4px !important;
     position: relative !important;
     background: transparent !important;
     margin-bottom: -1px !important;
@@ -588,6 +584,7 @@ organic-listing, .organic-listing .link{
             box-shadow: rgba(0,0,0,0.2) 0 0 8px !important;
             width: auto !important;
             margin-right: 3px !important;
+            min-height: 50px !important;
         }
 
     .thing p.title {
@@ -642,8 +639,11 @@ organic-listing, .organic-listing .link{
     }
     
     .entry {
+        display: inline-block !important;
         border: none !important;
+        padding-bottom: 5px !important;
         margin-left: 5px !important;
+        max-width: 75% !important;
     }
     
         .entry .buttons li a {
@@ -720,10 +720,11 @@ a.author:hover, a .author:hover {
     margin-left: 15px !important;
 }
 
+/* pls fix me */
 .commentarea {
     float: none !important;
-    width: 84% !important;
-    right: 8% !important;
+    width: 85% !important;
+    margin-right: 7% !important;
     margin-left: 8% !important;
     border: 1px solid #eee !important;
 }
@@ -754,11 +755,17 @@ div.usertext, .usertext-edit textarea {
     border-left: 1px solid #eee !important;
 }
 
+.footer-parent {
+    width: 100% !important;
+    left: auto !important;
+    margin-left: auto !important;
+}
+
 /* 
- * ===============
- * Other pages
- * ===============
- * */
+===============
+Other pages
+===============
+*/
 
 
 /* submitting a link */
@@ -835,6 +842,11 @@ div.usertext, .usertext-edit textarea {
     border-radius:10px;
 }
 
+.subreddit.hover {
+    margin-left: auto !important;
+    border: none !important;
+}
+
 .subreddit {
     border: 1px solid #eee !important;
     padding: 4px !important;
@@ -843,6 +855,10 @@ div.usertext, .usertext-edit textarea {
     margin-top: -11px !important;
 }
 
+.subreddit:hover {
+    text-decoration: none !important;
+    color: #404040 !important;
+}
 .subreddit:first-of-type {
     padding-top: 10px !important;
     margin-top: 0px !important;
@@ -876,6 +892,12 @@ div.usertext, .usertext-edit textarea {
 #text-desc.infobar {
     background: #f5f5f5 !important;
     color: #3f3f3f !important;
+}
+
+.nav-buttons {
+    margin-top: 20px !important;
+    margin-bottom: -20px !important;
+    text-align: center !important;
 }
 
 .nextprev {
@@ -973,10 +995,10 @@ div.usertext, .usertext-edit textarea {
 
 
 /* 
- * ===========
- * random 
- * ===========
- * */
+===========
+random 
+===========
+*/
 
 h1 {
     font-size: 18px;
@@ -1000,7 +1022,8 @@ a.helplink,
 .titlebox form.flairtoggle,
 .sidecontentbox .title h1,
 .bottommenu,
-#errorPageContainer, #errorTitle, #ad-frame, #ad_main {
+#errorPageContainer, #errorTitle, #ad-frame, #ad_main,
+.titlebox h1 {
     display: none !important;
 }
 
