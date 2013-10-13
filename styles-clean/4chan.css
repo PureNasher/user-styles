@@ -1,8 +1,8 @@
 @import "https://rawgithub.com/phallus/user-styles/master/styles-clean/4chan-testing.css";
 
 
-/* General {{{
------------------
+/* General 
+----------
 */
 
 
@@ -22,8 +22,8 @@
 /* }}} */
 
         
-/* Things to hide {{{
-------------------------
+/* Things to hide 
+-----------------
 */
 
 
@@ -55,10 +55,8 @@
         }
 
        
-/*
-=======================
-General colors
-=======================
+/* General colors 
+-----------------
 */
 
         a.useremail[href*='sage']:last-of-type::after,
@@ -240,10 +238,8 @@ General colors
         }   
 
 
-/*
-=============
-Board banner
-=============
+/* Board banner
+---------------
 */
 
 
@@ -284,15 +280,12 @@ Board banner
         }
        
        
-/*
-==================
-Navigation Links
-==================
+/* Navigation Links
+-------------------
 */
 
-
-/* top items - to do: compress into single absolutely-positioned menu */
-
+        /* boards */
+        
         #boardNavDesktop {
             position: fixed !important;
             top: 16px !important;
@@ -321,6 +314,40 @@ Navigation Links
             margin-left: 0 !important;
         }
         
+                
+        #boardNavDesktop a {
+            font-size: 7pt !important;
+            color: #c3c3c3 !important;
+            transition: 0.5s color ease;
+            display: none !important;
+        }
+       
+        #boardNavDesktop a[class="current"]{
+            color: #888 !important;
+            font-weight: normal !important;
+            text-shadow: none !important;
+        }
+       
+        #boardNavDesktop a:hover {
+            color: #aaa !important;
+            transition: 0.5s color ease;
+        }
+       
+        #boardNavDesktop a::before, #boardNavDesktop a::after {
+            content: "/";
+            transition: 0.5s color ease;
+        }
+         
+        #boardNavDesktop a[href*="boards.4chan.org/a/"],
+        #boardNavDesktop a[href*="boards.4chan.org/co/"],
+        #boardNavDesktop a[href*="boards.4chan.org/g/"],
+        #boardNavDesktop a[href*="boards.4chan.org/mu/"],
+        #boardNavDesktop a[href*="boards.4chan.org/diy/"],
+        #boardNavDesktop a.settingsWindowLink {
+            display: inline !important;
+        }
+        
+        /* image controls */
         
         #imgControls, #prefetch {
             font-size: 0px !important;
@@ -368,40 +395,80 @@ Navigation Links
             opacity: 0 !important;
             position:fixed !important;
         }
+
+        /* global message - to do: integrate into top items */
         
-        #boardNavDesktop a {
-            font-size: 7pt !important;
-            color: #c3c3c3 !important;
-            transition: 0.5s color ease;
-            display: none !important;
+        #globalToggle {
+            display: inline !important;
+            position: absolute !important;
+            top: -1000% !important;
+            right: 0% !important;
+            z-index: 4 !important;
+            margin-right: 62px !important;
+            padding-left: 1px !important;
+            cursor: default !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            font-size: 0;
+            height: 11px !important;
+            width: 10px !important;
+            border-radius: 3px !important;
+        }
+
+        #globalToggle::after {
+            content: url('http://i46.tinypic.com/3zxuh.jpg');
+            color: #b37d7d;
+            background: transparent !important;
         }
        
-        #boardNavDesktop a[class="current"]{
+       a#globalToggle.button.redButton.mobile.shown::after, a#globalToggle.button.redButton.mobile.shown:active::after{
+            content: url('http://i48.tinypic.com/dfhteh.jpg');
+            background: #aaa !important;
+        }
+       
+        .globalMessage {
+            position: relative !important;
+            width: 80% !important;
+            height: auto !important;
+            top: 12px !important;
+            right: 10% !important;
+            left: 10% !important;
+            padding-bottom: 0px !important;
+            padding-top: 4px !important;
+            z-index: 1;
+            border-bottom-left-radius: 2px !important;
+            border-bottom-right-radius: 2px !important;
+            background: transparent !important;
+        }
+        
+        #globalMessage h3 {
+            font-size: 10pt !important;
             color: #888 !important;
             font-weight: normal !important;
-            text-shadow: none !important;
+            margin: 2px !important;
         }
        
-        #boardNavDesktop a:hover {
-            color: #aaa !important;
-            transition: 0.5s color ease;
+        strong, h2 {
+            margin: 2px !important;
+            font-size: 10pt !important;
+            color: inherit !important;
+            font-weight: normal !important;
         }
        
-        #boardNavDesktop a::before, #boardNavDesktop a::after {
-            content: "/";
-            transition: 0.5s color ease;
+        .globalMessage a {
+            color: #666 !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
         }
-         
-        #boardNavDesktop a[href*="boards.4chan.org/a/"],
-        #boardNavDesktop a[href*="boards.4chan.org/co/"],
-        #boardNavDesktop a[href*="boards.4chan.org/g/"],
-        #boardNavDesktop a[href*="boards.4chan.org/mu/"],
-        #boardNavDesktop a[href*="boards.4chan.org/diy/"],
-        #boardNavDesktop a.settingsWindowLink {
-            display: inline !important;
+       
+        .globalMessage a:hover {
+            color: #ddd !important;
         }
         
-/* thread stats */
+
+/* Thread stats 
+---------------
+*/
 
         #stats {
             position: fixed !important;
@@ -481,81 +548,10 @@ Navigation Links
         #stats .move, #updater .move {
             cursor: default !important;
         }
-
-/* global message - to do: integrate into top items */
-        
-        #globalToggle {
-            display: inline !important;
-            position: absolute !important;
-            top: -1000% !important;
-            right: 0% !important;
-            z-index: 4 !important;
-            margin-right: 62px !important;
-            padding-left: 1px !important;
-            cursor: default !important;
-            text-decoration: none !important;
-            cursor: pointer !important;
-            font-size: 0;
-            height: 11px !important;
-            width: 10px !important;
-            border-radius: 3px !important;
-        }
-
-        #globalToggle::after {
-            content: url('http://i46.tinypic.com/3zxuh.jpg');
-            color: #b37d7d;
-            background: transparent !important;
-        }
-       
-       a#globalToggle.button.redButton.mobile.shown::after, a#globalToggle.button.redButton.mobile.shown:active::after{
-            content: url('http://i48.tinypic.com/dfhteh.jpg');
-            background: #aaa !important;
-        }
-       
-        .globalMessage {
-            position: relative !important;
-            width: 80% !important;
-            height: auto !important;
-            top: 12px !important;
-            right: 10% !important;
-            left: 10% !important;
-            padding-bottom: 0px !important;
-            padding-top: 4px !important;
-            z-index: 1;
-            border-bottom-left-radius: 2px !important;
-            border-bottom-right-radius: 2px !important;
-            background: transparent !important;
-        }
-        
-        #globalMessage h3 {
-            font-size: 10pt !important;
-            color: #888 !important;
-            font-weight: normal !important;
-            margin: 2px !important;
-        }
-       
-        strong, h2 {
-            margin: 2px !important;
-            font-size: 10pt !important;
-            color: inherit !important;
-            font-weight: normal !important;
-        }
-       
-        .globalMessage a {
-            color: #666 !important;
-            font-weight: normal !important;
-            text-decoration: none !important;
-        }
-       
-        .globalMessage a:hover {
-            color: #ddd !important;
-        }
        
 
-/* 
-=================
-Quick Reply 
-=================
+/* Quick Reply 
+--------------
 */
 
 
@@ -763,14 +759,12 @@ Quick Reply
         }
 
 
-/*
-=====================
-Threads, posts, etc.
-=====================
+/* Content
+----------
 */
 
 
-/* code blocks - to do: fix alignment of non-code text */
+        /* code blocks - to do: fix alignment of non-code text */
        
         .prettyprint{
             background-color: #f5f5f5 !important;
@@ -787,7 +781,7 @@ Threads, posts, etc.
             overflow: scroll !important;
         }
         
-/* inline and quick preview */
+        /* inline and quick preview */
 
         .inline {
             box-shadow: none !important;
@@ -837,7 +831,7 @@ Threads, posts, etc.
             display: block !important;
         }
         
-/* thread and reply hiding */
+        /* thread and reply hiding */
 
         .thread:hover .post.op .menu_button,
         .thread:hover .replylink,
@@ -1014,7 +1008,7 @@ Threads, posts, etc.
             font-family: Helvetica Neue !important;
         }
      
-/* posts */
+        /* posts */
 
         .post.reply {
             background: transparent !important;
@@ -1220,7 +1214,7 @@ Threads, posts, etc.
             margin-right: 2px !important;
         }
        
-/* file info */
+        /* file info */
        
         div .postInfo {
             width: auto !important;
@@ -1317,7 +1311,7 @@ Threads, posts, etc.
             opacity: 1 !important;
         }
            
-/* settings menu */    
+        /* settings menu */    
     
         #options.reply.dialog {
             border: none !important;
@@ -1420,7 +1414,7 @@ Threads, posts, etc.
         }
 
     
-/* page list and catalog links - from hdni's clean; reorganized to work for me */
+        /* page list and catalog links - from hdni's clean; reorganized to work for me */
        
         .pagelist {
             float: none !important;
@@ -1498,10 +1492,8 @@ Threads, posts, etc.
     }
 
 
-/*
-==============
-Catalog
-==============
+/* Catalog
+----------
 */
 
 
