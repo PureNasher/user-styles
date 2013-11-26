@@ -1,6 +1,3 @@
-@import "https://rawgithub.com/phallus/user-styles/master/styles-clean/4chan-testing.css";
-
-
 /* General 
 ----------
 */
@@ -40,7 +37,7 @@
         select#imageType,
         div.center,
         .navLinks,
-        .globalMessage.hideMobile,
+        /*.globalMessage.hideMobile,*/
         .vote,
         /*input[type="checkbox"]#imageExpand,
         input[type="checkbox"]#prefetch,*/
@@ -284,6 +281,72 @@
 -------------------
 */
 
+
+        /* global message - to do: integrate into top items */
+       
+        .globalMessage {
+            position: fixed !important;
+            width: 250px !important;
+            height: auto !important;
+            max-height: 200px !important;
+            padding: 3px !important;
+            top: -100000px !important;
+            right: 80px !important;
+            left: auto !important;
+            z-index: 1;
+            border: 2px solid #aaa !important;
+            border-radius: 2px !important;
+            background: #fff !important;
+            overflow: scroll !important;
+            font-size: 7pt !important;
+            color: #aaa !important;
+            z-index: 108342109890213 !important;
+        }
+        
+        #globalMessage h3 {
+            margin: 2px !important;
+        }
+        
+        .globalMessage:before {
+            content: "announcement" !important;
+            color: #fff !important;
+            background: #aaa !important;
+            border-radius: 2px !important;
+            padding: 2px !important;
+            padding-top: 1px !important;
+            padding-right: 3px !important;
+            display: inline !important;
+            position: fixed !important;
+            top: 5px !important;
+            right: 10px !important;
+            opacity: 0 !important;
+        }
+        
+        .globalMessage:hover:before {
+            opacity: 1 !important;
+        }
+        
+        .globalMessage:hover {
+            top: 5px !important;
+        }
+       
+        strong, h2 {
+            margin: 2px !important;
+            font-size: 10px !important;
+            color: inherit !important;
+            font-weight: normal !important;
+        }
+       
+        .globalMessage a {
+            color: #666 !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
+        }
+       
+        .globalMessage a:hover {
+            color: #444 !important;
+        }
+
         /* boards */
         
         #boardNavDesktop {
@@ -396,74 +459,6 @@
             position:fixed !important;
         }
 
-        /* global message - to do: integrate into top items */
-        
-        #globalToggle {
-            display: inline !important;
-            position: absolute !important;
-            top: -1000% !important;
-            right: 0% !important;
-            z-index: 4 !important;
-            margin-right: 62px !important;
-            padding-left: 1px !important;
-            cursor: default !important;
-            text-decoration: none !important;
-            cursor: pointer !important;
-            font-size: 0;
-            height: 11px !important;
-            width: 10px !important;
-            border-radius: 3px !important;
-        }
-
-        #globalToggle::after {
-            content: url('http://i46.tinypic.com/3zxuh.jpg');
-            color: #b37d7d;
-            background: transparent !important;
-        }
-       
-       a#globalToggle.button.redButton.mobile.shown::after, a#globalToggle.button.redButton.mobile.shown:active::after{
-            content: url('http://i48.tinypic.com/dfhteh.jpg');
-            background: #aaa !important;
-        }
-       
-        .globalMessage {
-            position: relative !important;
-            width: 80% !important;
-            height: auto !important;
-            top: 12px !important;
-            right: 10% !important;
-            left: 10% !important;
-            padding-bottom: 0px !important;
-            padding-top: 4px !important;
-            z-index: 1;
-            border-bottom-left-radius: 2px !important;
-            border-bottom-right-radius: 2px !important;
-            background: transparent !important;
-        }
-        
-        #globalMessage h3 {
-            font-size: 10pt !important;
-            color: #888 !important;
-            font-weight: normal !important;
-            margin: 2px !important;
-        }
-       
-        strong, h2 {
-            margin: 2px !important;
-            font-size: 10pt !important;
-            color: inherit !important;
-            font-weight: normal !important;
-        }
-       
-        .globalMessage a {
-            color: #666 !important;
-            font-weight: normal !important;
-            text-decoration: none !important;
-        }
-       
-        .globalMessage a:hover {
-            color: #ddd !important;
-        }
         
 
 /* Thread stats 
@@ -775,7 +770,7 @@
             font-size: 9pt !important;
             padding-bottom: 2px !important;
             padding-top: 4px !important;
-            max-width: 100% !important;
+            max-width: 500px !important;
             overflow: scroll !important;
         }
         
