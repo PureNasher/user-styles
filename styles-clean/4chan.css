@@ -377,6 +377,14 @@
             margin-left: 0 !important;
         }
         
+        #boardNavDesktop a[href="/a/"],
+        #boardNavDesktop a[href="/co/"],
+        #boardNavDesktop a[href="/g/"],
+        #boardNavDesktop a[href="/mu/"],
+        #boardNavDesktop a[href="/diy/"],
+        #boardNavDesktop a.settingsWindowLink {
+            display: inline !important;
+        }
                 
         #boardNavDesktop a {
             font-size: 7pt !important;
@@ -399,15 +407,6 @@
         #boardNavDesktop a::before, #boardNavDesktop a::after {
             content: "/";
             transition: 0.5s color ease;
-        }
-         
-        #boardNavDesktop a[href*="boards.4chan.org/a/"],
-        #boardNavDesktop a[href*="boards.4chan.org/co/"],
-        #boardNavDesktop a[href*="boards.4chan.org/g/"],
-        #boardNavDesktop a[href*="boards.4chan.org/mu/"],
-        #boardNavDesktop a[href*="boards.4chan.org/diy/"],
-        #boardNavDesktop a.settingsWindowLink {
-            display: inline !important;
         }
         
         /* image controls */
@@ -612,144 +611,242 @@
             z-index: 5 !important;
         }
        
-       input[title="Name"].field {
+        input[title="Name"].field {
             border: none !important;
-            border-left: 1px solid #eee !important;
+            border-left: 1px solid #e6e8eb !important;
             margin-left: 40px !important;
-       }
-     
-       input[title="Subject"].field {
+        }
+      
+        input[title="Subject"].field {
             border: none !important;
-            border-left: 1px solid #eee !important;
+            border-left: 1px solid #e6e8eb !important;
             border-top-right-radius: 2px !important;
-       }
-     
+        }
+
         input[title="E-mail"].field {
             border: none !important;
-            border-left: 1px solid #ddd !important;
+            border-left: 1px solid #e6e8eb !important;
         }
-     
-        input[title="Name"].field, input[title="E-mail"].field, input[title="Subject"].field {
+      
+        input[title="Name"].field,
+        input[title="E-mail"].field,
+        input[title="Subject"].field {
             -moz-appearance: none !important;
-            font-family: Lucida Grande !important;
             position: relative !important;
             margin-bottom: 0px !important;
-            height: 26px !important;
-            font-size: 7pt !important;
+            height: 26px !important;        
+            font-size: 10pt !important;
             background: #fff !important;
-            color: #333 !important;
-            border-bottom: 1px solid #eee !important;
+            color: #33414d !important;
+            border-bottom: 1px solid #e6e8eb !important;
         }
-       
+        
         input[title="Dump list"] {
             -moz-appearance: none !important;
             color: #ccc !important;
             font-size: 10pt !important;
             display: block;
             height: 26px !important;
-            margin-bottom: -26px !important;
+            margin-bottom: -26px !important;    
             background: #fff !important;
             border: none !important;
-            border-bottom: 1px solid #eee !important;
+            border-bottom: 1px solid #e6e8eb !important;
             border-top-left-radius: 2px !important;
         }
-     
-        form .field:hover, .textarea .field:hover {
-            background: #fdfdfd !important;
-            box-shadow: inset 0px 0px 3px rgba(0,0,0,0.1) !important;
+      
+        /* Dump menu */
+        #qr #replies {
+            background: #fff !important;
+            border-bottom: 1px solid #e6e8eb !important;
         }
-       
+
+        #qr .thumbnail {
+            text-shadow: 0px 0px 2px rgba(0,0,0,1.0) !important;
+           background-color: #fff !important;
+        }
+
+        #qr .thumbnail:before {
+            background: transparent !important;
+            text-shadow: 0px 0px 1px rgba(0,0,0,1.0) !important;
+        }
+
+        #qr #selected {
+            border: 1px dashed #24a1a1 !important;
+        }
+
+        #qr #null {
+            border: 1px dashed #b8bfcc !important;
+        }
+
+        #qr .remove {
+            text-shadow: 0px 0px 1px rgba(0,0,0,0.5) !important;
+            color: #ff1133 !important;
+        }
+
+        #qr #addReply {
+            color: #b8bfcc !important;
+        }
+
+        #qr #addReply:hover {
+            color: #24a1a1 !important;
+        }
+
         form > .textarea > .field {
             -moz-appearance: none !important;
             height: 200px !important;
             max-width: 200px !important;
             margin-bottom: 0px !important;
-            font-size: 8pt !important;
-            font-family: Lucida Grande !important;
+            font-size: 10pt !important;
+            line-height: 21px !important;        
             background: #fff !important;
-            color: #333 !important;
+            color: #33414d !important;
             border: none !important;
         }
-       
+        
         form > div > input[type="submit"] {
             position: absolute !important;
-            font-size: 8pt !important;
-            float: right !important;
+            font-size: 12px !important;
             width: 70px !important;
             height: 26px !important;
             margin-top: -26px !important;
-            margin-left: 50px !important;
+            margin-left: 0 !important;    
             -moz-appearance: none !important;
             background: #fff !important;
-            color: #ccc !important;
+            color: #b8bfcc !important;
             border: none !important;
-            border-left: 1px solid #eee !important;
-            border-bottom: 1px solid #eee !important;
+            border-left: 1px solid #e6e8eb !important;
+            border-top: 1px solid #e6e8eb !important;
+            border-bottom: 1px solid #e6e8eb !important;
             text-transform: lowercase !important;
         }
-       
+        
         .captchainput .field {
             -moz-appearance: none !important;
-            margin-top: 0px !important;
+            margin-top: 0 !important;
             margin-left: 1px !important;
-            margin-bottom: 0px !important;
-            font-size: 7pt !important;
+            margin-bottom: 0 !important;
+            font-size: 12px !important;
             height: 26px !important;
             border: none !important;
             background: #fff !important;
-            color: #333 !important;
+            color: #33414d !important;
+            border-top: 1px solid #e6e8eb !important;
+            border-bottom: 1px solid #e6e8eb !important;
         }
-       
-        form > div > input[type="submit"]:hover {
-            background: #fdfdfd !important;
-            box-shadow: inset 0px 0px 3px rgba(0,0,0,0.1) !important;
+        
+        /* Lighter captcha */
+        #qr .captchaimg {
+            outline: none !important;
+            border: none !important;
+            border-top: 1px solid #e6e8eb !important;
+            margin: 0 auto !important;
+            background: #fff !important;
         }
-     
-        form > div > input[type="file"] > * {
+        
+        .captchaimg img {
+            opacity: 0.55 !important;
+            margin: 0 auto !important;
+        }
+
+        #qr form > div > input[type="file"] {
             width: 330px !important;
-            height: 23px !important;
+            margin-top: 0 !important;
+        }
+
+        #qr form > div > input[type="file"] > * {
+            padding-top: 4px !important;
+            padding-bottom: 4px !important;
+            margin-left: 4px !important;
+            width: 326px !important;
             -moz-appearance: none;
-            background: #fff !important;
-            color: #333 !important;
-            font-size: 7pt !important;
+            background: transparent !important;
+            color: #33414d !important;
+            font-size: 12px !important;
+            font-family: Lucida Grande, sans-serif !important;
             border: none !important;
-            border-top: 1px solid #eee !important;
-            border-bottom-left-radius: 2px !important;
+            text-align: left !important;
         }
-       
-        form > div > input[type="file"] {
-            margin-top: -1px !important;
-        }
-     
-        form > div > input[type="file"] > input[type="button"] {
+
+        #qr form > div > input[type="file"] > input[type="button"] {
             position: absolute !important;
-            font-size: 8pt !important;
-            float: right;
+            right: 4px !important;
+            border-left: 1px solid #e6e8eb !important;
+            height: 24px !important;
             width: 70px !important;
-            height: 26px !important;
-            margin-top: 0px !important;
-            margin-left: 0px !important;
-            padding-bottom: 1px !important;
-            -moz-appearance: none;
-            background: #fff !important;
-            color: #ccc !important;
-            border: none !important;
-            border-top: 1px solid #eee !important;
-            border-left: 1px solid #eee !important;
-            border-bottom-left-radius: 0px !important;
-            border-bottom-right-radius: 2px !important;
+            color: #b8bfcc !important;
             text-transform: lowercase !important;
         }
-       
-        form > div > input[type="file"] > input[type="button"]:hover {
-            background: #fdfdfd !important;
-            box-shadow: inset 0px 0px 3px rgba(0,0,0,0.1) !important;
+
+        #qr.reply.dialog.captcha > form > div:nth-child(6) {
+            background: #fff !important;
+            height: 24px !important;
+            border-bottom-left-radius: 2px !important;
+            border-bottom-right-radius: 2px !important;
         }
-     
+
+        #qr form > div > input[type="file"] > *:hover,
+        #qr form > div > input[type="submit"]:hover {
+            color: #24a1a1 !important;
+            cursor: pointer !important;
+        }
+
         form .captchainput {
             width: 330px !important;
             margin-left: -1px !important;
         }
+
+        #qr input:hover::-moz-placeholder,
+        #qr textarea:hover::-moz-placeholder,
+        #dump.field:hover {
+            color: #24a1a1 !important;
+        }
+
+        #qr .warning, #qr #errmsg {
+            color: #fff !important;
+            text-transform: lowercase !important;
+            text-align: center !important;
+        }
+
+        #qr .warning a {
+            color: #fff !important;
+        }
+
+        #qr .warning a:hover {
+            color: #e6e8eb !important;
+        }
+
+        /* Spoiler label */
+        #qr input[id="spoiler"] {
+            -moz-appearance: none !important;
+            border: none !important;
+            float: right !important;
+            border-radius: 2px !important;
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        #qr #spoilerLabel {
+            float: right !important;
+            color: transparent !important;
+            font-size: 0 !important;
+            font-family: "Helvetica Neue", sans-serif !important;
+            text-transform: lowercase !important;
+            text-align: right !important;
+            margin-top: -16px !important;
+            padding-bottom: 2px !important;
+            width: 70px !important;
+        }
+
+        #qr #spoilerLabel:after {
+            content: "spoiler";
+            color: #d2d5de !important;
+            font-size: 12px !important;
+        }
+
+        #qr #spoilerLabel:hover::after {
+            color: #e6e8eb !important;
+        }
+
 
 
 /* Content
@@ -838,8 +935,8 @@
             float: right !important;
             margin-top: 0px !important;
             margin-right: 8px !important;
+            margin-left: 4px !important;
             z-index: 0 !important;
-            font-family: lemon !important;
             font-size: 0px !important;
             color: transparent !important;
         }
@@ -1256,10 +1353,12 @@
             margin-top: -4px !important;
             margin-bottom: -3px !important;
             display: table !important;
+            text-decoration: none !important;
         }
         
         .fileText, .inline .fileText {
             font-family: Helvetica Neue !important;
+            font-style: normal !important;
             color: #c3c3c3!important;
             margin-left: -5px !important;
             font-size: 8px !important;
@@ -1267,6 +1366,7 @@
         }
         
         .fileInfo a,
+        .fileText a,
         .inline .fileInfo a,
         .inline .fileText a {
             text-decoration: none !important;
@@ -1300,6 +1400,7 @@
         }
         
         .postContainer:hover .fileText,
+        .postContainer:hover .fileText a,
         .postContainer:hover .fileInfo a,
         .inline .fileInfo a:hover,
         .inline .fileText a:hover {
@@ -1313,7 +1414,7 @@
             background: #fff !important;
             border-radius: 2px !important;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.3) !important;
-            height: 500px !important;
+            height: 420px !important;
         }
 
         #options.reply.dialog label {
