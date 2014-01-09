@@ -1,4 +1,4 @@
-@namespace url(http://www.w3.org/1999/xhtml);
+amespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document url-prefix(http://ssl.reddit.com),
                url-prefix(http://www.reddit.com),
@@ -68,41 +68,41 @@ body {
 }
 
 .separator {
-  display: none !important;
+    display: none !important;
 }
 
 #sr-header-area .flat-list li {
-  display:block !important;
-  overflow: scroll !important;
-  padding-left: 2px !important;
+    display:block !important;
+    overflow: scroll !important;
+    padding-left: 2px !important;
 }
 
 #sr-header-area:active, #sr-header-area:hover {
-  top: 14px !important;
+    top: 14px !important;
 }
 
 #sr-header-area:hover #sr-more-link:before {
-  background: #888 !important;
-  border-radius: 3px !important;
+    background: #888 !important;
+    border-radius: 3px !important;
 }
 
 
 #sr-header-area .sr-list a[class="current"], #sr-header-area .selected a{
-  color: #888!important;
-  font-weight: normal !important;
-  text-shadow: none !important;
+    color: #888!important;
+    font-weight: normal !important;
+    text-shadow: none !important;
 }
 
 .dropdown.srdrop .selected {
-  display: none !important;
+    display: none !important;
 }
 
 #sr-header-area a {
-  color: #bbb !important;
-  font-size: 9px !important;
-  text-decoration: none !important;
-  transition: 0.5s color ease;
-  top: -2px !important;
+    color: #bbb !important;
+    font-size: 9px !important;
+    text-decoration: none !important;
+    transition: 0.5s color ease;
+    top: -2px !important;
 }
 
 #sr-header-area a:hover {
@@ -111,45 +111,45 @@ body {
 }
 
 .sr-bar .separator {
-  color: #909090 !important
+    color: #909090 !important
 }
 
 #sr-more-link {
-  background: inherit!important;
-  color: #FFF !important;
-  font-weight: normal !important;
-  text-align: center !important;
-  position: fixed !important;
-  right: -1000px !important;;
-  padding-top: 1px !important;
+    background: inherit!important;
+    color: #FFF !important;
+    font-weight: normal !important;
+    text-align: center !important;
+    position: fixed !important;
+    right: -1000px !important;;
+    padding-top: 1px !important;
 }
 
 #sr-more-link:before {
-  content: 'reddits' !important;
-  text-align: center !important;
-  background: transparent !important;
-  position: fixed !important;
-  top: 2px !important;
-  right: 0% !important;
-  padding: 2px !important;
-  padding-top: 1px !important;
-  padding-bottom: 0px !important;
-  margin-right: 60px;
-  text-transform: none !important;
-  font-family: Lucida Grande !important;
-  border-bottom-right-radius: 0px !important;
-  opacity:0;
+    content: 'reddits' !important;
+    text-align: center !important;
+    background: transparent !important;
+    position: fixed !important;
+    top: 2px !important;
+    right: 0% !important;
+    padding: 2px !important;
+    padding-top: 1px !important;
+    padding-bottom: 0px !important;
+    margin-right: 60px;
+    text-transform: none !important;
+    font-family: Lucida Grande !important;
+    border-bottom-right-radius: 0px !important;
+    opacity:0;
 }
 
 #sr-more-link:hover:before, #sr-header-area:hover #sr-more-link:before {
-  color: #fff !important;
-  opacity: 1 !important;
+    color: #fff !important;
+    opacity: 1 !important;
 }
 
 #sr-more-link:hover:before, #sr-header-area:hover::after {
-  color: #fff !important;
-  border-radius: 3px !important;
-  transition: 0.5s color ease;
+    color: #fff !important;
+    border-radius: 3px !important;
+    transition: 0.5s color ease;
 }
 
 #header-img {
@@ -308,10 +308,8 @@ ul.tabmenu.formtab {
 }
 
 
-/*
-===========
-sidebox
-===========
+/* sidebox
+-------------
 */
 
 
@@ -510,10 +508,8 @@ sidebox
 
 
 
-/*
-================
-Content
-================
+/* Content
+-------------
 */
 
 /* links */
@@ -564,29 +560,29 @@ organic-listing, .organic-listing .link{
 }
 
 .lk .thumbnail {
-  margin-right: auto!important;
-  width: auto !important;
+    margin-right: auto!important;
+    width: auto !important;
 }
 
-  .link .thumbnail img {
-      border: none!important;
-      box-shadow: rgba(0,0,0,0.2) 0 0 8px !important;
-      width: auto !important;
-      margin-right: 3px !important;
-      min-height: 50px !important;
-  }
+.link .thumbnail img {
+    border: none!important;
+    box-shadow: rgba(0,0,0,0.2) 0 0 8px !important;
+    width: auto !important;
+    margin-right: 3px !important;
+    min-height: 50px !important;
+}
 
 .thing p.title {
-  padding-bottom: 0px !important;
+    padding-bottom: 0px !important;
 }
 
 .thing .title.loggedin, .thing.p.title a {
-      color: #677996 !important;
-      line-height: 14px !important;
-      text-indent: 155px;
-      text-shadow: none !important;
-      transition: 0.5s ease all;
-      font-size: 8pt !important;
+    color: #677996 !important;
+    line-height: 14px !important;
+    text-indent: 155px;
+    text-shadow: none !important;
+    transition: 0.5s ease all;
+    font-size: 8pt !important;
 }
  
 .thing .title.loggedin:hover, .link .title:hover {
@@ -614,26 +610,26 @@ organic-listing, .organic-listing .link{
 }
   
 .tagline {
-  margin-left: 10px !important;
-  color: #888!important;
-  font-size: 7pt !important;
-  font-family: Helvetica Neue, sans-serif !important;
-  margin-top: 7px !important;
-  opacity: .8;
+    margin-left: 10px !important;
+    color: #888!important;
+    font-size: 7pt !important;
+    font-family: Helvetica Neue, sans-serif !important;
+    margin-top: 7px !important;
+    opacity: .8;
 }
 
 .link .flat-list {
-  margin-top: 3px !important;
-  margin-left: 2px !important;
-  font-size: 7pt !important;
+    margin-top: 3px !important;
+    margin-left: 2px !important;
+    font-size: 7pt !important;
 }
 
 .link .entry {
-  display: inline-block !important;
-  border: none !important;
-  padding-bottom: 5px !important;
-  margin-left: 5px !important;
-  max-width: 60% !important;
+    display: inline-block !important;
+    border: none !important;
+    padding-bottom: 5px !important;
+    margin-left: 5px !important;
+    max-width: 60% !important;
 }
 
 .entry .buttons li a {
@@ -684,16 +680,6 @@ organic-listing, .organic-listing .link{
     background: none !important;
 }
 
-.comment .author {
-    font-weight: normal;
-    color: #666 !important;
-}
-
-.usertext.grayed {
-    background: #fff !important;
-    margin-left: 10px !important;
-}
-
 a.author {
     margin-right: 0.5em;
     font-weight: normal;
@@ -711,11 +697,7 @@ a.author:hover, a .author:hover {
     color: #999;
 }
 
-#noresults, .error {
-    margin-left: 15px !important;
-}
-
-/* pls fix me */
+/* comments */
 
 .noncollapsed {
     margin-right: 4% !important;
@@ -771,6 +753,11 @@ div.usertext, .usertext-edit textarea {
     margin-left: 11px !important;
 }
 
+.comment .author {
+    font-weight: normal;
+    color: #666 !important;
+}
+
 .usertext .bottom-area {
     width: 100% !important;
     margin-left: 0% !important;
@@ -784,7 +771,12 @@ div.usertext, .usertext-edit textarea {
 }
 
 .usertext .toggle .option, .usertext .toggle .option.active {
-    color: #fff !important;   
+    color: #fff !important;
+}
+
+.usertext.grayed {
+    background: #fff !important;
+    margin-left: 10px !important;
 }
 
 .comment .child, .comment .showreplies {
@@ -1051,11 +1043,12 @@ Other pages
     padding-right: 0px !important;
 }
 
+#noresults, .error {
+    margin-left: 15px !important;
+}
 
-/*
-===========
-random
-===========
+/* etc
+---------
 */
 
 h1 {
@@ -1064,6 +1057,8 @@ h1 {
     margin: 10px 0px;
     text-align: center !important;
 }
+
+
 
 div.contents,
 body.with-listing-chooser .listing-chooser.initialized,
@@ -1090,5 +1085,3 @@ a.helplink,
 }
        
 }
-
-
