@@ -4,10 +4,12 @@
                url-prefix(http://www.reddit.com),
                url-prefix(http://www.np.reddit.com),
                url-prefix(http://np.reddit.com),
+               url-prefix(http://pay.reddit.com),
                url-prefix(https://ssl.reddit.com),
                url-prefix(https://www.reddit.com),
                url-prefix(https://www.np.reddit.com),
-               url-prefix(https://np.reddit.com)
+               url-prefix(https://np.reddit.com),
+               url-prefix(https://pay.reddit.com)
 {
 
 
@@ -745,10 +747,6 @@ div.usertext, .usertext-edit textarea {
     margin-left: 8px !important;
 }
 
-.commentarea div.midcol.unvoted {
-    margin-top: 14px !important;
-}
-
 .commentarea ul.flat-list.buttons {
     margin-left: 11px !important;
 }
@@ -791,7 +789,7 @@ div.usertext, .usertext-edit textarea {
 }
 
 .comment .midcol {
-    margin-top: 16px !important;
+    margin-top: 14px !important;
     padding-bottom: 4px !important;
     background: #fff !important;
 }
