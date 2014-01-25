@@ -2,12 +2,6 @@
 -----------------
 */ 
 
-#appcontent,
-#appcontent > #content,
-#appcontent > #content > tabbox > tabpanels {
-	background: #fbfbfb !important;
-}
-     
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down,
 toolbarbutton#appmenu-toolbar-button,
@@ -66,6 +60,7 @@ tabs#tabbrowser-tabs {
 	border: none !important;
 	color: #ddd !important;
 	background: #595961 !important;
+  width: 5000px !important;
 }
     
 .tabbrowser-tab:hover, .tabbrowser-tab:active {
@@ -111,8 +106,8 @@ tabs#tabbrowser-tabs {
 }
      
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
-	min-width: 30px !important;
-	max-width: 130px !important;
+  min-width: 1px !important;
+	max-width: 50000px !important;
 }
      
 /* }}} */
