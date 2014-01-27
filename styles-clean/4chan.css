@@ -12,6 +12,7 @@
         
     #content, div.board {
         margin-left: -4px !important;
+        margin-bottom: 13px !important;
         width: 100% !important;
     }
         
@@ -25,6 +26,7 @@
 
 
         hr,
+        span.MPControlBar,
         .deleteform,
         .postingMode,
         .stylechanger,
@@ -54,6 +56,7 @@
 -----------------
 */
 
+
         a.useremail[href*='sage']:last-of-type::after,
         a.useremail[href*='Sage']:last-of-type::after,
         a.useremail[href*='SAGE']:last-of-type::after {
@@ -66,10 +69,15 @@
         span.capcodeMod span.name,
         span.capcodeMod a:not(:hover),
         span.capcodeMod span.postertrip,
-        span.capcodeMod strong.capcode,
-        .postNum a:hover,
-        .inline .postNum a:hover {
+        span.capcodeMod strong.capcode {
             color: #a27b9d !important;
+            transition: 0.5s color ease;
+        }
+        
+        div.post div.postInfo span.postNum a:hover,
+        .useremail:hover .postertrip:not(.capcode) {
+            color: #986368 !important;
+            transition: 0.5s color ease;
         }
         
         .useremail,
@@ -80,18 +88,29 @@
             transition: 0.5s color ease;
         }
      
-        .useremail .name:hover {
+        .useremail .name:hover, 
+        .useremail div.post div.postInfo span.nameBlock:hover {
             color: #777 !important;
+            transition: 0.5s color ease;
         }
        
-       .name {
+        .name, 
+        div.post div.postInfo span.nameBlock span.name {
             color: #7b80a2 !important;
             font-weight: bold !important;
             text-decoration: none !important;
         }
                
-        .postertrip {
+        .postertrip, 
+        .useremail:not(:hover) .name:not(.capcode),
+        .useremail:not(:hover) .postertrip:not(.capcode) {
             color: #bf7c83 !important;
+            transition: 0.5s color ease;
+        }
+        
+        .useremail:hover .name:not(.capcode) {
+            color: #666 !important;
+            transition: 0.5s color ease;
         }
        
         a.useremail {
@@ -113,6 +132,7 @@
      
         .postNum a, .inline .postNum a {
             color: #bf7c83 !important;
+            transition: 0.5s color ease;
         }
        
         a.replylink {
@@ -221,6 +241,7 @@
             color: #aaa !important;
         }
         
+        
         .MPIconedURLText, .MPReplacedURL {
            vertical-align: inherit !important;
            color: #a27b9d !important;
@@ -280,8 +301,6 @@
 -------------------
 */
 
-
-        /* global message - to do: integrate into top items */
        
         .globalMessage {
             position: fixed !important;
@@ -458,10 +477,10 @@
         }
 
         
-
 /* Thread stats
 ---------------
 */
+
 
         #stats {
             position: fixed !important;
@@ -707,18 +726,23 @@
             position: absolute !important;
             font-size: 8pt !important;
             font-family: Lucida Grande !important;
-            width: 70px !important;
-            height: 26px !important;
-            margin-top: -26px !important;
+            width: 72px !important;
+            height: 24px !important;
+            margin-top: -25px !important;
             margin-left: 0 !important;
             -moz-appearance: none !important;
             background: #fff !important;
             color: #b8bfcc !important;
-            border: none !important;
-            border-left: 1px solid #e6e8eb !important;
-            border-top: 1px solid #e6e8eb !important;
-            border-bottom: 1px solid #e6e8eb !important;
+            border: 1px solid #eee !important;
+            border-top: none !important;
+            border-bottom: none !important;
             text-transform: lowercase !important;
+            padding-bottom: 1px !important;
+        }
+        
+        div.captchainput {
+            width: 400px !important;
+            display: inline !important;
         }
         
         .captchainput .field {
@@ -750,26 +774,20 @@
             margin: 0 auto !important;
         }
 
-        #qr form > div > input[type="file"] {
+        /* had to redo this part */
+        
+        form > div > input[type="file"] {
             width: 330px !important;
-            margin-top: 0 !important;
-        }
-
-        #qr form > div > input[type="file"] > * {
-            padding-top: 4px !important;
-            padding-bottom: 4px !important;
-            margin-left: 4px !important;
-            width: 326px !important;
-            -moz-appearance: none;
-            background: transparent !important;
-            color: #33414d !important;
-            font-size: 8pt !important;
+            margin-top: 0px !important;
             font-family: Lucida Grande !important;
-            border: none !important;
-            text-align: left !important;
+            font-size: 8pt !important;
+            color: #33414d !important;
+            display: table! important;
+            height: 24px !important;
+            opacity: 0.55 !important;
         }
 
-        #qr form > div > input[type="file"] > input[type="button"] {
+        #qr form > div > input[type="file"] input[type="button"] {
             position: absolute !important;
             right: 4px !important;
             border-left: 1px solid #e6e8eb !important;
@@ -851,7 +869,6 @@
         }
 
 
-
 /* Content
 ----------
 */
@@ -864,12 +881,13 @@
             border: 1px solid #e5e5e5 !important;
             border-radius: 3px !important;
             box-shadow: none !important;
-            margin-bottom: 0px !important;
-            margin-top: 4px !important;
-            margin-left: -3px !important;
+            margin-top: 2px !important;
+            margin-bottom: -6px !important;
             font-size: 9pt !important;
-            padding-bottom: 2px !important;
-            padding-top: 4px !important;
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+            padding-top: 1px !important;
+            padding-bottom: 0px !important;
             max-width: 500px !important;
             overflow: scroll !important;
         }
@@ -1132,7 +1150,7 @@
         
         .abbr {
             display: table !important;
-            margin-bottom: -49px !important;
+            margin-bottom: -20px !important;
         }
         
         div.closed {
@@ -1362,7 +1380,7 @@
             margin-left: -5px !important;
             margin-right: 2px !important;
             margin-top: -3px !important;
-            margin-bottom: -3px !important;
+            margin-bottom: -2px !important;
             display: table !important;
             text-decoration: none !important;
             opacity: 0;
@@ -1372,12 +1390,16 @@
             font-family: Helvetica Neue !important;
             font-style: normal !important;
             color: #c3c3c3!important;
-            margin-left: 6px !important;
             font-size: 8px !important;
             opacity: 0 !important;
             line-height: 10px !important;
-            margin-top: -8px !important;
+            margin-top: -4px !important;
         }
+        
+        .inline .fileInfo {
+            margin-top: -8px !important;
+            margin-left: 6px !important;
+            }
         
         .fileInfo a,
         .fileText a,
@@ -1524,7 +1546,6 @@
             font-family: Helvetica Neue !important;
         }
 
-    
         /* page list and catalog links - from hdni's clean; reorganized to work for me */
        
         .pagelist {
@@ -1668,8 +1689,9 @@
         }
         
         .extended-small .teaser, .extended-large .teaser {
-            font-size: 7px !important;
+            font-size: 7pt !important;
             font-family: Lucida Grande !important;
+            color: #777 !important;
         }
         
         #toggleMsgBtn, a#globalToggle.button.redButton.mobile.shown::after,
