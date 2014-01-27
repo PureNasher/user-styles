@@ -217,10 +217,12 @@
         .summary {
             color: #aaa !important;
             float: right !important;
-            margin-right: 2px !important;
-            padding-bottom: 2px !important;
+            margin-right: 4px !important;
+            padding-bottom: 2px !important;;
             font-size: 8pt !important;
             transition: 0.5s color ease;
+            position: relative !important;
+            display: block !important;
         }
         
         .summary:hover {
@@ -709,7 +711,7 @@
             color: #24a1a1 !important;
         }
 
-        form > .textarea > .field {
+        #qr form > .textarea > .field {
             -moz-appearance: none !important;
             height: 200px !important;
             max-width: 200px !important;
@@ -722,7 +724,7 @@
             border: none !important;
         }
         
-        form > div > input[type="submit"] {
+        #qr form > div > input[type="submit"] {
             position: absolute !important;
             font-size: 8pt !important;
             font-family: Lucida Grande !important;
@@ -776,7 +778,7 @@
 
         /* had to redo this part */
         
-        form > div > input[type="file"] {
+        #qr form > div > input[type="file"] {
             width: 330px !important;
             margin-top: 0px !important;
             font-family: Lucida Grande !important;
@@ -1611,6 +1613,10 @@
             cursor: pointer !important;
             font-size: 8pt !important;
             font-family: Lucida Grande !important;
+        }
+        
+        .next {
+            margin-top: 2px !important;
         }
 
         .pagelist .prev input:hover,
