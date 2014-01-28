@@ -208,21 +208,24 @@
             color: #28915d !important;
         }
        
+       .quotelink.deadlink {
+            text-decoration: none !important;
+        }
+       
         .subject {
             color: #666 !important;
             font-weight: bold !important;
             font-style: normal !important;
         }
-       
-        .summary {
+        
+        span.summary {
             color: #aaa !important;
             float: right !important;
+            margin-top: 15px !important;
             margin-right: 4px !important;
             padding-bottom: 2px !important;;
             font-size: 8pt !important;
             transition: 0.5s color ease;
-            position: relative !important;
-            display: block !important;
         }
         
         .summary:hover {
@@ -728,16 +731,20 @@
             position: absolute !important;
             font-size: 8pt !important;
             font-family: Lucida Grande !important;
-            width: 72px !important;
+            width: 70px !important;
+            /* comment next two if style breaks */
+            height: 26px !important;
+            margin-top: -26px !important;
+            /* uncomment if style breaks */
+            /*             
             height: 24px !important;
-            margin-top: -25px !important;
+            margin-top: -25px !important; 
+            */
             margin-left: 0 !important;
             -moz-appearance: none !important;
             background: #fff !important;
             color: #b8bfcc !important;
             border: 1px solid #eee !important;
-            border-top: none !important;
-            border-bottom: none !important;
             text-transform: lowercase !important;
             padding-bottom: 1px !important;
         }
@@ -776,9 +783,9 @@
             margin: 0 auto !important;
         }
 
-        /* had to redo this part */
+        /* uncomment this if the style breaks */
         
-        #qr form > div > input[type="file"] {
+        /*#qr form > div > input[type="file"] {
             width: 330px !important;
             margin-top: 0px !important;
             font-family: Lucida Grande !important;
@@ -787,9 +794,30 @@
             display: table! important;
             height: 24px !important;
             opacity: 0.55 !important;
+        }*/
+        
+        /* comment the next two blocks if the style breaks */
+        
+        #qr form > div > input[type="file"] {
+            width: 330px !important;
+            margin-top: 0 !important;
         }
 
-        #qr form > div > input[type="file"] input[type="button"] {
+        #qr form > div > input[type="file"] > * {
+            padding-top: 4px !important;
+            padding-bottom: 4px !important;
+            margin-left: 4px !important;
+            width: 326px !important;
+            -moz-appearance: none;
+            background: transparent !important;
+            color: #33414d !important;
+            font-size: 8pt !important;
+            font-family: Lucida Grande !important;
+            border: none !important;
+            text-align: left !important;
+        }
+
+        #qr form > div > input[type="file"] > input[type="button"] {
             position: absolute !important;
             right: 4px !important;
             border-left: 1px solid #e6e8eb !important;
@@ -1271,7 +1299,6 @@
         .post.op .fileThumb {
             margin-left: 22px !important;
             margin-bottom: 16px !important;
-           
         }
 
         .thread {
@@ -1281,7 +1308,6 @@
             padding-left: 0px !important;
             background-color: transparent !important;
             width: 86% !important;
-            max-width: 86% !important;
             border: 1px solid #eee !important;
         }
      
@@ -1328,6 +1354,7 @@
        
         .fileThumb {
             margin-bottom: 15px !important;
+            display: block !important;
         }
      
         .post.op .subject {
@@ -1672,6 +1699,7 @@
         
         .thread {
             width: 240px !important;
+            max-width: 240px !important;
             max-height: 300px !important;
             background-color: #fff !important;
             margin: 5px !important;
@@ -1679,6 +1707,7 @@
             border-radius: 2px !important;
             border: 1px solid #e0e0e0 !important;
             padding-left: 0px !important;
+            display: inline-block !important;
         }
 
         .thumb {

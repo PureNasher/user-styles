@@ -1,6 +1,6 @@
 The styles I use in Firefox.
 
-To install a style, simply copy the code of the desired style into a blank Stylish style.
+To install a style, simply copy the code of the desired style into a blank Stylish style. Note that Stylish version 1.4.1 breaks the 4chan style; view the comments in it for partial fixes.
 
 
 #4chan
