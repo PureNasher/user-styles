@@ -1644,9 +1644,9 @@
             font-family: Lucida Grande !important;
         }
         
-        .next {
+        /*.next {
             margin-top: 2px !important;
-        }
+        }*/
 
         .pagelist .prev input:hover,
         .pagelist .next input:hover,
