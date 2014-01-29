@@ -48,7 +48,7 @@
         .postInfo input[type="checkbox"],
         .fileDeletedRes,
         .MPURLIcon, .MPSoundUploaderSoundLabel, .MPVideoInfoDisplay,
-        #updater:hover .move, #watcher, .move, .ad-plea {
+        #updater:hover .move, #watcher, #qr .move, .ad-plea {
             display: none !important;
             box-shadow: none !important;
         }
